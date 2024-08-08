@@ -5,8 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 function Topbar() {
     return (
-    <>
-      <Navbar bg="dark" data-bs-theme="dark" sticky="top">
+      <Navbar bg="light" data-bs-theme="light" sticky="top">
         <Container>
           <Navbar.Brand href="#home">Navbar</Navbar.Brand>
           <Nav className="me-auto">
@@ -16,7 +15,6 @@ function Topbar() {
           </Nav>
         </Container>
       </Navbar>
-    </>
   );
 }
 

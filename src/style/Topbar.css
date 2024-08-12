@@ -1,0 +1,9 @@
+.nav-link {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  
+.nav-link.active-link {
+  opacity: 1;
+  font-weight: bold;
+}

@@ -10,6 +10,7 @@ import TimelinePage from "./pages/TimelinePage";
 import HackathonPage from "./pages/HackathonPage";
 import FaqPage from "./pages/FaqPage";
 import { useMediaQuery } from 'react-responsive';
+import "./App.css";
 
 const App = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });

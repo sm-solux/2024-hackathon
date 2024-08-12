@@ -1,9 +1,16 @@
+.navbar-custom {
+  background-color: #000000;
+  height: 8vh;
+}
+
 .nav-link {
-    opacity: 0.6;
-    transition: opacity 0.3s;
-  }
-  
+  color: #ffffff;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
 .nav-link.active-link {
+  color: #0057FF;
   opacity: 1;
   font-weight: bold;
 }

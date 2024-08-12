@@ -35,7 +35,7 @@ const DevelopedTextContainer = styled.div`
 
 function Footer() {
     return (
-        <footer className="bg-light text-dark py-3 fixed-bottom">
+        <footer className="text-dark py-3">
         <div className="container text-center">
             <LogoContainer>
               <FooterInfoText>solux</FooterInfoText>

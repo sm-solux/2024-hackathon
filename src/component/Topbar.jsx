@@ -4,7 +4,8 @@ import { useMediaQuery } from 'react-responsive';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
+import Button from "./Button";
 import '../style/Topbar.css';
 
 function Topbar() {
@@ -43,9 +44,10 @@ function Topbar() {
               FAQ
             </Nav.Link>
             <Button
-              variant='outline-light'
-              style={{ marginLeft: isMargin ? '20px' : '0' }}
-              href='#'
+              style={{ marginLeft: isMargin ? '20px' : '0px' }}
+              onClick={() => {
+                window.open("https://solux.tistory.com/")
+              }}
             >
               지원하기
             </Button>

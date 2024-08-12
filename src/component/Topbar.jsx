@@ -13,7 +13,7 @@ function Topbar() {
   const isMargin = useMediaQuery({ query: "(min-width: 995px)" });
 
   return (
-    <Navbar expand="lg" className="navbar-custom" data-bs-theme="dark">
+    <Navbar expand="lg" sticky="top" className="navbar-custom" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="/">DACOSxSOLUX HACKATHON</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -9,7 +9,7 @@ const StyleButton = styled.button `
     border: 0px;
     cursor: pointer;
     background-color: #0057FF;
-    padding: 5px;
+    padding: 5px 10px;
     margin: 5px 0px;
 `
 const hoverVariants = {

@@ -12,7 +12,6 @@ const LogoContainer = styled.div`
 `
 
 const MainConatiner = styled.div`
-    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,8 +41,9 @@ const MainLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 30rem;
-    height: 200px;
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
 `
 
 const RoundBackground = styled.div`
@@ -66,7 +66,7 @@ const HacktathonInfoContainer = styled.div`
 
 const DacosInfoContainer = styled.div`
     height: 92vh;
-    margin-top: 10vh;
+    margin-top: 8vh;
 `
 
 const SoluxInfoContainer = styled.div`

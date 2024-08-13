@@ -1,17 +1,22 @@
 import React from "react";
 import styled from 'styled-components';
-import backgound from "../images/round_background.png";
+import backgound from "../images/about_round_background.png";
+import logo from "../images/logo/about_logo.png"
 
-const Container = styled.div`
+const AboutContainer = styled.div`
+
+`
+
+const LogoContainer = styled.div`
     height: 92vh;
 `
 
-const TextConatiner = styled.div`
+const MainConatiner = styled.div`
     height: 40vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
+    padding: 60px 0px;
 `
 
 const WhiteText = styled.div`
@@ -22,8 +27,23 @@ const BlueText = styled.div`
     color: #0057FF;
 `
 
+const BoldText = styled.div`
+    font-weight: bolder;
+    font-size: 3rem;
+`
+
 const LightText = styled.div`
     font-weight: lighter;
+    font-size: 1rem;
+`
+
+const MainLogo = styled.div`
+    background-image: url(${logo});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30rem;
+    height: 200px;
 `
 
 const RoundBackground = styled.div`
@@ -35,24 +55,53 @@ const RoundBackground = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 52ch;
+    height: 150%;
     border: none;
+`
+
+const HacktathonInfoContainer = styled.div`
+    height: 92vh;
+    margin-top: 53vh;
+`
+
+const DacosInfoContainer = styled.div`
+    height: 92vh;
+    margin-top: 10vh;
+`
+
+const SoluxInfoContainer = styled.div`
+    height: 73vh;
 `
 
 const AboutPage = () => {
     return (
-        <Container>
-            <TextConatiner>
-                <WhiteText>DACOS X SOLUX</WhiteText>
-                <BlueText>HACKATHON</BlueText>
-                <WhiteText>연합해커톤</WhiteText>
-                <LightText>SOOKMYUNG WOMEN'S UNIVERSITY</LightText>
-            </TextConatiner>
-            
+        <AboutContainer>
+            <LogoContainer>
+                <MainConatiner>
+                    <MainLogo />
+                    <BoldText>연합해커톤</BoldText>
+                    <LightText>SOOKMYUNG WOMEN'S UNIVERSITY</LightText>
+                </MainConatiner>
+                
 
-            <RoundBackground/>
-            
-        </Container>
+                <RoundBackground/> 
+            </LogoContainer>
+
+            <HacktathonInfoContainer>
+                <BlueText>해커톤</BlueText>
+
+            </HacktathonInfoContainer>
+
+            <DacosInfoContainer>
+                <BlueText>Dacos</BlueText>
+
+            </DacosInfoContainer>
+
+            <SoluxInfoContainer>
+                <WhiteText>Solux</WhiteText>
+            </SoluxInfoContainer>
+        </AboutContainer>
+        
     );
 };
 

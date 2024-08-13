@@ -8,7 +8,7 @@ const Container = styled.div`
 const TimelinePage = () => {
     return (
         <Container>
-            Hackathon
+            Timeline
         </Container>
     );
 };

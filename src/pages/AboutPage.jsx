@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import backgound from "../images/about_round_background.png";
+import backgound from "../images/about/round_background.png";
 import logo from "../images/logo/about_logo.png"
 
 const AboutContainer = styled.div`

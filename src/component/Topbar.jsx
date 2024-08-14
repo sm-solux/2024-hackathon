@@ -29,25 +29,25 @@ function Topbar() {
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
             <Nav.Link
-              href="2024-hackathon/"
+              href="/"
               className={`nav-link ${location.pathname === '/' ? 'active-link' : ''}`}
             >
               ABOUT
             </Nav.Link>
             <Nav.Link
-              href="2024-hackathon/timeline"
+              href="/timeline"
               className={`nav-link ${location.pathname === '/timeline' ? 'active-link' : ''}`}
             >
               TIMELINE
             </Nav.Link>
             <Nav.Link
-              href="2024-hackathon/hackathon"
+              href="/hackathon"
               className={`nav-link ${location.pathname === '/hackathon' ? 'active-link' : ''}`}
             >
               HACKATHON
             </Nav.Link>
             <Nav.Link
-              href="2024-hackathon/faq"
+              href="/faq"
               className={`nav-link ${location.pathname === '/faq' ? 'active-link' : ''}`}
             >
               FAQ

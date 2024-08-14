@@ -13,8 +13,8 @@ import { useMediaQuery } from 'react-responsive';
 import "./App.css";
 
 const App = () => {
-    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-    const isPc = useMediaQuery({ query: "(min-width: 769px)" });
+    // const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    // const isPc = useMediaQuery({ query: "(min-width: 769px)" });
 
     return (
         <>

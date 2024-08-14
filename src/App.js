@@ -20,10 +20,10 @@ const App = () => {
         <>
         <Topbar />
         <Routes>
-            <Route index element={<AboutPage />} />
-            <Route path="timeline" element={<TimelinePage />} />
-            <Route path="hackathon" element={<HackathonPage />} />
-            <Route path="faq" element={<FaqPage />} />
+            <Route path="/" element={<AboutPage />} />
+            <Route path="/timeline" element={<TimelinePage />} />
+            <Route path="/hackathon" element={<HackathonPage />} />
+            <Route path="/faq" element={<FaqPage />} />
         </Routes>
         <Footer />
         </>

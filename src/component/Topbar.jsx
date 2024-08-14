@@ -16,7 +16,7 @@ function Topbar() {
   return (
     <Navbar expand="lg" sticky="top" className="navbar-custom" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/2024-hackathon/">
           <img  
             src={topbarlogo}
             width="100px"
@@ -29,25 +29,25 @@ function Topbar() {
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
             <Nav.Link
-              href="/"
+              href="/2024-hackathon/"
               className={`nav-link ${location.pathname === '/' ? 'active-link' : ''}`}
             >
               ABOUT
             </Nav.Link>
             <Nav.Link
-              href="/timeline"
+              href="/2024-hackathon/timeline"
               className={`nav-link ${location.pathname === '/timeline' ? 'active-link' : ''}`}
             >
               TIMELINE
             </Nav.Link>
             <Nav.Link
-              href="/hackathon"
+              href="/2024-hackathon/hackathon"
               className={`nav-link ${location.pathname === '/hackathon' ? 'active-link' : ''}`}
             >
               HACKATHON
             </Nav.Link>
             <Nav.Link
-              href="/faq"
+              href="/2024-hackathon/faq"
               className={`nav-link ${location.pathname === '/faq' ? 'active-link' : ''}`}
             >
               FAQ

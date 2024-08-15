@@ -1,10 +1,44 @@
 import React from 'react';
 import styled from 'styled-components';
+import dacoslogo from "../images/logo/dacos.png";
+import soluxlogo from "../images/logo/solux.png";
+import software from "../images/logo/software.png";
 
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   margin-bottom: 10px;
+`
+
+const DacosLogo = styled.div`
+  background-image: url(${dacoslogo});
+  height: 60px;
+  width: 97px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 20px;
+`
+
+const SoluxLogo = styled.div`
+  background-image: url(${soluxlogo});
+  height: 34px;
+  width: 97px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 20px;
+`
+const SoftwareLogo = styled.div`
+  background-image: url(${software});
+  height: 30px;
+  width: 97px;
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0px 20px;
 `
 
 const EmailContainer = styled.p`
@@ -38,9 +72,9 @@ function Footer() {
         <footer className="text-dark py-3">
         <div className="container text-center" style={{ height: "12vh" }}>
             <LogoContainer>
-              <FooterInfoText>solux</FooterInfoText>
-              <FooterInfoText>dacos</FooterInfoText>
-              <FooterInfoText>소중대</FooterInfoText>
+              <DacosLogo />
+              <SoluxLogo />
+              <SoftwareLogo />
             </LogoContainer>
 
             <EmailContainer>

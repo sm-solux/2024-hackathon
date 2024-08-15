@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import backgound from "../images/about/round_background.png";
+import background from "../images/about/round_background.png";
 import logo from "../images/logo/about_logo.png"
 
 const AboutContainer = styled.div`
@@ -22,10 +22,11 @@ const RoundBackground = styled.div`
     /* position: absolute;
     bottom: 0;
     left: 0; */
-    background-image: url(${backgound});
+    background-image: url(${background});
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
+    position: relative;
     width: 100%;
     height: 150%;
     border: none;

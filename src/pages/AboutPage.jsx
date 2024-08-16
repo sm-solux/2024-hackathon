@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
 import logo from "../images/logo/about_logo.png"
+import none from "../images/none.png";
 
 const AboutContainer = styled.div`
 
@@ -44,7 +45,7 @@ const MainLogo = styled.div`
 
 const MainBoldText = styled.div`
     font-weight: 800;
-    font-size: 3rem;
+    font-size: 2.8rem;
 `
 
 const MainLightText = styled.div`
@@ -62,8 +63,7 @@ const InfoContainer = styled.div`
 `
 
 const InfoImageContainer = styled.div`
-    height: 300px;
-    display: flex;
+    
 `
 
 const InfoTextContainer = styled.div`
@@ -75,12 +75,13 @@ const InfoTextContainer = styled.div`
 const InfoBoldText = styled.div`
     font-weight: 800;
     font-size: 1.3rem;
+    width: 55vw;
 `
 
 const InfoLightText = styled.div`
     font-weight: 100;
     font-size: 0.8rem;
-    width: 400px;
+    width: 55vw;
 `
 
 const DSTitle = styled.div`
@@ -88,17 +89,21 @@ const DSTitle = styled.div`
     font-weight: 600;
     font-size: 2.6rem;
     color: #0057FF;
+    width: 55vw;
 `
 
 const DSSubtitle = styled.div`
     font-weight: 200;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+    width: 55vw;
+    margin-bottom: 10px;
 `
 
 const DSContent = styled.div`
     font-weight: 100;
-    font-size: 0.8rem;
-    width: 400px;
+    font-size: 0.9rem;
+    width: 55vw;
+    margin-top: 10px;
 `
 
 const DacosInfoContainer = styled.div`
@@ -107,6 +112,20 @@ const DacosInfoContainer = styled.div`
 
 const SoluxInfoContainer = styled.div`
     height: 73vh;
+`
+
+const Iamge = styled.div`
+    width: 55vw;
+    height: 250px;
+    background-image: url(${none});
+    background-size: cover;
+    background-repeat: no-repeat;
+`
+
+const ImageContainer = styled.div`
+    display: flex;
+    width: 55vw;
+    height: 300px;
 `
 
 const AboutPage = () => {
@@ -123,10 +142,9 @@ const AboutPage = () => {
             </LogoContainer>
 
             <InfoContainer>
-                <InfoImageContainer>
-                    <InfoBoldText>이미지1</InfoBoldText>
-                    <InfoBoldText>이미지2</InfoBoldText>
-                </InfoImageContainer>
+                <ImageContainer>
+                    <Iamge />
+                </ImageContainer>
 
                 <InfoTextContainer>
                     <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
@@ -141,8 +159,8 @@ const AboutPage = () => {
                 </InfoTextContainer>
                 
                 <InfoTextContainer>
-                    <InfoBoldText>DACOS이미지1</InfoBoldText>
-                    <DSContent>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident deleniti ipsum, veniam quia maiores ullam molestiae natus assumenda commodi quasi suscipit! Iste, voluptas sapiente officia possimus minima reprehenderit nemo aperiam.</DSContent>
+                    <Iamge />
+                    <DSContent>DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.</DSContent>
                 </InfoTextContainer>
             </DacosInfoContainer>
 
@@ -153,7 +171,7 @@ const AboutPage = () => {
                 </InfoTextContainer>
 
                 <InfoTextContainer>
-                    <InfoBoldText>SOLUX이미지1</InfoBoldText>
+                    <Iamge />
                     <DSContent>SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
                 </InfoTextContainer>
             </SoluxInfoContainer>

@@ -24,8 +24,8 @@ const DacosLogo = styled.div`
 
 const SoluxLogo = styled.div`
   background-image: url(${soluxlogo});
-  height: 34px;
-  width: 97px;
+  height: 49px;
+  width: 122px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;

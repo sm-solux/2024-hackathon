@@ -2,6 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
+import none from "../images/none.png";
 
 const TimelineContainer = styled.div`
     width: 100%;
@@ -11,8 +12,8 @@ const TimelineContainer = styled.div`
 const InfoContainer = styled.div`
     height: 90vh;
     width: 100%;
-    /* margin-top: 1vh; */
-    /* margin-bottom: 6vh; */
+    margin-top: 1vh;
+    margin-bottom: 6vh;
     background-image: url(${background});
     background-size: cover;
     background-repeat: repeat;
@@ -29,7 +30,7 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 60vw;
+    width: 50vw;
 `
 
 const TitleText = styled.div`
@@ -42,6 +43,7 @@ const GrayTitleText = styled.div`
     font-weight: 600;
     color: #949494;
     background-color: transparent;
+    margin-left: 5px;
 `
 
 const GraySubtitleText = styled.div`
@@ -49,20 +51,20 @@ const GraySubtitleText = styled.div`
     font-size: 0.8rem;
     color: #949494;
     background-color: transparent;
-    width: 60vw;
+    width: 50vw;
 `
 
 const SubtitleText = styled.div`
     font-size: 1rem;
     font-weight: 100;
     background-color: transparent;
-    width: 60vw;
+    width: 50vw;
 `
 
 const PartContainer = styled.div`
     background-color: transparent;
     margin: 40px 0px 20px 0px;
-    width: 60vw;
+    width: 50vw;
 `
 
 const Part = styled.div`
@@ -84,6 +86,27 @@ const WhiteText = styled.div`
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
+`
+
+const ContentText = styled.div`
+    width: 50vw;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background-color: transparent;
+`
+
+const TimetableIamge = styled.div`
+    width: 25vw;
+    height: 250px;
+    background-image: url(${none});
+    background-size: cover;
+    background-repeat: no-repeat;
+`
+
+const TimetableContainer = styled.div`
+    display: flex;
+    width: 50vw;
 `
 
 const TimelinePage = () => {
@@ -122,8 +145,51 @@ const TimelinePage = () => {
             </InfoContainer>
             
             <InfoContainer>
-                <TitleText>팀 공개</TitleText>
+                <TitleContainer>
+                    <TitleText>팀 공개</TitleText>
+                    <GrayTitleText>TEAM REVEAL</GrayTitleText>
+                </TitleContainer>
+                
+                <SubtitleText>2024. 11. 01 (FRI)</SubtitleText>
+                
+                <ContentText>데이터 분석 2명, 프론트엔드 2명, 백엔드 2명으로 구성된 팀이 공개됩니다. (세부 인원수 변동 가능)</ContentText>
+
+                <GraySubtitleText>*팀은 임의로 변경 불가능합니다</GraySubtitleText>
+
             </InfoContainer>
+
+            <InfoContainer>
+                <TitleContainer>
+                    <TitleText>사전준비</TitleText>
+                    <GrayTitleText>PRE - PREPARATION</GrayTitleText>
+                </TitleContainer>
+                
+                <SubtitleText>2024. 11. 01 (FRI) - 24. 11. 07 (THU)</SubtitleText>
+                
+                <ContentText>일주일간 사전 준비 기간을 거쳐 주제 선정을 비롯한 기획 및 데이터 준비가 필요합니다.<br />강의실을 대여해 회의 공간으로 제공할 예정이며, 강의실은 대여 후 공지 예정입니다.</ContentText>
+
+            </InfoContainer>
+
+            <InfoContainer>
+                <TitleContainer>
+                    <TitleText>연합 해커톤 진행</TitleText>
+                    <GrayTitleText>HACKATHON</GrayTitleText>
+                </TitleContainer>
+                
+                <SubtitleText>2024. 11. 08 (FRI) - 24. 11. 09 (SAT)</SubtitleText>
+                
+                <ContentText>Time table</ContentText>
+                <TimetableContainer>
+                    <TimetableIamge />
+                    <TimetableIamge />
+                </TimetableContainer>
+
+                <ContentText>무박 2일 진행</ContentText>
+                <GraySubtitleText>*점심, 저녁 및 간단한 간식이 제공됩니다</GraySubtitleText>
+
+            </InfoContainer>
+
+
         </TimelineContainer>
     );
 };

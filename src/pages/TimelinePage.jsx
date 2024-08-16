@@ -30,7 +30,7 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 50vw;
+    width: 55vw;
 `
 
 const TitleText = styled.div`
@@ -51,20 +51,20 @@ const GraySubtitleText = styled.div`
     font-size: 0.8rem;
     color: #949494;
     background-color: transparent;
-    width: 50vw;
+    width: 55vw;
 `
 
 const SubtitleText = styled.div`
     font-size: 1rem;
     font-weight: 100;
     background-color: transparent;
-    width: 50vw;
+    width: 55vw;
 `
 
 const PartContainer = styled.div`
     background-color: transparent;
     margin: 40px 0px 20px 0px;
-    width: 50vw;
+    width: 55vw;
 `
 
 const Part = styled.div`
@@ -89,7 +89,7 @@ const WhiteText = styled.div`
 `
 
 const ContentText = styled.div`
-    width: 50vw;
+    width: 55vw;
     margin-top: 40px;
     font-size: 0.9rem;
     font-weight: 400;
@@ -97,7 +97,7 @@ const ContentText = styled.div`
 `
 
 const TimetableIamge = styled.div`
-    width: 25vw;
+    width: 25.5vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -106,7 +106,7 @@ const TimetableIamge = styled.div`
 
 const TimetableContainer = styled.div`
     display: flex;
-    width: 50vw;
+    width: 55vw;
 `
 
 const TimelinePage = () => {

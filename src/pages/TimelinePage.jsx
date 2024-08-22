@@ -22,8 +22,8 @@ const InfoContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 방향 가운데 정렬 */
-    align-items: center; /* 수평 방향 가운데 정렬 */
+    justify-content: center;
+    align-items: center;
     text-align: left;
 `
 
@@ -150,7 +150,7 @@ const TimelinePage = () => {
                                 style={{ color: !isDS ? "#0057FF" : "#767676",
                                     borderBottom: !isDS? "1px solid #FFFFFF" : "none"}}>개발</TextButton>
                             </Part>
-
+                            {/* 지민언니 이걸 참고하셔도 좋아요 https://caddyspoon.github.io/posts/2022/10/1003_react_style/ */}
                             { isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
                             </>

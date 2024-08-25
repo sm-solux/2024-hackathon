@@ -48,7 +48,7 @@ function Topbar() {
           <Button
             style={{ marginLeft: isMargin ? '20px' : '0px' }}
             onClick={() => {
-              window.open("https://solux.tistory.com/");
+              window.open("https://linktr.ee/DxSHackathon");
             }}
           >
             지원하기

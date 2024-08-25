@@ -150,28 +150,37 @@ const TimelinePage = () => {
                                 style={{ color: !isDS ? "#0057FF" : "#767676",
                                     borderBottom: !isDS? "1px solid #FFFFFF" : "none"}}>개발</TextButton>
                             </Part>
-                            {/* 지민언니 이걸 참고하셔도 좋아요 https://caddyspoon.github.io/posts/2022/10/1003_react_style/ */}
+
                             { isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "40px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
                             </>
                             }
 
                             { !isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "40px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
                             </>
                             }
                         </PartContainer>
-
-                        <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
-
-                        <Button
-                            onClick={() => {
-                                window.open("https://solux.tistory.com/")
-                            }}
-                            style = {{ height: "40px", width: "100px"}}
-                            >
-                            지원하기
-                        </Button>
                     </>
                 }
                 

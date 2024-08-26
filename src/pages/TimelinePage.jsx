@@ -1,8 +1,9 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
 import none from "../images/none.png";
+import { useMediaQuery } from 'react-responsive';
 
 const TimelineContainer = styled.div`
     width: 100%;
@@ -21,8 +22,8 @@ const InfoContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 방향 가운데 정렬 */
-    align-items: center; /* 수평 방향 가운데 정렬 */
+    justify-content: center;
+    align-items: center;
     text-align: left;
 `
 
@@ -34,13 +35,14 @@ const TitleContainer = styled.div`
 `
 
 const TitleText = styled.div`
-    font-size: 2.5rem;
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -48,14 +50,14 @@ const GrayTitleText = styled.div`
 
 const GraySubtitleText = styled.div`
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     color: #949494;
     background-color: transparent;
     width: 55vw;
 `
 
 const SubtitleText = styled.div`
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 100;
     background-color: transparent;
     width: 55vw;
@@ -68,6 +70,7 @@ const PartContainer = styled.div`
 `
 
 const Part = styled.div`
+    height: 5vh;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -81,8 +84,18 @@ const BlueText = styled.div`
     background-color: transparent;
 `
 
+const TextButton = styled.div`
+    width: 10rem;
+    height: 30px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    background-color: transparent;
+    cursor: pointer;
+    padding-right: 0.5rem;
+`
+
 const WhiteText = styled.div`
-    width: 22rem;
+    width: 55vw;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
@@ -90,14 +103,14 @@ const WhiteText = styled.div`
 
 const ContentText = styled.div`
     width: 55vw;
-    margin-top: 40px;
-    font-size: 0.9rem;
+    margin-top: 30px;
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 400;
     background-color: transparent;
 `
 
 const TimetableIamge = styled.div`
-    width: 25.5vw;
+    width: 27.5vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -110,6 +123,17 @@ const TimetableContainer = styled.div`
 `
 
 const TimelinePage = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const [isDS, setIsDS] = useState(true);
+
+  const handleClick = (part) => {
+    if (part === 'DS' && !isDS) {
+      setIsDS(true);
+    } else if (part === 'Dev' && isDS) {
+      setIsDS(false);
+    }
+  };
+
     return (
         <TimelineContainer>
             <InfoContainer>
@@ -117,31 +141,95 @@ const TimelinePage = () => {
                     <TitleText>지원하기</TitleText>
                     <GrayTitleText>APPLY</GrayTitleText>
                 </TitleContainer>
-                
                 <SubtitleText>24. 09. 08 (SUN) nn:nn -24. 09. 14 (SAT) nn:nn</SubtitleText>
+
+                { isMobile &&
+                    <>
+                        <PartContainer>
+                            <Part>
+                            <TextButton
+                                onClick={() => handleClick('DS')}
+                                style={{
+                                color: isDS ? "#0057FF" : "#767676",
+                                borderBottom: isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                데이터 분석
+                            </TextButton>
+                            <TextButton
+                                onClick={() => handleClick('Dev')}
+                                style={{
+                                color: !isDS ? "#0057FF" : "#767676",
+                                borderBottom: !isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                개발
+                            </TextButton>
+                            </Part>
+
+                            { isDS && <>
+                                <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "35px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
+                            </>
+                            }
+
+                            { !isDS && <>
+                                <WhiteText style={{ marginTop: "10px"}}>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "35px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
+                            </>
+                            }
+                        </PartContainer>
+                    </>
+                }
                 
-                <PartContainer>
-                    <Part>
-                        <BlueText>데이터 분석</BlueText>   
-                        <WhiteText>DACOS 2기 부원 및 OB부원</WhiteText>
-                    </Part>
+                { !isMobile && 
+                    <>
+                    <PartContainer>
+                        <Part>
+                            <BlueText>데이터 분석</BlueText>   
+                            <WhiteText>DACOS 2기 부원 및 OB부원</WhiteText>
+                        </Part>
+                        
+                        <Part>
+                            <BlueText>개발</BlueText>
+                            <WhiteText>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                        </Part>
+                    </PartContainer>
                     
-                    <Part>
-                        <BlueText>개발</BlueText>
-                        <WhiteText>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
-                    </Part>
-                </PartContainer>
+
+                    <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                    <Button
+                        onClick={() => {
+                            window.open("https://solux.tistory.com/")
+                        }}
+                        style = {{ height: "40px", width: "100px"}}
+                        >
+                        지원하기
+                    </Button>
+                    </>
+                }
                 
-
-                <GraySubtitleText>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
-
-                <Button
-                    onClick={() => {
-                        window.open("https://solux.tistory.com/")
-                    }}
-                    >
-                    지원하기
-                </Button>
             </InfoContainer>
             
             <InfoContainer>
@@ -184,7 +272,7 @@ const TimelinePage = () => {
                     <TimetableIamge />
                 </TimetableContainer>
 
-                <ContentText>무박 2일 진행</ContentText>
+                <ContentText style={{ marginTop: "10px"}}>무박 2일 진행</ContentText>
                 <GraySubtitleText>*점심, 저녁 및 간단한 간식이 제공됩니다</GraySubtitleText>
 
             </InfoContainer>

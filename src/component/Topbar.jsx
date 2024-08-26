@@ -13,15 +13,17 @@ function Topbar() {
   const isMargin = useMediaQuery({ query: "(min-width: 995px)" });
   
   const [activeLink, setActiveLink] = useState('/');
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
   useEffect(() => {
     setActiveLink(location.pathname);
+    setIsNavbarOpen(false);
   }, [location.pathname]);
 
   return (
     <Navbar expand="lg" sticky="top" className="navbar-custom" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <img  
             src={topbarlogo}
             width="100px"
@@ -30,8 +32,9 @@ function Topbar() {
             alt="dacos x solux Hackathon Logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"
+        onClick={() => setIsNavbarOpen(!isNavbarOpen)} />
+        <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end' in={isNavbarOpen}>
         <Nav>
           <Nav.Link as={Link} to="/" className={`nav-link ${activeLink === '/' ? 'active-link' : ''}`}>
               ABOUT

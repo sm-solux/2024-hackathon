@@ -11,11 +11,13 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 7vh;
     background-image: url(${theme});
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     display: flex;
+    background-position: top;
     flex-direction: column;
     justify-content: center; /* 세로 방향 가운데 정렬 */
     align-items: center; /* 수평 방향 가운데 정렬 */
@@ -64,13 +66,14 @@ const TitleContainer = styled.div`
 `
 
 const TitleText = styled.div`
-    font-size: 2.5rem;
+    font-size: clamp(1.35rem, 1vw, 1.5rem);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -105,13 +108,13 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: clamp(1rem, 2vw, 1.4rem); /* 최소 1rem, 최대 1.4rem 비례 조절 */
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* 최소 1rem, 최대 1.4rem 비례 조절 */
     background-color: transparent;
 `;
 
 const PrizeMoney = styled.div`
     font-weight: 200; 
-    font-size: clamp(0.8rem, 2vw, 1.2rem); /* 최소 0.8rem, 최대 1.2rem 비례 조절 */
+    font-size: clamp(0.6rem, 2vw, 0.9rem); /* 최소 0.8rem, 최대 1.2rem 비례 조절 */
     margin-top: 0.5rem;
     background-color: transparent;
 `;
@@ -129,7 +132,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
     padding: 0.6vw 1.5vw;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;

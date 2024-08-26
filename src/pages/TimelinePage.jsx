@@ -35,13 +35,14 @@ const TitleContainer = styled.div`
 `
 
 const TitleText = styled.div`
-    font-size: 2.5rem;
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -49,14 +50,14 @@ const GrayTitleText = styled.div`
 
 const GraySubtitleText = styled.div`
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: clamp(0.8rem, 1vw, 1rem);
     color: #949494;
     background-color: transparent;
     width: 55vw;
 `
 
 const SubtitleText = styled.div`
-    font-size: 1rem;
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 100;
     background-color: transparent;
     width: 55vw;
@@ -69,6 +70,7 @@ const PartContainer = styled.div`
 `
 
 const Part = styled.div`
+    height: 5vh;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -83,16 +85,17 @@ const BlueText = styled.div`
 `
 
 const TextButton = styled.div`
-    width: 7.5rem;
-    font-size: 1rem;
+    width: 10rem;
+    height: 30px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     font-weight: 400;
     background-color: transparent;
     cursor: pointer;
-    margin-right: 0.5rem;
+    padding-right: 0.5rem;
 `
 
 const WhiteText = styled.div`
-    width: 22rem;
+    width: 55vw;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
@@ -101,13 +104,13 @@ const WhiteText = styled.div`
 const ContentText = styled.div`
     width: 55vw;
     margin-top: 30px;
-    font-size: 0.9rem;
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 400;
     background-color: transparent;
 `
 
 const TimetableIamge = styled.div`
-    width: 25.5vw;
+    width: 27.5vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -123,9 +126,13 @@ const TimelinePage = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [isDS, setIsDS] = useState(true);
 
-    function changePart(){
-        setIsDS(!isDS);
+  const handleClick = (part) => {
+    if (part === 'DS' && !isDS) {
+      setIsDS(true);
+    } else if (part === 'Dev' && isDS) {
+      setIsDS(false);
     }
+  };
 
     return (
         <TimelineContainer>
@@ -139,16 +146,27 @@ const TimelinePage = () => {
                 { isMobile &&
                     <>
                         <PartContainer>
-                            <Part 
-                            style={{ borderBottom: "1px solid #767676"}}>
-                                <TextButton 
-                                onClick={changePart}
-                                style={{ color: isDS ? "#0057FF" : "#767676",
-                                    borderBottom: isDS? "1px solid #FFFFFF" : "none"}}>데이터 분석</TextButton>
-                                <TextButton
-                                onClick={changePart}
-                                style={{ color: !isDS ? "#0057FF" : "#767676",
-                                    borderBottom: !isDS? "1px solid #FFFFFF" : "none"}}>개발</TextButton>
+                            <Part>
+                            <TextButton
+                                onClick={() => handleClick('DS')}
+                                style={{
+                                color: isDS ? "#0057FF" : "#767676",
+                                borderBottom: isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                데이터 분석
+                            </TextButton>
+                            <TextButton
+                                onClick={() => handleClick('Dev')}
+                                style={{
+                                color: !isDS ? "#0057FF" : "#767676",
+                                borderBottom: !isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                개발
+                            </TextButton>
                             </Part>
 
                             { isDS && <>
@@ -159,7 +177,7 @@ const TimelinePage = () => {
                                     onClick={() => {
                                         window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
                                     }}
-                                    style = {{ height: "40px", width: "100px"}}
+                                    style = {{ height: "35px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>
@@ -174,7 +192,7 @@ const TimelinePage = () => {
                                     onClick={() => {
                                         window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
                                     }}
-                                    style = {{ height: "40px", width: "100px"}}
+                                    style = {{ height: "35px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>

@@ -31,7 +31,7 @@ const RoundBackground = styled.div`
     background-position: top;
     position: relative;
     width: 100%;
-    height: 150%;
+    height: clamp(80%, 1.5vw, 150%);
     border: none;
 `
 
@@ -47,12 +47,12 @@ const MainLogo = styled.div`
 
 const MainBoldText = styled.div`
     font-weight: 800;
-    font-size: 2.8rem;
+    font-size: clamp(2.5rem, 1.5vw, 2.8rem);
 `
 
 const MainLightText = styled.div`
     font-weight: 100;
-    font-size: 1rem;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
 `
 
 const InfoContainer = styled.div`
@@ -72,20 +72,20 @@ const InfoTextContainer = styled.div`
 
 const InfoBoldText = styled.div`
     font-weight: 800;
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.5vw, 1.3rem);
     width: 55vw;
 `
 
 const InfoLightText = styled.div`
     font-weight: 100;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
     width: 55vw;
 `
 
 const DSTitle = styled.div`
     margin-top: 10vh;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 1vw, 2.5rem);
     color: #0057FF;
     width: 55vw;
 `
@@ -99,13 +99,13 @@ const DSSubtitle = styled.div`
 
 const DSContent = styled.div`
     font-weight: 100;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
     width: 55vw;
     margin-top: 10px;
 `
 
 const DacosInfoContainer = styled.div`
-    height: 92vh;
+    height: 70vh;
 `
 
 const SoluxInfoContainer = styled.div`
@@ -122,7 +122,7 @@ const Image = styled.div`
 
 const DacosImage = styled.div`
     width: 55vw;
-    height: 200px;
+    height: clamp(100px, 1.5vw, 200px);
     background-image: url(${dacos});
     background-size: contain;
     background-repeat: no-repeat;
@@ -130,7 +130,7 @@ const DacosImage = styled.div`
 
 const SoluxImage = styled.div`
     width: 55vw;
-    height: 200px;
+    height: clamp(100px, 1.5vw, 200px);
     background-image: url(${solux});
     background-size: contain;
     background-repeat: no-repeat;

@@ -19,26 +19,26 @@ const DacosLogo = styled.div`
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 20px;
+  margin: 0px 10px;
 `
 
 const SoluxLogo = styled.div`
   background-image: url(${soluxlogo});
-  height: 49px;
-  width: 122px;
+  height: 39px;
+  width: 112px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 20px;
+  margin: 0px 10px;
 `
 const SoftwareLogo = styled.div`
   background-image: url(${software});
-  height: 30px;
-  width: 97px;
+  height: 20px;
+  width: 87px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 20px;
+  margin: 0px 10px;
 `
 
 const EmailContainer = styled.p`
@@ -69,8 +69,8 @@ const DevelopedTextContainer = styled.div`
 
 function Footer() {
     return (
-        <footer className="text-dark py-3">
-        <div className="container text-center" style={{ height: "12vh" }}>
+      <footer className="text-dark py-3">
+        <div className="container text-center"  style={{ height: "20vh", padding: "0px" }}>
             <LogoContainer>
               <DacosLogo />
               <SoluxLogo />

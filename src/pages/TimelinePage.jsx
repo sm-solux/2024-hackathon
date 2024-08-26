@@ -84,16 +84,17 @@ const BlueText = styled.div`
 `
 
 const TextButton = styled.div`
-    width: 7.5rem;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    width: 10rem;
+    height: 30px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
     font-weight: 400;
     background-color: transparent;
     cursor: pointer;
-    margin-right: 0.5rem;
+    padding-right: 0.5rem;
 `
 
 const WhiteText = styled.div`
-    width: 22rem;
+    width: 55vw;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
@@ -140,16 +141,16 @@ const TimelinePage = () => {
                 { isMobile &&
                     <>
                         <PartContainer>
-                            <Part 
-                            style={{ borderBottom: "1px solid #767676"}}>
+                            <Part>
+                            
                                 <TextButton 
                                 onClick={changePart}
                                 style={{ color: isDS ? "#0057FF" : "#767676",
-                                    borderBottom: isDS? "1px solid #FFFFFF" : "none"}}>데이터 분석</TextButton>
+                                    borderBottom: isDS? "1px solid #FFFFFF" : "1px solid #767676"}}>데이터 분석</TextButton>
                                 <TextButton
                                 onClick={changePart}
                                 style={{ color: !isDS ? "#0057FF" : "#767676",
-                                    borderBottom: !isDS? "1px solid #FFFFFF" : "none"}}>개발</TextButton>
+                                    borderBottom: !isDS? "1px solid #FFFFFF" : "1px solid #767676"}}>개발</TextButton>
                             </Part>
 
                             { isDS && <>
@@ -175,7 +176,7 @@ const TimelinePage = () => {
                                     onClick={() => {
                                         window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
                                     }}
-                                    style = {{ height: "40px", width: "100px"}}
+                                    style = {{ height: "35px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>

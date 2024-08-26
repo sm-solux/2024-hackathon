@@ -35,13 +35,14 @@ const TitleContainer = styled.div`
 `
 
 const TitleText = styled.div`
-    font-size: 2.5rem;
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -49,14 +50,14 @@ const GrayTitleText = styled.div`
 
 const GraySubtitleText = styled.div`
     font-weight: 400;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1vw, 0.9rem);
     color: #949494;
     background-color: transparent;
     width: 55vw;
 `
 
 const SubtitleText = styled.div`
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 100;
     background-color: transparent;
     width: 55vw;
@@ -84,7 +85,7 @@ const BlueText = styled.div`
 
 const TextButton = styled.div`
     width: 7.5rem;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 400;
     background-color: transparent;
     cursor: pointer;
@@ -101,13 +102,13 @@ const WhiteText = styled.div`
 const ContentText = styled.div`
     width: 55vw;
     margin-top: 30px;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 400;
     background-color: transparent;
 `
 
 const TimetableIamge = styled.div`
-    width: 25.5vw;
+    width: 27.5vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -159,7 +160,7 @@ const TimelinePage = () => {
                                     onClick={() => {
                                         window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
                                     }}
-                                    style = {{ height: "40px", width: "100px"}}
+                                    style = {{ height: "35px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>

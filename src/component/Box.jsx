@@ -6,17 +6,17 @@ const StyledBox = styled.div`
     border: 1px solid #0057FF;
     padding: clamp(1rem, 1.2vw, 1.2rem); 
     flex-direction: column; 
-    align-items: flex-start; /* 좌측 정렬 */
+    align-items: flex-start;
     margin-top: 1vw;
-    flex-grow: 1; /* 부모 컨테이너의 너비에 맞게 성장 */
-    max-width: 55vw; /* 최대 너비 설정 */
+    flex-grow: 1;
+    max-width: 55vw;
     width: 100%;
 `
 
 const StyledTitle = styled.div`
     font-weight: 600;
-    font-size: clamp(1.2rem, 1.5vw, 1.5rem); /* 최소 0.8rem, 최대 1.2rem 비례 조절 */
-    margin-bottom: 0.5rem; /* 제목과 내용 사이 간격 */
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
 `
 
 const List = styled.ul`
@@ -26,7 +26,7 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-    font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     margin-top: 0.7vw;
 `;
 

@@ -1,8 +1,9 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
 import none from "../images/none.png";
+import { useMediaQuery } from 'react-responsive';
 
 const TimelineContainer = styled.div`
     width: 100%;
@@ -21,8 +22,8 @@ const InfoContainer = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* 세로 방향 가운데 정렬 */
-    align-items: center; /* 수평 방향 가운데 정렬 */
+    justify-content: center;
+    align-items: center;
     text-align: left;
 `
 
@@ -81,6 +82,15 @@ const BlueText = styled.div`
     background-color: transparent;
 `
 
+const TextButton = styled.div`
+    width: 7.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 0.5rem;
+`
+
 const WhiteText = styled.div`
     width: 22rem;
     font-size: 0.9rem;
@@ -90,7 +100,7 @@ const WhiteText = styled.div`
 
 const ContentText = styled.div`
     width: 55vw;
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
@@ -110,6 +120,13 @@ const TimetableContainer = styled.div`
 `
 
 const TimelinePage = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const [isDS, setIsDS] = useState(true);
+
+    function changePart(){
+        setIsDS(!isDS);
+    }
+
     return (
         <TimelineContainer>
             <InfoContainer>
@@ -117,31 +134,84 @@ const TimelinePage = () => {
                     <TitleText>지원하기</TitleText>
                     <GrayTitleText>APPLY</GrayTitleText>
                 </TitleContainer>
-                
                 <SubtitleText>24. 09. 08 (SUN) nn:nn -24. 09. 14 (SAT) nn:nn</SubtitleText>
+
+                { isMobile &&
+                    <>
+                        <PartContainer>
+                            <Part 
+                            style={{ borderBottom: "1px solid #767676"}}>
+                                <TextButton 
+                                onClick={changePart}
+                                style={{ color: isDS ? "#0057FF" : "#767676",
+                                    borderBottom: isDS? "1px solid #FFFFFF" : "none"}}>데이터 분석</TextButton>
+                                <TextButton
+                                onClick={changePart}
+                                style={{ color: !isDS ? "#0057FF" : "#767676",
+                                    borderBottom: !isDS? "1px solid #FFFFFF" : "none"}}>개발</TextButton>
+                            </Part>
+
+                            { isDS && <>
+                                <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "40px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
+                            </>
+                            }
+
+                            { !isDS && <>
+                                <WhiteText style={{ marginTop: "10px"}}>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                                <Button
+                                    onClick={() => {
+                                        window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
+                                    }}
+                                    style = {{ height: "40px", width: "100px"}}
+                                    >
+                                    지원하기
+                                </Button>
+                            </>
+                            }
+                        </PartContainer>
+                    </>
+                }
                 
-                <PartContainer>
-                    <Part>
-                        <BlueText>데이터 분석</BlueText>   
-                        <WhiteText>DACOS 2기 부원 및 OB부원</WhiteText>
-                    </Part>
+                { !isMobile && 
+                    <>
+                    <PartContainer>
+                        <Part>
+                            <BlueText>데이터 분석</BlueText>   
+                            <WhiteText>DACOS 2기 부원 및 OB부원</WhiteText>
+                        </Part>
+                        
+                        <Part>
+                            <BlueText>개발</BlueText>
+                            <WhiteText>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                        </Part>
+                    </PartContainer>
                     
-                    <Part>
-                        <BlueText>개발</BlueText>
-                        <WhiteText>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
-                    </Part>
-                </PartContainer>
+
+                    <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+
+                    <Button
+                        onClick={() => {
+                            window.open("https://solux.tistory.com/")
+                        }}
+                        style = {{ height: "40px", width: "100px"}}
+                        >
+                        지원하기
+                    </Button>
+                    </>
+                }
                 
-
-                <GraySubtitleText>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
-
-                <Button
-                    onClick={() => {
-                        window.open("https://solux.tistory.com/")
-                    }}
-                    >
-                    지원하기
-                </Button>
             </InfoContainer>
             
             <InfoContainer>
@@ -184,7 +254,7 @@ const TimelinePage = () => {
                     <TimetableIamge />
                 </TimetableContainer>
 
-                <ContentText>무박 2일 진행</ContentText>
+                <ContentText style={{ marginTop: "10px"}}>무박 2일 진행</ContentText>
                 <GraySubtitleText>*점심, 저녁 및 간단한 간식이 제공됩니다</GraySubtitleText>
 
             </InfoContainer>

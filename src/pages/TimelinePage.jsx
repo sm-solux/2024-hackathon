@@ -50,14 +50,14 @@ const GrayTitleText = styled.div`
 
 const GraySubtitleText = styled.div`
     font-weight: 400;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-size: clamp(0.8rem, 1vw, 1rem);
     color: #949494;
     background-color: transparent;
     width: 55vw;
 `
 
 const SubtitleText = styled.div`
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 100;
     background-color: transparent;
     width: 55vw;
@@ -70,6 +70,7 @@ const PartContainer = styled.div`
 `
 
 const Part = styled.div`
+    height: 5vh;
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -103,7 +104,7 @@ const WhiteText = styled.div`
 const ContentText = styled.div`
     width: 55vw;
     margin-top: 30px;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 400;
     background-color: transparent;
 `
@@ -125,9 +126,13 @@ const TimelinePage = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [isDS, setIsDS] = useState(true);
 
-    function changePart(){
-        setIsDS(!isDS);
+  const handleClick = (part) => {
+    if (part === 'DS' && !isDS) {
+      setIsDS(true);
+    } else if (part === 'Dev' && isDS) {
+      setIsDS(false);
     }
+  };
 
     return (
         <TimelineContainer>
@@ -142,15 +147,26 @@ const TimelinePage = () => {
                     <>
                         <PartContainer>
                             <Part>
-                            
-                                <TextButton 
-                                onClick={changePart}
-                                style={{ color: isDS ? "#0057FF" : "#767676",
-                                    borderBottom: isDS? "1px solid #FFFFFF" : "1px solid #767676"}}>데이터 분석</TextButton>
-                                <TextButton
-                                onClick={changePart}
-                                style={{ color: !isDS ? "#0057FF" : "#767676",
-                                    borderBottom: !isDS? "1px solid #FFFFFF" : "1px solid #767676"}}>개발</TextButton>
+                            <TextButton
+                                onClick={() => handleClick('DS')}
+                                style={{
+                                color: isDS ? "#0057FF" : "#767676",
+                                borderBottom: isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                데이터 분석
+                            </TextButton>
+                            <TextButton
+                                onClick={() => handleClick('Dev')}
+                                style={{
+                                color: !isDS ? "#0057FF" : "#767676",
+                                borderBottom: !isDS ? "1px solid #FFFFFF" : "1px solid #767676"
+                                }}
+                                disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
+                            >
+                                개발
+                            </TextButton>
                             </Part>
 
                             { isDS && <>

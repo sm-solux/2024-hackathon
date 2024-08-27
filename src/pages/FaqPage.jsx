@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
+import mailicon from "../images/faq/mail_icon.svg"
+import instagramicon from "../images/faq/instagram_icon.svg"
 
 const faqData = [
     {
@@ -138,13 +140,13 @@ const FaqQuestion = styled.div`
 
 const InquriryContainer = styled.div`
     display: flex;
-    flex-direction: column; 
     align-items: center;
     padding-top: 30px;
 `
 
 const Part = styled.div`
     padding: 10px;
+    margin-left: 10px;
     flex: 1;
 `
 
@@ -153,10 +155,31 @@ const BlueText = styled.div`
 `
 
 const WhiteText = styled.div`
-    width: 22rem;
+    width: 3rem;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
+`
+
+const InquiryInfoConatiner = styled.div`
+    display: flex;
+    width: 25.5vw;
+`
+
+const MailIcon = styled.div`
+    background-image: url(${mailicon});
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+`
+
+const InstagramIcon = styled.div`
+    background-image: url(${instagramicon});
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
 `
 
 
@@ -201,13 +224,26 @@ const FaqPage = () => {
                 <InquriryContainer>
                     <Part>
                         <BlueText>DACOS</BlueText>
-                        <WhiteText>smdacos@gmail.com</WhiteText>
-                        <WhiteText>@smdacos_oficial</WhiteText>
+                        <InquiryInfoConatiner>
+                            <MailIcon />
+                            <WhiteText>smdacos@gmail.com</WhiteText>
+                        </InquiryInfoConatiner>
+                        <InquiryInfoConatiner> 
+                            <InstagramIcon />
+                            <WhiteText>@smdacos_oficial</WhiteText>
+                        </InquiryInfoConatiner>
                     </Part>
                     <Part>
                         <BlueText>SOLUX</BlueText>
-                        <WhiteText>sm.solux@gmail.com</WhiteText>
-                        <WhiteText>@only_solux</WhiteText>
+                        <InquiryInfoConatiner>
+                            <MailIcon />
+                            <WhiteText>sm.solux@gmail.com</WhiteText>
+                        </InquiryInfoConatiner>
+                        
+                        <InquiryInfoConatiner>
+                            <InstagramIcon />
+                            <WhiteText>@only_solux</WhiteText>
+                        </InquiryInfoConatiner>
                     </Part>
                 </InquriryContainer>
             </FaqContainer>

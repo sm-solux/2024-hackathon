@@ -187,9 +187,9 @@ const TimelinePage = () => {
 
                                 <Button
                                     onClick={() => {
-                                        window.open("https://linktr.ee/DxSHackathon") //다코스 모집 폼 링크
+                                        window.open("https://forms.gle/6KaV4nXxNoFtnS6p7") //다코스 모집 폼 링크
                                     }}
-                                    style = {{ height: "35px", width: "100px"}}
+                                    style = {{ height: "40px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>
@@ -212,9 +212,9 @@ const TimelinePage = () => {
 
                                 <Button
                                     onClick={() => {
-                                        window.open("https://linktr.ee/DxSHackathon") //솔룩스 모집 폼 링크
+                                        window.open("https://forms.gle/1Bt1vyWGVtyYf2SH9") //솔룩스 모집 폼 링크
                                     }}
-                                    style = {{ height: "35px", width: "100px"}}
+                                    style = {{ height: "40px", width: "100px"}}
                                     >
                                     지원하기
                                 </Button>
@@ -252,7 +252,7 @@ const TimelinePage = () => {
 
                     <Button
                         onClick={() => {
-                            window.open("https://solux.tistory.com/")
+                            window.open("https://linktr.ee/DxSHackathon")
                         }}
                         style = {{ height: "40px", width: "100px"}}
                         >

@@ -49,7 +49,7 @@ function Topbar() {
               FAQ
           </Nav.Link>
           <Button
-            style={{ marginLeft: isMargin ? '20px' : '0px' }}
+            style={{ marginLeft: isMargin ? '20px' : '0px', width: "90px" }}
             onClick={() => {
               window.open("https://linktr.ee/DxSHackathon");
             }}

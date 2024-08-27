@@ -7,11 +7,17 @@ import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png"
 
 const AboutContainer = styled.div`
-
+    
 `
 
 const LogoContainer = styled.div`
     height: 92vh;
+`
+
+const About = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const MainConatiner = styled.div`
@@ -22,9 +28,6 @@ const MainConatiner = styled.div`
 `
 
 const RoundBackground = styled.div`
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
     background-image: url(${background});
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,7 +50,7 @@ const MainLogo = styled.div`
 
 const MainBoldText = styled.div`
     font-weight: 800;
-    font-size: clamp(2.5rem, 1.5vw, 2.8rem);
+    font-size: clamp(2.3rem, 1.5vw, 2.5rem);
 `
 
 const MainLightText = styled.div`
@@ -57,6 +60,7 @@ const MainLightText = styled.div`
 
 const InfoContainer = styled.div`
     height: 85vh;
+    width: 50vw;
     margin-top: 70vh;
     display: flex;
     flex-direction: column;
@@ -65,42 +69,43 @@ const InfoContainer = styled.div`
 `
 
 const InfoTextContainer = styled.div`
+    width: 50vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 `
 
 const InfoBoldText = styled.div`
-    font-weight: 800;
-    font-size: clamp(1rem, 1.5vw, 1.3rem);
-    width: 55vw;
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    width: 50vw;
 `
 
 const InfoLightText = styled.div`
-    font-weight: 100;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
-    width: 55vw;
+    font-weight: 200;
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    width: 50vw;
 `
 
 const DSTitle = styled.div`
     margin-top: 10vh;
     font-weight: 600;
-    font-size: clamp(2rem, 1vw, 2.5rem);
+    font-size: clamp(1.8rem, 1vw, 2rem);
     color: #0057FF;
-    width: 55vw;
+    width: 50vw;
 `
 
 const DSSubtitle = styled.div`
     font-weight: 200;
     font-size: 0.8rem;
-    width: 55vw;
+    width: 50vw;
     margin-bottom: 10px;
 `
 
 const DSContent = styled.div`
     font-weight: 100;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
-    width: 55vw;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    width: 50vw;
     margin-top: 10px;
 `
 
@@ -113,7 +118,7 @@ const SoluxInfoContainer = styled.div`
 `
 
 const Image = styled.div`
-    width: 55vw;
+    width: 50vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -121,24 +126,25 @@ const Image = styled.div`
 `
 
 const DacosImage = styled.div`
-    width: 55vw;
-    height: clamp(100px, 1.5vw, 200px);
+    width: 100%;
+    height: 23vh;
     background-image: url(${dacos});
-    background-size: contain;
+    background-size: contain;  // 이미지 비율 유지
     background-repeat: no-repeat;
-`
+`;
 
 const SoluxImage = styled.div`
-    width: 55vw;
-    height: clamp(100px, 1.5vw, 200px);
+    width: 100%;
+    height: 23vh;
     background-image: url(${solux});
-    background-size: contain;
+    background-size: contain;  // 이미지 비율 유지
     background-repeat: no-repeat;
-`
+`;
+
 
 const ImageContainer = styled.div`
     display: flex;
-    width: 55vw;
+    width: 50vw;
     height: 300px;
 `
 
@@ -155,6 +161,7 @@ const AboutPage = () => {
                 <RoundBackground/> 
             </LogoContainer>
 
+            <About>
             <InfoContainer>
                 <ImageContainer>
                     <Image />
@@ -186,9 +193,10 @@ const AboutPage = () => {
 
                 <InfoTextContainer>
                     <SoluxImage />
-                    <DSContent>SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
+                    <DSContent>리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
                 </InfoTextContainer>
             </SoluxInfoContainer>
+            </About>
         </AboutContainer>
         
     );

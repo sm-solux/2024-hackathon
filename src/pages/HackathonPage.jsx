@@ -108,14 +108,14 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: clamp(0.8rem, 2vw, 1.2rem); /* 최소 1rem, 최대 1.4rem 비례 조절 */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
     background-color: transparent;
 `;
 
 const PrizeMoney = styled.div`
-    font-weight: 200; 
-    font-size: clamp(0.6rem, 2vw, 0.9rem); /* 최소 0.8rem, 최대 1.2rem 비례 조절 */
-    margin-top: 0.5rem;
+    font-weight: 200;
+    font-size: clamp(0.7rem, 2.5vw, 1rem); 
+    margin-top: clamp(0.3rem, 0.5rem, 0.5rem);
     background-color: transparent;
 `;
 

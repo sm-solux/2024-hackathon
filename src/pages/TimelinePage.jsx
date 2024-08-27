@@ -31,11 +31,11 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const TitleText = styled.div`
-    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    font-size: clamp(1.5rem, 1vw, 1.8rem);
     font-weight: 600;
     background-color: transparent;
 `
@@ -53,27 +53,29 @@ const GraySubtitleText = styled.div`
     font-size: clamp(0.8rem, 1vw, 1rem);
     color: #949494;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const SubtitleText = styled.div`
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
     font-weight: 100;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const PartContainer = styled.div`
     background-color: transparent;
     margin: 40px 0px 20px 0px;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 const Part = styled.div`
-    height: 5vh;
     background-color: transparent;
     display: flex;
-    align-items: center;
+    width: 100%;
 `
 
 const BlueText = styled.div`
@@ -85,32 +87,32 @@ const BlueText = styled.div`
 `
 
 const TextButton = styled.div`
-    width: 10rem;
+    width: 100%;
     height: 30px;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    font-weight: 400;
+    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    font-weight: 600;
     background-color: transparent;
     cursor: pointer;
     padding-right: 0.5rem;
 `
 
 const WhiteText = styled.div`
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
 `
 
 const ContentText = styled.div`
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
     margin-top: 30px;
-    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-size: clamp(0.9rem, 1vw, 1rem);
     font-weight: 400;
     background-color: transparent;
 `
 
 const TimetableIamge = styled.div`
-    width: 30vw;
+    width: clamp(35vw, 1.5vw, 30vw);
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -119,7 +121,7 @@ const TimetableIamge = styled.div`
 
 const TimetableContainer = styled.div`
     display: flex;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const TimelinePage = () => {
@@ -141,37 +143,47 @@ const TimelinePage = () => {
                     <TitleText>지원하기</TitleText>
                     <GrayTitleText>APPLY</GrayTitleText>
                 </TitleContainer>
-                <SubtitleText>24. 09. 08 (SUN) nn:nn -24. 09. 14 (SAT) nn:nn</SubtitleText>
+                <SubtitleText>24. 09. 08 (SUN) 10:00 -24. 09. 14 (SAT) 23:59</SubtitleText>
 
                 { isMobile &&
                     <>
                         <PartContainer>
                             <Part>
-                            <TextButton
-                                onClick={() => handleClick('DS')}
-                                style={{
-                                color: isDS ? "#0057FF" : "#767676",
-                                borderBottom: isDS ? "1px solid #FFFFFF" : "1px solid #767676"
-                                }}
-                                disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
-                            >
-                                데이터 분석
-                            </TextButton>
-                            <TextButton
-                                onClick={() => handleClick('Dev')}
-                                style={{
-                                color: !isDS ? "#0057FF" : "#767676",
-                                borderBottom: !isDS ? "1px solid #FFFFFF" : "1px solid #767676"
-                                }}
-                                disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
-                            >
-                                개발
-                            </TextButton>
+                                <TextButton
+                                    onClick={() => handleClick('DS')}
+                                    style={{
+                                    color: isDS ? "#0057FF" : "#767676",
+                                    borderBottom: isDS ? "2px solid #FFFFFF" : "2px solid #767676"
+                                    }}
+                                    disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
+                                >
+                                    데이터 분석
+                                </TextButton>
+                                <TextButton
+                                    onClick={() => handleClick('Dev')}
+                                    style={{
+                                    color: !isDS ? "#0057FF" : "#767676",
+                                    borderBottom: !isDS ? "2px solid #FFFFFF" : "2px solid #767676"
+                                    }}
+                                    disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
+                                >
+                                    개발
+                                </TextButton>
                             </Part>
 
                             { isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
-                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+                                <GraySubtitleText>
+                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
+                                </GraySubtitleText>
+
+                                <GraySubtitleText>
+                                    * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
+                                </GraySubtitleText>
+
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>
+                                    * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
+                                </GraySubtitleText>
 
                                 <Button
                                     onClick={() => {
@@ -186,7 +198,17 @@ const TimelinePage = () => {
 
                             { !isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
-                                <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+                                <GraySubtitleText>
+                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
+                                </GraySubtitleText>
+
+                                <GraySubtitleText>
+                                * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
+                                </GraySubtitleText>
+
+                                <GraySubtitleText style={{ marginBottom: "50px"}}>
+                                    * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
+                                </GraySubtitleText>
 
                                 <Button
                                     onClick={() => {
@@ -216,8 +238,17 @@ const TimelinePage = () => {
                         </Part>
                     </PartContainer>
                     
+                    <GraySubtitleText>
+                        * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
+                    </GraySubtitleText>
 
-                    <GraySubtitleText style={{ marginBottom: "50px"}}>*교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정</GraySubtitleText>
+                    <GraySubtitleText>
+                        * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
+                    </GraySubtitleText>
+
+                    <GraySubtitleText style={{ marginBottom: "50px"}}>
+                        * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
+                    </GraySubtitleText>
 
                     <Button
                         onClick={() => {
@@ -240,7 +271,8 @@ const TimelinePage = () => {
                 
                 <SubtitleText>2024. 11. 01 (FRI)</SubtitleText>
                 
-                <ContentText>데이터 분석 2명, 프론트엔드 2명, 백엔드 2명으로 구성된 팀이 공개됩니다. (세부 인원수 변동 가능)</ContentText>
+                <ContentText>데이터 분석 2명, 프론트엔드 2명, 백엔드 2명으로 구성된 팀이 공개됩니다. (세부 인원수 변동 가능) <br />
+                구글폼에 기재해주신 연락처를 통해 오픈채팅방 개설 예정입니다.</ContentText>
 
                 <GraySubtitleText>*팀은 임의로 변경 불가능합니다</GraySubtitleText>
 
@@ -254,7 +286,8 @@ const TimelinePage = () => {
                 
                 <SubtitleText>2024. 11. 01 (FRI) - 24. 11. 07 (THU)</SubtitleText>
                 
-                <ContentText>일주일간 사전 준비 기간을 거쳐 주제 선정을 비롯한 기획 및 데이터 준비가 필요합니다.<br />강의실을 대여해 회의 공간으로 제공할 예정이며, 강의실은 대여 후 공지 예정입니다.</ContentText>
+                <ContentText>일주일간 사전 준비 기간을 거쳐 주제 선정을 비롯한 기획 및 데이터 준비가 필요합니다. 백-모델링 연결을 위한 사전 준비 또한 필요합니다. (관련 가이드 제공)
+                    <br />강의실을 대여해 회의 공간으로 제공할 예정이며, 강의실은 대여 후 공지 예정입니다.</ContentText>
 
             </InfoContainer>
 
@@ -264,20 +297,20 @@ const TimelinePage = () => {
                     <GrayTitleText>HACKATHON</GrayTitleText>
                 </TitleContainer>
                 
-                <SubtitleText>2024. 11. 08 (FRI) - 24. 11. 09 (SAT)</SubtitleText>
+                <SubtitleText>2024. 11. 08 (FRI) 10:00 - 24. 11. 09 (SAT) 14:00</SubtitleText>
                 
-                <ContentText>Time table</ContentText>
+                <ContentText>
+                    무박 2일 진행 <br />
+                    상세 장소는 추후 공지 예정이나 교내에서 진행됩니다.<br />
+                </ContentText>
+                <ContentText style={{ marginTop: "10px"}}>Time table</ContentText>
                 <TimetableContainer>
                     <TimetableIamge />
                     <TimetableIamge />
                 </TimetableContainer>
 
-                <ContentText style={{ marginTop: "10px"}}>무박 2일 진행</ContentText>
-                <GraySubtitleText>*점심, 저녁 및 간단한 간식이 제공됩니다</GraySubtitleText>
-
+                <GraySubtitleText style={{ marginTop: "5px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다</GraySubtitleText>
             </InfoContainer>
-
-
         </TimelineContainer>
     );
 };

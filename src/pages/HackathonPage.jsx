@@ -62,18 +62,18 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const TitleText = styled.div`
-    font-size: clamp(1.35rem, 1vw, 1.5rem);
+    font-size: clamp(1.5rem, 1vw, 1.8rem);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -83,13 +83,13 @@ const SubtitleText = styled.div`
     font-size: 1rem;
     font-weight: 100;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `
 
 const PrizeBoxContainer = styled.div`
     display: flex;
     margin-top: 1vw;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
     justify-content: space-between;
 `;
 
@@ -127,12 +127,12 @@ const ButtonContainer = styled.div`
     margin-top: 1vw;
     margin-bottom: 2.5vw;
     width: 100%;
-    max-width: 60vw;
+    max-width: clamp(70vw, 1.5vw, 60vw);
 `;
 
 const Button = styled.button`
     padding: 0.6vw 1.5vw;
-    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;

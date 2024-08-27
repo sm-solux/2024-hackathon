@@ -8,37 +8,38 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-bottom: 10px;
 `
 
 const DacosLogo = styled.div`
   background-image: url(${dacoslogo});
-  height: 60px;
-  width: 97px;
+  width: clamp(87px, 1.5vw, 97px);
+  height: clamp(50px, 1.5vw, 60px);
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 30px;
 `
 
 const SoluxLogo = styled.div`
   background-image: url(${soluxlogo});
-  height: 39px;
-  width: 112px;
+  width: clamp(102px, 1.5vw, 112px);
+  height: clamp(29px, 1.5vw, 39px);
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 30px;
 `
+
 const SoftwareLogo = styled.div`
   background-image: url(${software});
-  height: 20px;
-  width: 87px;
+  width: clamp(77px, 1.5vw, 87px);
+  height: clamp(20px, 1.5vw, 30px);
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin: 0px 10px;
+  margin: 0px 30px;
 `
 
 const EmailContainer = styled.p`
@@ -70,7 +71,7 @@ const DevelopedTextContainer = styled.div`
 function Footer() {
     return (
       <footer className="text-dark py-3">
-        <div className="container text-center"  style={{ height: "20vh", padding: "0px" }}>
+        <div className="container text-center"  style={{ height: "20vh", padding: "0px"}}>
             <LogoContainer>
               <DacosLogo />
               <SoluxLogo />

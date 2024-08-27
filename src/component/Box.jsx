@@ -9,18 +9,19 @@ const StyledBox = styled.div`
     align-items: flex-start;
     margin-top: 1vw;
     flex-grow: 1;
-    max-width: 60vw;
+    max-width: clamp(70vw, 1.5vw, 60vw);
     width: 100%;
 `
 
 const StyledTitle = styled.div`
     font-weight: 600;
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
     margin-bottom: 0.5rem;
 `
 
 const List = styled.ul`
     list-style: disc; /* 기본 점 스타일 */
+    font-size: clamp(0.9rem, 1vw, 1rem);
     padding-left: clamp(1.2rem, 1.5rem, 1.5rem); /* 왼쪽 여백을 추가하여 점과 텍스트 사이의 공간 확보 */
     margin: 0; /* 기본 여백 제거 */
 `;

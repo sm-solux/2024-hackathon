@@ -74,7 +74,7 @@ const FaqContainer = styled.div`
 `;
 
 const FAQ = styled.div`
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
     margin: 0 auto;
 `;
 
@@ -82,11 +82,11 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 60vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `;
 
 const TitleText = styled.div`
-    font-size: clamp(1.4rem, 1vw, 1.6rem);
+    font-size: clamp(1.5rem, 1vw, 1.8rem);
     font-weight: 600;
     background-color: transparent;
 `;
@@ -173,7 +173,7 @@ const WhiteText = styled.div`
 
 const InquiryInfoConatiner = styled.div`
     display: flex;
-    width: 30vw;
+    width: clamp(35vw, 1.5vw, 30vw);
 `
 
 const MailIcon = styled.div`

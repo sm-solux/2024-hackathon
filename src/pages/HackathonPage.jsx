@@ -62,7 +62,7 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `
 
 const TitleText = styled.div`
@@ -83,13 +83,13 @@ const SubtitleText = styled.div`
     font-size: 1rem;
     font-weight: 100;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `
 
 const PrizeBoxContainer = styled.div`
     display: flex;
     margin-top: 1vw;
-    width: 55vw;
+    width: 60vw;
     justify-content: space-between;
 `;
 
@@ -127,7 +127,7 @@ const ButtonContainer = styled.div`
     margin-top: 1vw;
     margin-bottom: 2.5vw;
     width: 100%;
-    max-width: 55vw;
+    max-width: 60vw;
 `;
 
 const Button = styled.button`

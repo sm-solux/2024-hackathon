@@ -31,7 +31,7 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `
 
 const TitleText = styled.div`
@@ -53,20 +53,20 @@ const GraySubtitleText = styled.div`
     font-size: clamp(0.8rem, 1vw, 1rem);
     color: #949494;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `
 
 const SubtitleText = styled.div`
-    font-size: clamp(1rem, 1vw, 1.2rem);
+    font-size: clamp(0.8rem, 1vw, 1rem);
     font-weight: 100;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `
 
 const PartContainer = styled.div`
     background-color: transparent;
     margin: 40px 0px 20px 0px;
-    width: 55vw;
+    width: 60vw;
 `
 
 const Part = styled.div`
@@ -95,14 +95,14 @@ const TextButton = styled.div`
 `
 
 const WhiteText = styled.div`
-    width: 55vw;
+    width: 60vw;
     font-size: 0.9rem;
     font-weight: 400;
     background-color: transparent;
 `
 
 const ContentText = styled.div`
-    width: 55vw;
+    width: 60vw;
     margin-top: 30px;
     font-size: clamp(1rem, 1vw, 1.2rem);
     font-weight: 400;
@@ -110,7 +110,7 @@ const ContentText = styled.div`
 `
 
 const TimetableIamge = styled.div`
-    width: 27.5vw;
+    width: 30vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -119,7 +119,7 @@ const TimetableIamge = styled.div`
 
 const TimetableContainer = styled.div`
     display: flex;
-    width: 55vw;
+    width: 60vw;
 `
 
 const TimelinePage = () => {

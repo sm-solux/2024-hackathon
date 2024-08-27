@@ -181,19 +181,22 @@ const HackathonPage = () => {
                 {isDS ? (
                     <>
                     <Box
-                        title='실용성 (10점)'
+                        title='실용성 '
+                        point='(10점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
                         ]}
                     />
                     <Box
-                        title='실용성 (10점)'
+                        title='실용성 '
+                        point='(20점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
                         ]}
                     />
                     <Box
-                        title='실용성 (10점)'
+                        title='실용성 '
+                        point='(5점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
                         ]}
@@ -205,19 +208,22 @@ const HackathonPage = () => {
                     
                     <>
                         <Box
-                            title='실용성 (10점)'
+                            title='실용성 '
+                            point='(10점)'
                             contents={[
                                 '실생활에서의 활용이 가능한가?'
                             ]}
                         />
                         <Box
-                            title='프레젠테이션 (10점)'
+                            title='완성도 '
+                            point='(25점)'
                             contents={[
                                 '발표 구성 및 전달력이 논리적인가?'
                             ]}
                         />
                         <Box
-                            title='기술성'
+                            title='SW 구현 '
+                            point='(25점)'
                             contents={[
                                 '서비스가 원활하게 작동하는가?',
                                 'UIUX가 사용자 친화적인가?',

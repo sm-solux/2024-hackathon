@@ -13,10 +13,20 @@ const StyledBox = styled.div`
     width: 100%;
 `
 
+const TitleContainer = styled.div`
+    display: flex;
+    align-items: baseline;
+`
+
 const StyledTitle = styled.div`
     font-weight: 600;
     font-size: clamp(1rem, 1.5vw, 1.1rem);
     margin-bottom: 0.5rem;
+`
+
+const StyledPoint = styled.div`
+    font-size: clamp(0.7rem, 0.9vw, 1rem);
+    margin-left: 0.3vw;
 `
 
 const List = styled.ul`
@@ -32,11 +42,14 @@ const ListItem = styled.li`
 `;
 
 function Box(props){
-    const { title, contents } = props;
+    const { title, point, contents } = props;
 
     return(
         <StyledBox>
-            <StyledTitle>{title}</StyledTitle>
+            <TitleContainer>
+                <StyledTitle>{title}</StyledTitle>
+                <StyledPoint>{point}</StyledPoint>
+            </TitleContainer>
             <List>
                 {contents.map((content, index) => (
                     <ListItem key={index}>{content}</ListItem>

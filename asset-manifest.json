@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2024-hackathon/static/css/main.e46755ae.css",
-    "main.js": "/2024-hackathon/static/js/main.75924819.js",
+    "main.js": "/2024-hackathon/static/js/main.94a6b710.js",
     "static/js/453.086ebf5e.chunk.js": "/2024-hackathon/static/js/453.086ebf5e.chunk.js",
     "static/media/theme_background.png": "/2024-hackathon/static/media/theme_background.4eb31e24da696d3e161e.png",
     "static/media/solux_img.png": "/2024-hackathon/static/media/solux_img.ae62ea11462710127c50.png",
@@ -11,12 +11,14 @@
     "static/media/about_logo.png": "/2024-hackathon/static/media/about_logo.751cf62842852d5358a0.png",
     "static/media/solux.png": "/2024-hackathon/static/media/solux.9f3156dbe5cea9f1c1e2.png",
     "index.html": "/2024-hackathon/index.html",
+    "static/media/instagram_icon.svg": "/2024-hackathon/static/media/instagram_icon.2851bc5ebd0bf4cd7f0e279febf4dd99.svg",
+    "static/media/mail_icon.svg": "/2024-hackathon/static/media/mail_icon.93d395ab05cb8dca4b37f97a8f4e1b0c.svg",
     "main.e46755ae.css.map": "/2024-hackathon/static/css/main.e46755ae.css.map",
-    "main.75924819.js.map": "/2024-hackathon/static/js/main.75924819.js.map",
+    "main.94a6b710.js.map": "/2024-hackathon/static/js/main.94a6b710.js.map",
     "453.086ebf5e.chunk.js.map": "/2024-hackathon/static/js/453.086ebf5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e46755ae.css",
-    "static/js/main.75924819.js"
+    "static/js/main.94a6b710.js"
   ]
 }

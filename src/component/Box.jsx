@@ -9,7 +9,7 @@ const StyledBox = styled.div`
     align-items: flex-start;
     margin-top: 1vw;
     flex-grow: 1;
-    max-width: 55vw;
+    max-width: 60vw;
     width: 100%;
 `
 

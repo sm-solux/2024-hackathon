@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from 'styled-components';
+import mailicon from "../images/faq/mail_icon.svg"
+import instagramicon from "../images/faq/instagram_icon.svg"
 
 const faqData = [
     {
@@ -58,11 +60,9 @@ const faqData = [
 
 
 const Container = styled.div`
-    height: 240vh;
 `;
 
 const FaqContainer = styled.div`
-    width: 85%;
     margin-top: 2rem;
     margin-bottom: 2rem;
     position: relative;
@@ -74,7 +74,7 @@ const FaqContainer = styled.div`
 `;
 
 const FAQ = styled.div`
-    width: 70%;
+    width: 60vw;
     margin: 0 auto;
 `;
 
@@ -82,17 +82,18 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: 55vw;
+    width: 60vw;
 `;
 
 const TitleText = styled.div`
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 1vw, 1.6rem);
     font-weight: 600;
     background-color: transparent;
 `;
 
 const GrayTitleText = styled.div`
     font-weight: 600;
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
@@ -106,6 +107,16 @@ const FAQAnswer = styled.div`
     padding-top: 0;
     padding-bottom: 0;
 `;
+
+const QuestionText = styled.div`
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    background-color: transparent;
+`
+
+const AnswerText = styled.div`
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    background-color: transparent;
+`
 
 // Unified container for both question and answer
 const FaqItem = styled.div`
@@ -127,36 +138,60 @@ const FaqItem = styled.div`
         background-color: transparent;
         max-height: 500px;
         padding-top: 20px;
-        padding-bottom: 10px;
         opacity: 1;
     }
 `;
 
 const FaqQuestion = styled.div`
     padding: 1px;
+    background-color: transparent;
 `;
 
 const InquriryContainer = styled.div`
     display: flex;
-    flex-direction: column; 
-    align-items: center;
     padding-top: 30px;
+    height: 30vh;
 `
 
 const Part = styled.div`
-    padding: 10px;
     flex: 1;
 `
 
 const BlueText = styled.div`
     color: #0057FF;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-weight: 400;
+    margin-bottom: 5px;
 `
 
 const WhiteText = styled.div`
-    width: 22rem;
-    font-size: 0.9rem;
+    width: 3rem;
+    font-size: clamp(0.5rem, 1.5vw, 0.8rem);
     font-weight: 400;
     background-color: transparent;
+`
+
+const InquiryInfoConatiner = styled.div`
+    display: flex;
+    width: 30vw;
+`
+
+const MailIcon = styled.div`
+    background-image: url(${mailicon});
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 3px;
+    width: clamp(18px, 1.5vw, 22px);
+    height: clamp(18px, 1.5vw, 22px);
+`
+
+const InstagramIcon = styled.div`
+    background-image: url(${instagramicon});
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 3px;
+    width: clamp(18px, 1.5vw, 22px);
+    height: clamp(18px, 1.5vw, 22px);
 `
 
 
@@ -183,10 +218,14 @@ const FaqPage = () => {
                         onClick={() => handleToggle(index)} // Click handler on the container
                     >
                         <FaqQuestion>
-                            {item.question}
+                            <QuestionText>
+                                Q. {item.question}
+                            </QuestionText>
                         </FaqQuestion>
                         <FAQAnswer className={activeIndex === index ? 'active' : ''}>
-                            {item.answer}
+                            <AnswerText>
+                                A. {item.answer}
+                            </AnswerText>
                         </FAQAnswer>
                     </FaqItem>
                 ))}
@@ -195,19 +234,32 @@ const FaqPage = () => {
             
             <FaqContainer>
                 <TitleContainer>
-                    <TitleText>문의사항</TitleText>
+                    <TitleText style={{ marginTop: "7vh"}}>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
                 <InquriryContainer>
                     <Part>
                         <BlueText>DACOS</BlueText>
-                        <WhiteText>smdacos@gmail.com</WhiteText>
-                        <WhiteText>@smdacos_oficial</WhiteText>
+                        <InquiryInfoConatiner>
+                            <MailIcon />
+                            <WhiteText>smdacos@gmail.com</WhiteText>
+                        </InquiryInfoConatiner>
+                        <InquiryInfoConatiner> 
+                            <InstagramIcon />
+                            <WhiteText>@smdacos_oficial</WhiteText>
+                        </InquiryInfoConatiner>
                     </Part>
                     <Part>
                         <BlueText>SOLUX</BlueText>
-                        <WhiteText>sm.solux@gmail.com</WhiteText>
-                        <WhiteText>@only_solux</WhiteText>
+                        <InquiryInfoConatiner>
+                            <MailIcon />
+                            <WhiteText>sm.solux@gmail.com</WhiteText>
+                        </InquiryInfoConatiner>
+                        
+                        <InquiryInfoConatiner>
+                            <InstagramIcon />
+                            <WhiteText>@only_solux</WhiteText>
+                        </InquiryInfoConatiner>
                     </Part>
                 </InquriryContainer>
             </FaqContainer>

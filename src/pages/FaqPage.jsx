@@ -157,6 +157,7 @@ const BlueText = styled.div`
     color: #0057FF;
     font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 5px;
 `
 
 const WhiteText = styled.div`

@@ -171,10 +171,10 @@ const HackathonPage = () => {
 
                 <ButtonContainer>
                     <Button isActive={selectPart === 'DS'}  onClick={() => changePart('DS')}>
-                        데이터 분석 (30점)
+                        데이터 분석 (35점)
                     </Button>
                     <Button isActive={selectPart === 'Develop'}  onClick={() => changePart('Develop')}>
-                        개발 (65점)
+                        개발 (60점)
                     </Button>
                     <Button isActive={selectPart === 'Presentation'}  onClick={() => changePart('Presentation')}>
                         발표 (5점)

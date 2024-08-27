@@ -60,7 +60,6 @@ const faqData = [
 
 
 const Container = styled.div`
-    height: 220vh;
 `;
 
 const FaqContainer = styled.div`
@@ -110,7 +109,12 @@ const FAQAnswer = styled.div`
 `;
 
 const QuestionText = styled.div`
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    background-color: transparent;
+`
+
+const AnswerText = styled.div`
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     background-color: transparent;
 `
 
@@ -145,8 +149,8 @@ const FaqQuestion = styled.div`
 
 const InquriryContainer = styled.div`
     display: flex;
-    align-items: center;
     padding-top: 30px;
+    height: 30vh;
 `
 
 const Part = styled.div`
@@ -155,14 +159,14 @@ const Part = styled.div`
 
 const BlueText = styled.div`
     color: #0057FF;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 400;
     margin-bottom: 5px;
 `
 
 const WhiteText = styled.div`
     width: 3rem;
-    font-size: 0.8rem;
+    font-size: clamp(0.5rem, 1.5vw, 0.8rem);
     font-weight: 400;
     background-color: transparent;
 `
@@ -177,8 +181,8 @@ const MailIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: 22px;
-    height: 22px;
+    width: clamp(18px, 1.5vw, 22px);
+    height: clamp(18px, 1.5vw, 22px);
 `
 
 const InstagramIcon = styled.div`
@@ -186,8 +190,8 @@ const InstagramIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: 22px;
-    height: 22px;
+    width: clamp(18px, 1.5vw, 22px);
+    height: clamp(18px, 1.5vw, 22px);
 `
 
 
@@ -219,7 +223,9 @@ const FaqPage = () => {
                             </QuestionText>
                         </FaqQuestion>
                         <FAQAnswer className={activeIndex === index ? 'active' : ''}>
-                            A. {item.answer}
+                            <AnswerText>
+                                A. {item.answer}
+                            </AnswerText>
                         </FAQAnswer>
                     </FaqItem>
                 ))}

@@ -144,11 +144,11 @@ const Button = styled.button`
 const HackathonPage = () => {
 
     //const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-    const [isDS, setIsDS] = useState(true);
+    const [selectPart, setSelectPart] = useState('DS');
 
     function changePart(newPart){
-        if (newPart !== isDS) {
-            setIsDS(newPart);
+        if (newPart !== selectPart) {
+            setSelectPart(newPart);
         }
     }
 
@@ -170,32 +170,35 @@ const HackathonPage = () => {
                 </TitleContainer>
 
                 <ButtonContainer>
-                    <Button isActive={isDS}  onClick={() => changePart(true)}>
+                    <Button isActive={selectPart === 'DS'}  onClick={() => changePart('DS')}>
                         데이터 분석 (30점)
                     </Button>
-                    <Button isActive={!isDS}  onClick={() => changePart(false)}>
-                        개발 (70점)
+                    <Button isActive={selectPart === 'Develop'}  onClick={() => changePart('Develop')}>
+                        개발 (65점)
+                    </Button>
+                    <Button isActive={selectPart === 'Presentation'}  onClick={() => changePart('Presentation')}>
+                        발표 (5점)
                     </Button>
                 </ButtonContainer>
 
-                {isDS ? (
+                {selectPart === 'DS' && (
                     <>
                     <Box
-                        title='실용성 '
+                        title='실용성'
                         point='(10점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
                         ]}
                     />
                     <Box
-                        title='실용성 '
+                        title='실용성'
                         point='(20점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
                         ]}
                     />
                     <Box
-                        title='실용성 '
+                        title='실용성'
                         point='(5점)'
                         contents={[
                             '실생활에서의 활용이 가능한가?'
@@ -204,25 +207,27 @@ const HackathonPage = () => {
                     
                 </>
                     
-                ) : (
+                )}
+
+                {selectPart === 'Develop' && (
                     
                     <>
                         <Box
-                            title='실용성 '
+                            title='실용성'
                             point='(10점)'
                             contents={[
                                 '실생활에서의 활용이 가능한가?'
                             ]}
                         />
                         <Box
-                            title='완성도 '
+                            title='완성도'
                             point='(25점)'
                             contents={[
                                 '발표 구성 및 전달력이 논리적인가?'
                             ]}
                         />
                         <Box
-                            title='SW 구현 '
+                            title='SW 구현'
                             point='(25점)'
                             contents={[
                                 '서비스가 원활하게 작동하는가?',
@@ -233,6 +238,19 @@ const HackathonPage = () => {
                         />
                         
                     </>
+                )}
+
+                {selectPart === 'Presentation' && (
+                    <>
+                    <Box
+                        title='실용성'
+                        point='(10점)'
+                        contents={[
+                            '실생활에서의 활용이 가능한가?'
+                        ]}
+                    />                    
+                </>
+
                 )}
 
 

@@ -8,12 +8,17 @@ const StyledBox = styled.div`
     flex-direction: column; 
     align-items: flex-start;
     margin-top: 1vw;
+    margin-bottom: 1rem;
     flex-grow: 1;
     max-width: clamp(70vw, 1.5vw, 60vw);
     width: 100%;
 `
 
 const TitleContainer = styled.div`
+    display: flex;
+    align-items: baseline;
+`
+const TitleContainer2 = styled.div`
     display: flex;
     align-items: baseline;
 `
@@ -42,7 +47,7 @@ const ListItem = styled.li`
 `;
 
 function Box(props){
-    const { title, point, contents } = props;
+    const { title, point, contents, title2, point2, contents2 } = props;
 
     return(
         <StyledBox>
@@ -51,10 +56,20 @@ function Box(props){
                 <StyledPoint>{point}</StyledPoint>
             </TitleContainer>
             <List>
-                {contents.map((content, index) => (
+                {contents && contents.map((content, index) => (
                     <ListItem key={index}>{content}</ListItem>
                 ))}
             </List>
+            <TitleContainer2>
+                <StyledTitle>{title2}</StyledTitle>
+                <StyledPoint>{point2}</StyledPoint>
+            </TitleContainer2>
+            <List>
+                {contents2 && contents2.map((content2, index) => (
+                    <ListItem key={index}>{content2}</ListItem>
+                ))}
+            </List>
+
         </StyledBox>
     );
 }

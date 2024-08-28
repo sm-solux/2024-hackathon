@@ -59,7 +59,7 @@ const MainLightText = styled.div`
 `
 
 const InfoContainer = styled.div`
-    height: 85vh;
+    height: 78vh;
     width: 55vw;
     margin-top: 50vh;
     display: flex;
@@ -110,11 +110,11 @@ const DSContent = styled.div`
 `
 
 const DacosInfoContainer = styled.div`
-    height: 75vh;
+    height: 87vh;
 `
 
 const SoluxInfoContainer = styled.div`
-    height: 73vh;
+    height: 77vh;
 `
 
 const Image = styled.div`
@@ -126,18 +126,18 @@ const Image = styled.div`
 `
 
 const DacosImage = styled.div`
-    width: 100%;
-    height: 23vh;
+    width: clamp(50vw, 4vw, 40vw);
+    height: clamp(23vw, 4vw, 30vw);
     background-image: url(${dacos});
-    background-size: contain;  // 이미지 비율 유지
+    background-size: contain;
     background-repeat: no-repeat;
 `;
 
 const SoluxImage = styled.div`
-    width: 100%;
-    height: 23vh;
+    width: clamp(50vw, 4vw, 40vw);
+    height: clamp(23vw, 4vw, 30vw);
     background-image: url(${solux});
-    background-size: contain;  // 이미지 비율 유지
+    background-size: contain;
     background-repeat: no-repeat;
 `;
 

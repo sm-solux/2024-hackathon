@@ -24,11 +24,11 @@ function Topbar() {
     <Navbar expand="lg" sticky="top" className="navbar-custom" data-bs-theme="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img  
+          <img
             src={topbarlogo}
-            width="100px"
-            height="24px"
-            className="d-inline-block align-top"
+            width="81px"
+            height="17px"
+            className="d-inline-block"
             alt="dacos x solux Hackathon Logo"
           />
         </Navbar.Brand>
@@ -49,7 +49,7 @@ function Topbar() {
               FAQ
           </Nav.Link>
           <Button
-            style={{ marginLeft: isMargin ? '20px' : '0px', width: "90px" }}
+            style={{ marginLeft: isMargin ? '20px' : '10px', width: isMargin? "90px" : "", marginRight: isMargin ? '20px' : '10px' }}
             onClick={() => {
               window.open("https://linktr.ee/DxSHackathon");
             }}

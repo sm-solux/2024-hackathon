@@ -31,7 +31,7 @@ const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
 `
 
 const TitleText = styled.div`
@@ -50,32 +50,34 @@ const GrayTitleText = styled.div`
 
 const GraySubtitleText = styled.div`
     font-weight: 400;
-    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
+    margin-top: 20px;
 `
 
 const SubtitleText = styled.div`
     font-size: clamp(0.8rem, 1vw, 0.9rem);
-    font-weight: 100;
+    font-weight: 200;
+    color: #B2B2B2;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
 `
 
 const PartContainer = styled.div`
     background-color: transparent;
-    margin: 40px 0px 20px 0px;
-    width: clamp(70vw, 1.5vw, 60vw);
+    margin: 40px 0px 0px 0px;
+    width: clamp(60vw, 1.5vw, 70vw);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 `
 
 const Part = styled.div`
     background-color: transparent;
     display: flex;
-    width: 100%;
+    width: 80%;
 `
 
 const BlueText = styled.div`
@@ -87,9 +89,9 @@ const BlueText = styled.div`
 `
 
 const TextButton = styled.div`
-    width: 100%;
+    width: 80%;
     height: 30px;
-    font-size: clamp(1.2rem, 1.5vw, 1.4rem);
+    font-size: clamp(1.1rem, 1.5vw, 1.3rem);
     font-weight: 600;
     background-color: transparent;
     cursor: pointer;
@@ -97,22 +99,23 @@ const TextButton = styled.div`
 `
 
 const WhiteText = styled.div`
-    width: clamp(70vw, 1.5vw, 60vw);
-    font-size: 0.9rem;
+    width: clamp(60vw, 1.5vw, 70vw);
+    font-size: 1rem;
     font-weight: 400;
     background-color: transparent;
 `
 
 const ContentText = styled.div`
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
     margin-top: 30px;
     font-size: clamp(0.9rem, 1vw, 1rem);
     font-weight: 400;
     background-color: transparent;
+    line-height: 170%;
 `
 
 const TimetableIamge = styled.div`
-    width: clamp(35vw, 1.5vw, 30vw);
+    width: clamp(30vw, 1.5vw, 35vw);
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -121,7 +124,7 @@ const TimetableIamge = styled.div`
 
 const TimetableContainer = styled.div`
     display: flex;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
 `
 
 const TimelinePage = () => {
@@ -155,7 +158,7 @@ const TimelinePage = () => {
                                     color: isDS ? "#0057FF" : "#767676",
                                     borderBottom: isDS ? "2px solid #FFFFFF" : "2px solid #767676"
                                     }}
-                                    disabled={isDS} // 데이터 분석 버튼이 활성화된 상태에서는 비활성화
+                                    disabled={isDS}
                                 >
                                     데이터 분석
                                 </TextButton>
@@ -165,7 +168,7 @@ const TimelinePage = () => {
                                     color: !isDS ? "#0057FF" : "#767676",
                                     borderBottom: !isDS ? "2px solid #FFFFFF" : "2px solid #767676"
                                     }}
-                                    disabled={!isDS} // 개발 버튼이 활성화된 상태에서는 비활성화
+                                    disabled={!isDS}
                                 >
                                     개발
                                 </TextButton>
@@ -173,18 +176,11 @@ const TimelinePage = () => {
 
                             { isDS && <>
                                 <WhiteText style={{ marginTop: "10px"}}>DACOS 2기 부원 및 OB부원</WhiteText>
-                                <GraySubtitleText>
-                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
-                                </GraySubtitleText>
-
-                                <GraySubtitleText>
-                                    * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
-                                </GraySubtitleText>
-
                                 <GraySubtitleText style={{ marginBottom: "50px"}}>
+                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.<br />
+                                    * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.<br />
                                     * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
                                 </GraySubtitleText>
-
                                 <Button
                                     onClick={() => {
                                         window.open("https://forms.gle/6KaV4nXxNoFtnS6p7") //다코스 모집 폼 링크
@@ -197,16 +193,10 @@ const TimelinePage = () => {
                             }
 
                             { !isDS && <>
-                                <WhiteText style={{ marginTop: "10px"}}>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
-                                <GraySubtitleText>
-                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
-                                </GraySubtitleText>
-
-                                <GraySubtitleText>
-                                * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
-                                </GraySubtitleText>
-
+                                <WhiteText style={{ marginTop: "10px"}}>SOLUX 29기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
                                 <GraySubtitleText style={{ marginBottom: "50px"}}>
+                                    * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.<br />
+                                    * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.<br />
                                     * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
                                 </GraySubtitleText>
 
@@ -234,19 +224,12 @@ const TimelinePage = () => {
                         
                         <Part>
                             <BlueText>개발</BlueText>
-                            <WhiteText>SOLUX 20기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                            <WhiteText>SOLUX 29기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
                         </Part>
                     </PartContainer>
-                    
-                    <GraySubtitleText>
-                        * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.
-                    </GraySubtitleText>
-
-                    <GraySubtitleText>
-                        * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.
-                    </GraySubtitleText>
-
                     <GraySubtitleText style={{ marginBottom: "50px"}}>
+                        * 5,000원의 참가비가 발생하니, 지원 시 참고해주시기 바랍니다.<br />
+                        * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.<br />
                         * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
                     </GraySubtitleText>
 

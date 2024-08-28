@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledBox = styled.div`
     border-radius: 15px;
     border: 1px solid #0057FF;
-    padding: clamp(1rem, 1.2vw, 1.2rem); 
+    padding: clamp(1rem, 1.2vw, 1.2rem);
     flex-direction: column; 
     align-items: flex-start;
     margin-top: 1vw;
@@ -14,6 +14,10 @@ const StyledBox = styled.div`
     width: 100%;
 `
 
+const StylehasmainTitle = styled.div`
+    padding-left: ${({ hasMainTitle }) => (hasMainTitle ? 'clamp(1rem, 1.2vw, 1.2rem)' : '0')};
+`
+
 const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
@@ -21,6 +25,7 @@ const TitleContainer = styled.div`
 const TitleContainer2 = styled.div`
     display: flex;
     align-items: baseline;
+    margin-top: 1.5rem;
 `
 
 const StyledTitle = styled.div`
@@ -47,29 +52,42 @@ const ListItem = styled.li`
 `;
 
 function Box(props){
-    const { title, point, contents, title2, point2, contents2 } = props;
+    const { mainTitle, title, point, contents, title2, point2, contents2 } = props;
 
     return(
         <StyledBox>
-            <TitleContainer>
-                <StyledTitle>{title}</StyledTitle>
-                <StyledPoint>{point}</StyledPoint>
-            </TitleContainer>
-            <List>
-                {contents && contents.map((content, index) => (
-                    <ListItem key={index}>{content}</ListItem>
-                ))}
-            </List>
-            <TitleContainer2>
-                <StyledTitle>{title2}</StyledTitle>
-                <StyledPoint>{point2}</StyledPoint>
-            </TitleContainer2>
-            <List>
-                {contents2 && contents2.map((content2, index) => (
-                    <ListItem key={index}>{content2}</ListItem>
-                ))}
-            </List>
 
+            {mainTitle && (
+                <TitleContainer>
+                    <StyledTitle>{mainTitle}</StyledTitle>
+                </TitleContainer>
+            )}
+
+            <StylehasmainTitle hasMainTitle={mainTitle}>
+                <TitleContainer>
+                    <StyledTitle>{title}</StyledTitle>
+                    <StyledPoint>{point}</StyledPoint>
+                </TitleContainer>
+                <List>
+                    {contents && contents.map((content, index) => (
+                        <ListItem key={index}>{content}</ListItem>
+                    ))}
+                </List>
+
+                {title2 && point2 && (
+                    <>
+                        <TitleContainer2>
+                            <StyledTitle>{title2}</StyledTitle>
+                            <StyledPoint>{point2}</StyledPoint>
+                        </TitleContainer2>
+                        <List>
+                            {contents2 && contents2.map((content2, index) => (
+                                <ListItem key={index}>{content2}</ListItem>
+                            ))}
+                        </List>
+                    </>
+                )}
+            </StylehasmainTitle>
         </StyledBox>
     );
 }

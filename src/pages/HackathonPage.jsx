@@ -94,8 +94,8 @@ const PrizeBoxContainer = styled.div`
 `;
 
 const PrizeBox = styled.div`
-    width: 30%;
-    height: 15vw;
+    width: clamp(14vw, 22vw, 22vw);
+    height: 20vw;
     border: 1px solid #0057FF;
     background-color: ${({ opacity }) => `rgba(0, 87, 255, ${opacity})`};
     display: flex;
@@ -222,6 +222,7 @@ const HackathonPage = () => {
                             ]}
                         />
                         <Box
+                            mainTitle='기술성'
                             title='완성도'
                             point='(25점)'
                             contents={[

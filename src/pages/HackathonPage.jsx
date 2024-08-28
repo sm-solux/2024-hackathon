@@ -94,8 +94,8 @@ const PrizeBoxContainer = styled.div`
 `;
 
 const PrizeBox = styled.div`
-    width: 30%;
-    height: 15vw;
+    width: clamp(14vw, 22vw, 22vw);
+    height: 20vw;
     border: 1px solid #0057FF;
     background-color: ${({ opacity }) => `rgba(0, 87, 255, ${opacity})`};
     display: flex;
@@ -108,14 +108,14 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: clamp(0.8rem, 2vw, 1.2rem); /* 최소 1rem, 최대 1.4rem 비례 조절 */
+    font-size: clamp(1rem, 2.5vw, 1.5rem); 
     background-color: transparent;
 `;
 
 const PrizeMoney = styled.div`
-    font-weight: 200; 
-    font-size: clamp(0.6rem, 2vw, 0.9rem); /* 최소 0.8rem, 최대 1.2rem 비례 조절 */
-    margin-top: 0.5rem;
+    font-weight: 200;
+    font-size: clamp(0.7rem, 2.5vw, 1rem); 
+    margin-top: clamp(0.3rem, 0.5rem, 0.5rem);
     background-color: transparent;
 `;
 
@@ -144,11 +144,11 @@ const Button = styled.button`
 const HackathonPage = () => {
 
     //const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-    const [isDS, setIsDS] = useState(true);
+    const [selectPart, setSelectPart] = useState('DS');
 
     function changePart(newPart){
-        if (newPart !== isDS) {
-            setIsDS(newPart);
+        if (newPart !== selectPart) {
+            setSelectPart(newPart);
         }
     }
 
@@ -170,63 +170,86 @@ const HackathonPage = () => {
                 </TitleContainer>
 
                 <ButtonContainer>
-                    <Button isActive={isDS}  onClick={() => changePart(true)}>
-                        데이터 분석 (30점)
+                    <Button isActive={selectPart === 'DS'}  onClick={() => changePart('DS')}>
+                        데이터 분석 (35점)
                     </Button>
-                    <Button isActive={!isDS}  onClick={() => changePart(false)}>
-                        개발 (70점)
+                    <Button isActive={selectPart === 'Develop'}  onClick={() => changePart('Develop')}>
+                        개발 (60점)
+                    </Button>
+                    <Button isActive={selectPart === 'Presentation'}  onClick={() => changePart('Presentation')}>
+                        발표 (5점)
                     </Button>
                 </ButtonContainer>
 
-                {isDS ? (
+                {selectPart === 'DS' && (
                     <>
                     <Box
-                        title='실용성 (10점)'
+                        title='분석 적합성'
+                        point='(10점)'
                         contents={[
-                            '실생활에서의 활용이 가능한가?'
+                            '적절한 데이터셋을 활용했는가',
+                            '목적에 맞는 데이터 전처리를 했는가'
                         ]}
                     />
                     <Box
-                        title='실용성 (10점)'
+                        title='기술성'
+                        point='(20점)'
                         contents={[
-                            '실생활에서의 활용이 가능한가?'
+                            '주제에 맞는 모델링을 잘 활용했는가',
+                            '모델링 기술을 통해 주장을 뒷받침 하였는가'
                         ]}
                     />
                     <Box
-                        title='실용성 (10점)'
+                        title='아이디어'
+                        point='(5점)'
                         contents={[
-                            '실생활에서의 활용이 가능한가?'
+                            '창의성과 독창성을 잘 발휘하였는가'
                         ]}
                     />
                     
                 </>
                     
-                ) : (
+                )}
+
+                {selectPart === 'Develop' && (
                     
                     <>
                         <Box
-                            title='실용성 (10점)'
+                            title='실용성'
+                            point='(10점)'
                             contents={[
-                                '실생활에서의 활용이 가능한가?'
+                                '실생활에서의 활용이 가능한가'
                             ]}
                         />
                         <Box
-                            title='프레젠테이션 (10점)'
+                            mainTitle='기술성'
+                            title='완성도'
+                            point='(25점)'
                             contents={[
-                                '발표 구성 및 전달력이 논리적인가?'
+                                '서비스가 원활하게 작동하는가 (서버연결)',
+                                'UIUX가 사용자 친화적인가'
                             ]}
-                        />
-                        <Box
-                            title='기술성'
-                            contents={[
-                                '서비스가 원활하게 작동하는가?',
-                                'UIUX가 사용자 친화적인가?',
-                                'SW를 구현하였는가? (구현하지 못할 경우 실격)',
-                                '데이터 시각화까지 포함하여 구현하였는가?'
+                            title2='SW 구현'
+                            point2='(25점)'
+                            contents2={[
+                                'SW를 구현하였는가 (구현하지 못할 경우 실격)',
+                                '데이터 시각화까지 포함하여 구현하였는가'
                             ]}
-                        />
-                        
+                        />                        
                     </>
+                )}
+
+                {selectPart === 'Presentation' && (
+                    <>
+                    <Box
+                        title='프레젠테이션'
+                        point='(5점)'
+                        contents={[
+                            '발표 구성 및 전달력이 논리적인가'
+                        ]}
+                    />                    
+                </>
+
                 )}
 
 

@@ -11,7 +11,7 @@ const AboutContainer = styled.div`
 `
 
 const LogoContainer = styled.div`
-    height: 92vh;
+    height: 97vh;
 `
 
 const About = styled.div`
@@ -60,8 +60,8 @@ const MainLightText = styled.div`
 
 const InfoContainer = styled.div`
     height: 85vh;
-    width: 50vw;
-    margin-top: 70vh;
+    width: 55vw;
+    margin-top: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +69,7 @@ const InfoContainer = styled.div`
 `
 
 const InfoTextContainer = styled.div`
-    width: 50vw;
+    width: 55vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -78,13 +78,13 @@ const InfoTextContainer = styled.div`
 const InfoBoldText = styled.div`
     font-weight: 600;
     font-size: clamp(1.5rem, 1.5vw, 2rem);
-    width: 50vw;
+    width: 55vw;
 `
 
 const InfoLightText = styled.div`
     font-weight: 200;
     font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-    width: 50vw;
+    width: 55vw;
 `
 
 const DSTitle = styled.div`
@@ -92,25 +92,25 @@ const DSTitle = styled.div`
     font-weight: 600;
     font-size: clamp(1.8rem, 1vw, 2rem);
     color: #0057FF;
-    width: 50vw;
+    width: 55vw;
 `
 
 const DSSubtitle = styled.div`
     font-weight: 200;
     font-size: 0.8rem;
-    width: 50vw;
+    width: 55vw;
     margin-bottom: 10px;
 `
 
 const DSContent = styled.div`
     font-weight: 100;
     font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-    width: 50vw;
+    width: 55vw;
     margin-top: 10px;
 `
 
 const DacosInfoContainer = styled.div`
-    height: 70vh;
+    height: 75vh;
 `
 
 const SoluxInfoContainer = styled.div`
@@ -118,7 +118,7 @@ const SoluxInfoContainer = styled.div`
 `
 
 const Image = styled.div`
-    width: 50vw;
+    width: 55vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -144,7 +144,7 @@ const SoluxImage = styled.div`
 
 const ImageContainer = styled.div`
     display: flex;
-    width: 50vw;
+    width: 55vw;
     height: 300px;
 `
 

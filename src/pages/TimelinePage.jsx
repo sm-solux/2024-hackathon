@@ -55,6 +55,8 @@ const GraySubtitleText = styled.div`
     background-color: transparent;
     width: clamp(60vw, 1.5vw, 70vw);
     margin-top: 20px;
+    line-height: 140%;
+    letter-spacing: 1px;
 `
 
 const SubtitleText = styled.div`
@@ -111,7 +113,8 @@ const ContentText = styled.div`
     font-size: clamp(0.9rem, 1vw, 1rem);
     font-weight: 400;
     background-color: transparent;
-    line-height: 170%;
+    line-height: 130%;
+    letter-spacing: 0.3px;
 `
 
 const TimetableIamge = styled.div`

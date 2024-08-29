@@ -83,7 +83,7 @@ const InfoTextContainer = styled.div`
 
 const InfoBoldText = styled.div`
     font-weight: 600;
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
+    font-size: clamp(1.3rem, 1.5vw, 1.7rem);
     width: 60vw;
 `
 
@@ -98,7 +98,7 @@ const InfoLightText = styled.div`
 const DSTitle = styled.div`
     margin-top: 10vh;
     font-weight: 600;
-    font-size: clamp(1.8rem, 1vw, 2rem);
+    font-size: clamp(2.5rem, 1vw, 2.7rem);
     color: #0057FF;
     width: 60vw;
 `

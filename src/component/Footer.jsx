@@ -14,8 +14,8 @@ const LogoContainer = styled.div`
 
 const DacosLogo = styled.div`
   background-image: url(${dacoslogo});
-  width: 45px;
-  height: 35px;
+  width: clamp(30px, 15vw, 45px);
+  height: 30px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
@@ -23,18 +23,18 @@ const DacosLogo = styled.div`
 
 const SoluxLogo = styled.div`
   background-image: url(${soluxlogo});
-  width: 70px;
+  width: clamp(55px, 15vw, 70px);
   height: 35px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 30px;
-  margin-right: clamp(20px, 1.5vw, 40px);
+  margin-right: 30px;
 `
 
 const SoftwareLogo = styled.div`
   background-image: url(${software});
-  width: 200px;
+  width: clamp(150px, 15vw, 170px);
   height: 43px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -52,15 +52,15 @@ const InfoContainer = styled.div`
 
 const FooterInfoText = styled.p`
   color: #6B6B6B;
-  font-size: xx-small;
+  font-size: clamp(5px, 15vw, 8px);
   margin: 0px 15px 0px 0px;
 `
 
 const LogoText = styled.p`
-  font-size: small;
+  font-size: clamp(5px, 15vw, 8px);
   font-weight: 400;
   margin-right: 10px;
-  height: 35px;
+  height: 30px;
   margin-bottom: 0px;
 `
 

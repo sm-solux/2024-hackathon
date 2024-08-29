@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 import mailicon from "../images/faq/mail_icon.svg"
 import instagramicon from "../images/faq/instagram_icon.svg"
+import arrowicon from "../images/faq/bottom_arrow_icon.svg";
 
 const applyData = [
     {
@@ -18,14 +19,22 @@ const applyData = [
     },
     {
         question: '외부 인원이 지원해도 괜찮나요?',
-        answer: '상금은 행사 종료 후 한 달 내로 지급될 예정이며, 시기는 변동될 수 있습니다.'
+        answer: '추후 공지를 통해 진행될 외부 인원 추가 모집을 통해서만 가능하며, 내부 인원을 우선 선발하기에 사전 마감될 수 있습니다.'
     },
 ];
 
 const planningData = [
     {
-      question: '사전 기획 기간에는 자율적으로 모여서 작업하는 건가요?',
-      answer: '네. 또한, 주최 측에서 대면 회의가 가능한 강의실을 제공해드릴 예정이며, 추후 공지드릴 예정입니다.'
+        question: '사전 기획 기간에는 무엇을 해야 하나요?',
+        answer: '주제 선정과 기획 및 디자인을 진행해 주시면 됩니다. 더불어, 모델링 혹은 연동 등 기능적 부분을 준비할 수 있는 기간입니다.'
+    },
+    {
+        question: '사전 기획 기간에는 자율적으로 모여서 작업하는 건가요?',
+        answer: '네. 또한, 주최 측에서 대면 회의가 가능한 강의실을 제공해 드릴 예정이며 추후 공지드릴 예정입니다.'
+    },
+    {
+      question: '모델과 백 연동을 할 줄 몰라도 괜찮나요?',
+      answer: '솔룩스 내에서 10월 세미나로 해당 내용을 다룰 예정이니 세미나 수강을 권장드립니다.'
     },
 ];
 
@@ -82,11 +91,14 @@ const etcData = [
     },
     {
         question: '선발일은 언제인가요? / 참가 합격자 공지는 언제 주나요?',
-        answer: 'ㅇㅇㅇ에 오픈채팅방 개설과 함께 참가자 명단이 공개됩니다. 팀 공개일(24. 10. 31)에 팀 명단이 공개되며, 이후 공지는 오픈채팅방을 통해 이루어질 예정입니다. '
+        answer: '부원 자격으로 신청한 경우 9월 20일에 오픈채팅방 개설과 함께 참가자 명단이 공개됩니다. 팀 구성은 팀 공개일(24. 10. 31)에 공개됩니다.'
     },
 ];
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const FaqContainer = styled.div`
@@ -143,6 +155,8 @@ const QuestionText = styled.div`
 const AnswerText = styled.div`
     font-size: clamp(0.8rem, 1.5vw, 1rem);
     background-color: transparent;
+    text-indent: -1rem;
+    margin-left: 1rem;
 `
 
 // Unified container for both question and answer
@@ -170,8 +184,12 @@ const FaqItem = styled.div`
 `;
 
 const FaqQuestion = styled.div`
+    width: 100%;
     padding: 1px;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 `;
 
 const InquriryContainer = styled.div`
@@ -221,21 +239,29 @@ const InstagramIcon = styled.div`
     height: clamp(18px, 1.5vw, 22px);
 `
 
+const ArrowIcon = styled.div`
+    background-image: url(${arrowicon});
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+`
+
 const ButtonContainer = styled.div`
     display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-    justify-content: flex-start; /* 수평 왼쪽 정렬 */
+    justify-content: flex-start;
+    align-items: center; 
+    text-align: left;
     gap: 1vw;
     margin-top: 1vw;
     margin-bottom: 2.5vw;
-    width: 50%;
-    max-width: clamp(70vw, 1.5vw, 60vw);
-    margin-left: 8vw;
+    width: clamp(70vw, 1.5vw, 60vw);
 `;
 
 const Button = styled.button`
     padding: 0.6vw 1.5vw;
-    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    font-size: clamp(0.6rem, 1vw, 0.8rem);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
@@ -247,12 +273,15 @@ const Button = styled.button`
 
 const FaqPage = () => {
     const [activeIndex, setActiveIndex] = useState(null);
+    const [selectPart, setSelectPart] = useState('Apply');
+
+    useEffect(() => {
+        setActiveIndex(null);
+    }, [selectPart]);
 
     const handleToggle = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
     };
-
-    const [selectPart, setSelectPart] = useState('Apply');
 
     function changePart(newPart){
         if (newPart !== selectPart) {
@@ -262,7 +291,6 @@ const FaqPage = () => {
 
     return (
         <Container>
-
             <FaqContainer>
                 <TitleContainer>
                     <TitleText>자주 묻는 질문</TitleText>
@@ -301,7 +329,9 @@ const FaqPage = () => {
                         <QuestionText>
                             Q. {item.question}
                         </QuestionText>
+                        <ArrowIcon />
                     </FaqQuestion>
+                    
                     <FAQAnswer className={activeIndex === index ? 'active' : ''}>
                         <AnswerText>
                             A. {item.answer}
@@ -327,7 +357,9 @@ const FaqPage = () => {
                         <QuestionText>
                             Q. {item.question}
                         </QuestionText>
+                        <ArrowIcon />
                     </FaqQuestion>
+                    
                     <FAQAnswer className={activeIndex === index ? 'active' : ''}>
                         <AnswerText>
                             A. {item.answer}
@@ -353,6 +385,7 @@ const FaqPage = () => {
                         <QuestionText>
                             Q. {item.question}
                         </QuestionText>
+                        <ArrowIcon />
                     </FaqQuestion>
                     <FAQAnswer className={activeIndex === index ? 'active' : ''}>
                         <AnswerText>
@@ -379,6 +412,7 @@ const FaqPage = () => {
                         <QuestionText>
                             Q. {item.question}
                         </QuestionText>
+                        <ArrowIcon />
                     </FaqQuestion>
                     <FAQAnswer className={activeIndex === index ? 'active' : ''}>
                         <AnswerText>
@@ -405,6 +439,7 @@ const FaqPage = () => {
                         <QuestionText>
                             Q. {item.question}
                         </QuestionText>
+                        <ArrowIcon />
                     </FaqQuestion>
                     <FAQAnswer className={activeIndex === index ? 'active' : ''}>
                         <AnswerText>

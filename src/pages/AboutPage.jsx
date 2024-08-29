@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
-import logo from "../images/logo/about_logo.png"
+import logo from "../images/logo/dxs_logo.svg"
 import none from "../images/none.png";
 import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png"
@@ -11,7 +11,7 @@ const AboutContainer = styled.div`
 `
 
 const LogoContainer = styled.div`
-    height: 92vh;
+    height: 97vh;
 `
 
 const About = styled.div`
@@ -38,14 +38,20 @@ const RoundBackground = styled.div`
     border: none;
 `
 
-const MainLogo = styled.div`
+const DXSLogo = styled.div`
     background-image: url(${logo});
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 80%;
-    height: 100px;
-    margin-bottom: 10px;
+    height: 35px;
+`
+const MainBlueBoldText = styled.div`
+    font-weight: 450;
+    height: 55px;
+    color: #0057FF;
+    letter-spacing: 5px;
+    font-size: clamp(2.8rem, 1.5vw, 3rem);
 `
 
 const MainBoldText = styled.div`
@@ -59,9 +65,9 @@ const MainLightText = styled.div`
 `
 
 const InfoContainer = styled.div`
-    height: 85vh;
-    width: 50vw;
-    margin-top: 70vh;
+    height: 78vh;
+    width: 60vw;
+    margin-top: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,7 +75,7 @@ const InfoContainer = styled.div`
 `
 
 const InfoTextContainer = styled.div`
-    width: 50vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -77,48 +83,52 @@ const InfoTextContainer = styled.div`
 
 const InfoBoldText = styled.div`
     font-weight: 600;
-    font-size: clamp(1.5rem, 1.5vw, 2rem);
-    width: 50vw;
+    font-size: clamp(1.3rem, 1.5vw, 1.7rem);
+    width: 60vw;
 `
 
 const InfoLightText = styled.div`
     font-weight: 200;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-    width: 50vw;
+    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    line-height: 140%;
+    letter-spacing: 1px;
+    width: 60vw;
 `
 
 const DSTitle = styled.div`
     margin-top: 10vh;
     font-weight: 600;
-    font-size: clamp(1.8rem, 1vw, 2rem);
+    font-size: clamp(2.5rem, 1vw, 2.7rem);
     color: #0057FF;
-    width: 50vw;
+    width: 60vw;
 `
 
 const DSSubtitle = styled.div`
-    font-weight: 200;
+    font-weight: 100;
     font-size: 0.8rem;
-    width: 50vw;
+    width: 60vw;
     margin-bottom: 10px;
 `
 
 const DSContent = styled.div`
-    font-weight: 100;
+    font-weight: 200;
     font-size: clamp(0.8rem, 1.5vw, 0.9rem);
-    width: 50vw;
+    line-height: 140%;
+    letter-spacing: 1px;
+    width: 60vw;
     margin-top: 10px;
 `
 
 const DacosInfoContainer = styled.div`
-    height: 70vh;
+    height: 87vh;
 `
 
 const SoluxInfoContainer = styled.div`
-    height: 73vh;
+    height: 76vh;
 `
 
 const Image = styled.div`
-    width: 50vw;
+    width: 60vw;
     height: 250px;
     background-image: url(${none});
     background-size: cover;
@@ -126,25 +136,24 @@ const Image = styled.div`
 `
 
 const DacosImage = styled.div`
-    width: 100%;
-    height: 23vh;
+    width: clamp(50vw, 2vw, 40vw);
+    height: clamp(20vw, 2vw, 30vw);
     background-image: url(${dacos});
-    background-size: contain;  // 이미지 비율 유지
+    background-size: contain;
     background-repeat: no-repeat;
 `;
 
 const SoluxImage = styled.div`
-    width: 100%;
-    height: 23vh;
+    width: clamp(50vw, 4vw, 40vw);
+    height: clamp(20vw, 2vw, 30vw);
     background-image: url(${solux});
-    background-size: contain;  // 이미지 비율 유지
+    background-size: contain;
     background-repeat: no-repeat;
 `;
 
-
 const ImageContainer = styled.div`
     display: flex;
-    width: 50vw;
+    width: 60vw;
     height: 300px;
 `
 
@@ -153,7 +162,8 @@ const AboutPage = () => {
         <AboutContainer>
             <LogoContainer>
                 <MainConatiner>
-                    <MainLogo />
+                    <DXSLogo />
+                    <MainBlueBoldText>HACKATHON</MainBlueBoldText>
                     <MainBoldText>연합해커톤</MainBoldText>
                     <MainLightText>SOOKMYUNG WOMEN'S UNIVERSITY</MainLightText>
                 </MainConatiner>
@@ -188,7 +198,7 @@ const AboutPage = () => {
             <SoluxInfoContainer>
                 <InfoTextContainer>
                     <DSTitle>SOLUX</DSTitle>
-                    <DSSubtitle>숙명 유일 프로그래밍 중앙 동아리</DSSubtitle>
+                    <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
                 </InfoTextContainer>
 
                 <InfoTextContainer>

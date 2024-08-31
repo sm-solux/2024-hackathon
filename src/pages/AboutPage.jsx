@@ -2,9 +2,14 @@ import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
 import logo from "../images/logo/logo.svg"
-import none from "../images/none.png";
 import solux from "../images/about/solux_img.png";
-import dacos from "../images/about/dacos_img.png"
+import dacos from "../images/about/dacos_img.png";
+import poster1 from "../images/about/poster1.svg";
+import poster2 from "../images/about/poster2.svg";
+import { useMediaQuery } from 'react-responsive';
+import Slider from "react-slick";
+import "../style/slick-theme.css";
+import "../style/slick.css";
 
 const AboutContainer = styled.div`
     
@@ -59,8 +64,8 @@ const MainLightText = styled.div`
 `
 
 const InfoContainer = styled.div`
-    height: 78vh;
-    width: 60vw;
+    height: 90vh;
+    width: clamp(40vw, 100vw, 50vw);
     margin-top: 50vh;
     display: flex;
     flex-direction: column;
@@ -69,7 +74,7 @@ const InfoContainer = styled.div`
 `
 
 const InfoTextContainer = styled.div`
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -78,15 +83,14 @@ const InfoTextContainer = styled.div`
 const InfoBoldText = styled.div`
     font-weight: 600;
     font-size: clamp(1.3rem, 1.5vw, 1.7rem);
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
 `
 
 const InfoLightText = styled.div`
     font-weight: 200;
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
     line-height: 140%;
-    letter-spacing: 1px;
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
 `
 
 const DSTitle = styled.div`
@@ -94,22 +98,21 @@ const DSTitle = styled.div`
     font-weight: 600;
     font-size: clamp(2.5rem, 1vw, 2.7rem);
     color: #0057FF;
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
 `
 
 const DSSubtitle = styled.div`
     font-weight: 100;
     font-size: 0.8rem;
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
     margin-bottom: 10px;
 `
 
 const DSContent = styled.div`
     font-weight: 200;
-    font-size: clamp(0.8rem, 1.5vw, 0.9rem);
+    font-size: clamp(0.7rem, 100vw, 0.8rem);
     line-height: 140%;
-    letter-spacing: 1px;
-    width: 60vw;
+    width: clamp(40vw, 100vw, 50vw);
     margin-top: 10px;
 `
 
@@ -118,28 +121,65 @@ const DacosInfoContainer = styled.div`
 `
 
 const SoluxInfoContainer = styled.div`
-    height: 76vh;
+    height: clamp(76vh, 100vw, 80vh);
 `
 
-const Image = styled.div`
-    width: 60vw;
-    height: 250px;
-    background-image: url(${none});
+const MobilePosterContainer = styled.div`
+    height: 100vh;
+    width: clamp(40vw, 100vw, 50vw);
+    margin-top: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+`
+
+const Poster1 = styled.div`
+    width: 101%;
+    height: 101%;
+    background-image: url(${poster1});
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 1vh;
+`
+
+const Poster2 = styled.div`
+    width: 100%;
+    height: 100%;
+    background-image: url(${poster2});
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    margin-left: 1vh;
+`
+
+const MobilePoster1 = styled.div`
+    width: 70%;
+    height: 70vw;
+    background-image: url(${poster1});
     background-size: cover;
     background-repeat: no-repeat;
 `
 
+const MobilePoster2 = styled.div`
+    width: 100%;
+    height: 70vw;
+    background-image: url(${poster2});
+    background-size: contain;
+    background-repeat: no-repeat;
+`
+
 const DacosImage = styled.div`
-    width: clamp(50vw, 2vw, 40vw);
-    height: clamp(20vw, 2vw, 30vw);
+    width: clamp(40vw, 100vw, 50vw);
+    height: clamp(10vw, 100vw, 20vw);
     background-image: url(${dacos});
     background-size: contain;
     background-repeat: no-repeat;
 `;
 
 const SoluxImage = styled.div`
-    width: clamp(50vw, 4vw, 40vw);
-    height: clamp(20vw, 2vw, 30vw);
+    width: clamp(40vw, 100vw, 50vw);
+    height: clamp(10vw, 100vw, 20vw);
     background-image: url(${solux});
     background-size: contain;
     background-repeat: no-repeat;
@@ -147,11 +187,26 @@ const SoluxImage = styled.div`
 
 const ImageContainer = styled.div`
     display: flex;
-    width: 60vw;
-    height: 300px;
+    width: clamp(30vw, 100vw, 50vw);
+    height: clamp(25vw, 100vw, 35vw);
+`
+
+const MobileImageContainer = styled.div`
+    display: flex;
+    width: clamp(41vw, 100vw, 51vw);
+    height: 75vw;
 `
 
 const AboutPage = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      };
+
     return (
         <AboutContainer>
             <LogoContainer>
@@ -165,16 +220,38 @@ const AboutPage = () => {
             </LogoContainer>
 
             <About>
-            <InfoContainer>
-                <ImageContainer>
-                    <Image />
-                </ImageContainer>
+                { isMobile && <>
+                <MobilePosterContainer>
+                    <MobileImageContainer>
+                        <Slider {...settings}>
+                            <MobilePoster1 />
+                            <MobilePoster2 />
+                        </Slider>
+                    </MobileImageContainer>
+                    <InfoTextContainer>
+                        <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
+                        <InfoLightText style={{ width: isMobile? "clamp(40vw, 100vw, 50vw)" : "clamp(20vw, 100vw, 25vw)" }}>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</InfoLightText>
+                    </InfoTextContainer>
+                </MobilePosterContainer>
+                    
+                </>
+                }
+                
+                { !isMobile && <>
+                    <InfoContainer>
+                        <ImageContainer>
+                            <Poster1 />
+                            <Poster2 />
+                        </ImageContainer>
+                        <InfoTextContainer>
+                            <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
+                            <InfoLightText style={{ width: isMobile? "clamp(40vw, 100vw, 50vw)" : "clamp(20vw, 100vw, 25vw)" }}>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</InfoLightText>
+                        </InfoTextContainer>
+                    </InfoContainer>
+                </>}
 
-                <InfoTextContainer>
-                    <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
-                    <InfoLightText>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</InfoLightText>
-                </InfoTextContainer>
-            </InfoContainer>
+
+                
 
             <DacosInfoContainer>
                 <InfoTextContainer>

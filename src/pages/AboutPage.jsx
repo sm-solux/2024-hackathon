@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
-import logo from "../images/logo/dxs_logo.svg"
+import logo from "../images/logo/logo.svg"
 import none from "../images/none.png";
 import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png"
@@ -24,7 +24,8 @@ const MainConatiner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 60px 0px;
+    padding-top: 80px;
+    padding-bottom: 30px;
 `
 
 const RoundBackground = styled.div`
@@ -43,25 +44,18 @@ const DXSLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 80%;
-    height: 35px;
-`
-const MainBlueBoldText = styled.div`
-    font-weight: 450;
-    height: 55px;
-    color: #0057FF;
-    letter-spacing: 5px;
-    font-size: clamp(2.8rem, 1.5vw, 3rem);
+    width: clamp(350px, 60vw, 400px);
+    height: clamp(100px, 60vw, 150px);
 `
 
 const MainBoldText = styled.div`
     font-weight: 800;
-    font-size: clamp(2.3rem, 1.5vw, 2.5rem);
+    font-size: clamp(2.5rem, 60vw, 2.7rem);
 `
 
 const MainLightText = styled.div`
     font-weight: 100;
-    font-size: clamp(0.7rem, 1vw, 0.9rem);
+    font-size: 0.65rem;
 `
 
 const InfoContainer = styled.div`
@@ -163,7 +157,6 @@ const AboutPage = () => {
             <LogoContainer>
                 <MainConatiner>
                     <DXSLogo />
-                    <MainBlueBoldText>HACKATHON</MainBlueBoldText>
                     <MainBoldText>연합해커톤</MainBoldText>
                     <MainLightText>SOOKMYUNG WOMEN'S UNIVERSITY</MainLightText>
                 </MainConatiner>

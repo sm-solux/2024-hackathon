@@ -13,7 +13,7 @@
 .nav-link.active-link {
   color: #0057FF;
   opacity: 1;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .navbar-toggler:focus{

@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from "./Button";
 import '../style/Topbar.css';
-import topbarlogo from "../images/logo/logo_white.png";
+import topbarlogo from "../images/logo/logo.svg";
 
 function Topbar() {
   const location = useLocation();
@@ -26,8 +26,8 @@ function Topbar() {
         <Navbar.Brand as={Link} to="/">
           <img
             src={topbarlogo}
-            width="107px"
-            height="25px"
+            width="137px"
+            height="40px"
             className="d-inline-block"
             alt="dacos x solux Hackathon Logo"
           />

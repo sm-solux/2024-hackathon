@@ -16,6 +16,7 @@ const StyledBox = styled.div`
 const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
+    padding-left: clamp(0.5rem, 0.5vw, 1.2rem);
 `
 
 const StyledTitle = styled.div`
@@ -32,7 +33,7 @@ const StyledPoint = styled.div`
 const List = styled.ul`
     list-style: disc; /* 기본 점 스타일 */
     font-size: clamp(0.9rem, 1vw, 1rem);
-    padding-left: clamp(1.2rem, 1.5rem, 1.5rem); /* 왼쪽 여백을 추가하여 점과 텍스트 사이의 공간 확보 */
+    padding-left: clamp(2rem, 2.3vw, 2.3rem); 
     margin: 0; /* 기본 여백 제거 */
 `;
 

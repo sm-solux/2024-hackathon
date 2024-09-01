@@ -160,7 +160,7 @@ const HackathonPage = () => {
                     <ThemeText>주제</ThemeText>
                     <GrayTitleText>THEME</GrayTitleText>
                 </ThemeTitleContainer>
-                <SubtitleText>자율주제로 진행됩니다. 추후에 설명 한줄 더 추가될 수 있습니다.</SubtitleText>  
+                <SubtitleText>자율주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
             </ThemeContainer>
             
             <EvaluationContainer>

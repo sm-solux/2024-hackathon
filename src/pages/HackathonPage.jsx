@@ -139,6 +139,11 @@ const Button = styled.button`
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#0057FF' : 'black')};
     color: ${({ isActive }) => (isActive ? 'white' : 'grey')};
+
+    &:hover{
+        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
+    }
 `;
 
 const HackathonPage = () => {

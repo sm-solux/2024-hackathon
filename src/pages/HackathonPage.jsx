@@ -222,16 +222,17 @@ const HackathonPage = () => {
                             ]}
                         />
                         <Box
-                            mainTitle='기술성'
                             title='완성도'
                             point='(25점)'
                             contents={[
                                 '서비스가 원활하게 작동하는가 (서버연결)',
                                 'UIUX가 사용자 친화적인가'
                             ]}
-                            title2='SW 구현'
-                            point2='(25점)'
-                            contents2={[
+                        />
+                        <Box
+                            title='SW 구현'
+                            point='(25점)'
+                            contents={[
                                 'SW를 구현하였는가 (구현하지 못할 경우 실격)',
                                 '데이터 시각화까지 포함하여 구현하였는가'
                             ]}

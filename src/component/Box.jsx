@@ -13,19 +13,9 @@ const StyledBox = styled.div`
     max-width: clamp(70vw, 1.5vw, 60vw);
     width: 100%;
 `
-
-const StylehasmainTitle = styled.div`
-    padding-left: ${({ hasMainTitle }) => (hasMainTitle ? 'clamp(1rem, 1.2vw, 1.2rem)' : '0')};
-`
-
 const TitleContainer = styled.div`
     display: flex;
     align-items: baseline;
-`
-const TitleContainer2 = styled.div`
-    display: flex;
-    align-items: baseline;
-    margin-top: 1.5rem;
 `
 
 const StyledTitle = styled.div`
@@ -52,18 +42,10 @@ const ListItem = styled.li`
 `;
 
 function Box(props){
-    const { mainTitle, title, point, contents, title2, point2, contents2 } = props;
+    const { title, point, contents } = props;
 
     return(
         <StyledBox>
-
-            {mainTitle && (
-                <TitleContainer>
-                    <StyledTitle>{mainTitle}</StyledTitle>
-                </TitleContainer>
-            )}
-
-            <StylehasmainTitle hasMainTitle={mainTitle}>
                 <TitleContainer>
                     <StyledTitle>{title}</StyledTitle>
                     <StyledPoint>{point}</StyledPoint>
@@ -73,21 +55,6 @@ function Box(props){
                         <ListItem key={index}>{content}</ListItem>
                     ))}
                 </List>
-
-                {title2 && point2 && (
-                    <>
-                        <TitleContainer2>
-                            <StyledTitle>{title2}</StyledTitle>
-                            <StyledPoint>{point2}</StyledPoint>
-                        </TitleContainer2>
-                        <List>
-                            {contents2 && contents2.map((content2, index) => (
-                                <ListItem key={index}>{content2}</ListItem>
-                            ))}
-                        </List>
-                    </>
-                )}
-            </StylehasmainTitle>
         </StyledBox>
     );
 }

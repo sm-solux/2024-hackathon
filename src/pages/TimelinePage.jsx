@@ -255,7 +255,7 @@ const TimelinePage = () => {
                     <GrayTitleText>TEAM REVEAL</GrayTitleText>
                 </TitleContainer>
                 
-                <SubtitleText>2024. 11. 01 (FRI)</SubtitleText>
+                <SubtitleText>2024. 10. 31 (THU)</SubtitleText>
                 
                 <ContentText>데이터 분석 2명, 프론트엔드 2명, 백엔드 2명으로 구성된 팀이 공개됩니다. (세부 인원수 변동 가능) <br />
                 구글폼에 기재해주신 연락처를 통해 오픈채팅방 개설 예정입니다.</ContentText>

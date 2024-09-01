@@ -96,20 +96,21 @@ const etcData = [
 ];
 
 const Container = styled.div`
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 const FaqContainer = styled.div`
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
     position: relative;
     display: flex; 
     flex-direction: column;
     justify-content: center; /* Vertically centered */
     align-items: center;  /* Center aligned horizontally */
-    text-align: left;
+    text-align: center;
 `;
 
 const FAQ = styled.div`
@@ -119,6 +120,8 @@ const FAQ = styled.div`
 
 const TitleContainer = styled.div`
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: baseline;
     background-color: transparent;
     width: clamp(70vw, 1.5vw, 60vw);
@@ -194,12 +197,18 @@ const FaqQuestion = styled.div`
 
 const InquriryContainer = styled.div`
     display: flex;
+    align-items: center;
     padding-top: 30px;
     height: 30vh;
 `
 
 const Part = styled.div`
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center:
+    text-align: center;
+    margin: 0 auto;
 `
 
 const BlueText = styled.div`
@@ -218,7 +227,11 @@ const WhiteText = styled.div`
 
 const InquiryInfoConatiner = styled.div`
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: clamp(35vw, 1.5vw, 30vw);
+    text-align: center;
+    margin: 0 auto;
 `
 
 const MailIcon = styled.div`
@@ -250,10 +263,10 @@ const ArrowIcon = styled.div`
 
 const ButtonContainer = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center; 
     text-align: left;
-    gap: 1vw;
+    gap: 0.5vw;
     margin-top: 1vw;
     margin-bottom: 2.5vw;
     width: clamp(70vw, 1.5vw, 60vw);
@@ -294,8 +307,11 @@ const FaqPage = () => {
             <FaqContainer>
                 <TitleContainer>
                     <TitleText>자주 묻는 질문</TitleText>
+                </TitleContainer>
+                <TitleContainer>
                     <GrayTitleText>FAQ</GrayTitleText>
                 </TitleContainer>
+                
             </FaqContainer>
 
             <ButtonContainer>
@@ -457,6 +473,8 @@ const FaqPage = () => {
             <FaqContainer>
                 <TitleContainer>
                     <TitleText style={{ marginTop: "7vh"}}>문의사항</TitleText>
+                </TitleContainer>
+                <TitleContainer>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
                 <InquriryContainer>

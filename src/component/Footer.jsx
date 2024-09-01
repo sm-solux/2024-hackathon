@@ -5,7 +5,6 @@ import soluxlogo from "../images/logo/solux.png";
 import software from "../images/logo/software.svg";
 
 const LogoContainer = styled.div`
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +27,6 @@ const SoluxLogo = styled.div`
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
-  margin-left: 30px;
-  margin-right: 30px;
 `
 
 const SoftwareLogo = styled.div`
@@ -38,6 +35,7 @@ const SoftwareLogo = styled.div`
   height: 43px;
   background-size: contain;
   background-repeat: no-repeat;
+  margin: 0px 20px;
 `
 
 const EmailContainer = styled.p`
@@ -53,15 +51,7 @@ const InfoContainer = styled.div`
 const FooterInfoText = styled.p`
   color: #6B6B6B;
   font-size: clamp(5px, 15vw, 8px);
-  margin: 0px 15px 0px 0px;
-`
-
-const LogoText = styled.p`
-  font-size: clamp(5px, 15vw, 8px);
-  font-weight: 400;
-  margin-right: 10px;
-  height: 30px;
-  margin-bottom: 0px;
+  margin: 0px 5px 0px 0px;
 `
 
 const ProducedTextContainer = styled.div`
@@ -76,7 +66,7 @@ const DevelopedTextContainer = styled.div`
 
 function Footer() {
     return (
-      <footer className="text-dark py-3" style={{  height: "150px", borderTop: "1px solid #2E2E2E"}}>
+      <footer className="text-dark py-3" style={{borderTop: "1px solid #2E2E2E"}}>
         <div className="container text-center"  style={{ padding: "0px", display:"flex", flexDirection: "column", justifyContent: "center"}}>
           <InfoContainer>
             <FooterInfoText>Made by SOLUX</FooterInfoText>
@@ -99,12 +89,9 @@ function Footer() {
           </EmailContainer>
 
           <LogoContainer>
-            <LogoText>주최</LogoText>
             <DacosLogo />
-            <SoluxLogo />
-
-            <LogoText>주관 </LogoText>
             <SoftwareLogo />
+            <SoluxLogo />
           </LogoContainer>
         </div>
       </footer>

@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import styled from 'styled-components';
 import theme from '../images/hackathon/theme_background.png';
 import Box from '../component/Box';
-//import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const HackathonContainer = styled.div`
 
@@ -12,7 +12,7 @@ const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
     margin-top: 7vh;
-    background-image: url(${theme});
+    background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -124,12 +124,14 @@ const PrizeMoney = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center; /* 세로 중앙 정렬 */
-    justify-content: flex-start; /* 수평 왼쪽 정렬 */
+    justify-content: ${({ isMobile }) => (isMobile ? 'flex-start' : 'center')}; /* 수평 왼쪽 정렬 */
     gap: 1vw;
     margin-top: 1vw;
     margin-bottom: 2vw;
     width: 100%;
     max-width: clamp(60vw, 1.5vw, 70vw);
+    overflow-x: auto;
+    scrollbar-width: none;
 `;
 
 const Button = styled.button`
@@ -141,6 +143,7 @@ const Button = styled.button`
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#0057FF' : 'black')};
     color: ${({ isActive }) => (isActive ? 'white' : 'grey')};
+    white-space: nowrap;
 
     &:hover{
         background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
@@ -150,7 +153,7 @@ const Button = styled.button`
 
 const HackathonPage = () => {
 
-    //const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [selectPart, setSelectPart] = useState('DS');
 
     function changePart(newPart){
@@ -162,7 +165,7 @@ const HackathonPage = () => {
 
     return (
         <HackathonContainer>
-            <ThemeContainer>
+            <ThemeContainer isMobile={isMobile}>
                 <ThemeTitleContainer>
                     <ThemeText>주제</ThemeText>
                     <GrayTitleText>THEME</GrayTitleText>
@@ -176,7 +179,7 @@ const HackathonPage = () => {
                     <GrayTitleText>EVALUATION CRITERIA</GrayTitleText>              
                 </TitleContainer>
 
-                <ButtonContainer>
+                <ButtonContainer isMobile={isMobile}>
                     <Button isActive={selectPart === 'DS'}  onClick={() => changePart('DS')}>
                         데이터 분석 (35점)
                     </Button>

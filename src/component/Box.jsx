@@ -6,11 +6,11 @@ const StyledBox = styled.div`
     border: 1px solid #0057FF;
     padding: clamp(1rem, 1.2vw, 1.2rem);
     flex-direction: column; 
-    align-items: flex-start;
+    align-items: center;
     margin-top: 1vw;
     margin-bottom: 1rem;
     flex-grow: 1;
-    max-width: clamp(70vw, 1.5vw, 60vw);
+    max-width: clamp(60vw, 1.5vw, 70vw);
     width: 100%;
 `
 const TitleContainer = styled.div`

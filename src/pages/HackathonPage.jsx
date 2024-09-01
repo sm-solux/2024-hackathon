@@ -60,9 +60,11 @@ const PrizeContainer = styled.div`
 `
 const TitleContainer = styled.div`
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
+    margin-bottom: clamp(1vw, 2vw, 2vw);
 `
 
 const TitleText = styled.div`
@@ -89,13 +91,13 @@ const SubtitleText = styled.div`
 const PrizeBoxContainer = styled.div`
     display: flex;
     margin-top: 1vw;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
     justify-content: space-between;
 `;
 
 const PrizeBox = styled.div`
-    width: clamp(14vw, 22vw, 22vw);
-    height: 20vw;
+    width: clamp(14vw, 18vw, 18vw);
+    height: 17vw;
     border: 1px solid #0057FF;
     background-color: ${({ opacity }) => `rgba(0, 87, 255, ${opacity})`};
     display: flex;
@@ -125,13 +127,13 @@ const ButtonContainer = styled.div`
     justify-content: flex-start; /* 수평 왼쪽 정렬 */
     gap: 1vw;
     margin-top: 1vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2vw;
     width: 100%;
-    max-width: clamp(70vw, 1.5vw, 60vw);
+    max-width: clamp(60vw, 1.5vw, 70vw);
 `;
 
 const Button = styled.button`
-    padding: 0.6vw 1.5vw;
+    padding: clamp(0.4rem, 0.6vw, 0.6rem) clamp(1rem, 1.5vw, 1.5rem);
     font-size: clamp(0.7rem, 1vw, 0.8rem);
     font-weight: 500;
     border-color: #0057FF;

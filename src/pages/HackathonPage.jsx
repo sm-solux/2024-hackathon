@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import styled from 'styled-components';
 import theme from '../images/hackathon/theme_background.png';
 import Box from '../component/Box';
-//import { useMediaQuery } from 'react-responsive';
+import { useMediaQuery } from 'react-responsive';
 
 const HackathonContainer = styled.div`
 
@@ -12,7 +12,7 @@ const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
     margin-top: 7vh;
-    background-image: url(${theme});
+    background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -60,9 +60,11 @@ const PrizeContainer = styled.div`
 `
 const TitleContainer = styled.div`
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
+    margin-bottom: clamp(1vw, 2vw, 2vw);
 `
 
 const TitleText = styled.div`
@@ -89,13 +91,13 @@ const SubtitleText = styled.div`
 const PrizeBoxContainer = styled.div`
     display: flex;
     margin-top: 1vw;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: clamp(60vw, 1.5vw, 70vw);
     justify-content: space-between;
 `;
 
 const PrizeBox = styled.div`
-    width: clamp(14vw, 22vw, 22vw);
-    height: 20vw;
+    width: clamp(14vw, 18vw, 18vw);
+    height: 17vw;
     border: 1px solid #0057FF;
     background-color: ${({ opacity }) => `rgba(0, 87, 255, ${opacity})`};
     display: flex;
@@ -122,16 +124,18 @@ const PrizeMoney = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center; /* 세로 중앙 정렬 */
-    justify-content: flex-start; /* 수평 왼쪽 정렬 */
+    justify-content: ${({ isMobile }) => (isMobile ? 'flex-start' : 'center')}; /* 수평 왼쪽 정렬 */
     gap: 1vw;
     margin-top: 1vw;
-    margin-bottom: 2.5vw;
+    margin-bottom: 2vw;
     width: 100%;
-    max-width: clamp(70vw, 1.5vw, 60vw);
+    max-width: clamp(60vw, 1.5vw, 70vw);
+    overflow-x: auto;
+    scrollbar-width: none;
 `;
 
 const Button = styled.button`
-    padding: 0.6vw 1.5vw;
+    padding: clamp(0.4rem, 0.6vw, 0.6rem) clamp(1rem, 1.5vw, 1.5rem);
     font-size: clamp(0.7rem, 1vw, 0.8rem);
     font-weight: 500;
     border-color: #0057FF;
@@ -139,11 +143,17 @@ const Button = styled.button`
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#0057FF' : 'black')};
     color: ${({ isActive }) => (isActive ? 'white' : 'grey')};
+    white-space: nowrap;
+
+    &:hover{
+        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
+    }
 `;
 
 const HackathonPage = () => {
 
-    //const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [selectPart, setSelectPart] = useState('DS');
 
     function changePart(newPart){
@@ -155,12 +165,12 @@ const HackathonPage = () => {
 
     return (
         <HackathonContainer>
-            <ThemeContainer>
+            <ThemeContainer isMobile={isMobile}>
                 <ThemeTitleContainer>
                     <ThemeText>주제</ThemeText>
                     <GrayTitleText>THEME</GrayTitleText>
                 </ThemeTitleContainer>
-                <SubtitleText>자율주제로 진행됩니다. 추후에 설명 한줄 더 추가될 수 있습니다.</SubtitleText>  
+                <SubtitleText>자율주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
             </ThemeContainer>
             
             <EvaluationContainer>
@@ -169,7 +179,7 @@ const HackathonPage = () => {
                     <GrayTitleText>EVALUATION CRITERIA</GrayTitleText>              
                 </TitleContainer>
 
-                <ButtonContainer>
+                <ButtonContainer isMobile={isMobile}>
                     <Button isActive={selectPart === 'DS'}  onClick={() => changePart('DS')}>
                         데이터 분석 (35점)
                     </Button>
@@ -222,16 +232,17 @@ const HackathonPage = () => {
                             ]}
                         />
                         <Box
-                            mainTitle='기술성'
                             title='완성도'
                             point='(25점)'
                             contents={[
                                 '서비스가 원활하게 작동하는가 (서버연결)',
                                 'UIUX가 사용자 친화적인가'
                             ]}
-                            title2='SW 구현'
-                            point2='(25점)'
-                            contents2={[
+                        />
+                        <Box
+                            title='SW 구현'
+                            point='(25점)'
+                            contents={[
                                 'SW를 구현하였는가 (구현하지 못할 경우 실격)',
                                 '데이터 시각화까지 포함하여 구현하였는가'
                             ]}

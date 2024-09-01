@@ -66,7 +66,7 @@ const MainLightText = styled.div`
 `
 
 const InfoContainer = styled.div`
-    margin-top: 50vh;
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -26,7 +26,7 @@ function Topbar() {
         <Navbar.Brand as={Link} to="/">
           <img
             src={topbarlogo}
-            width="137px"
+            width="100px"
             height="40px"
             className="d-inline-block"
             alt="dacos x solux Hackathon Logo"

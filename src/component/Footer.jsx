@@ -8,7 +8,7 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  height: 40px;
 `
 
 const DacosLogo = styled.div`
@@ -23,7 +23,7 @@ const DacosLogo = styled.div`
 const SoluxLogo = styled.div`
   background-image: url(${soluxlogo});
   width: clamp(55px, 15vw, 70px);
-  height: 35px;
+  height: 30px;
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
@@ -31,8 +31,8 @@ const SoluxLogo = styled.div`
 
 const SoftwareLogo = styled.div`
   background-image: url(${software});
-  width: clamp(150px, 15vw, 170px);
-  height: 43px;
+  width: 200px;
+  height: 100%;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0px 20px;

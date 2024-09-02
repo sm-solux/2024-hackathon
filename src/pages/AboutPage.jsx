@@ -125,9 +125,7 @@ const PosterContainer = styled.div`
 `
 
 const PosterWrapper = styled.div`
-    width: 40%;
-    max-height: 83vh;
-    border: 1px solid #FFFFFF;
+    width: 48%;
     border-radius: 3%;
     overflow: hidden;
 `

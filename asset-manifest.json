@@ -1,29 +1,32 @@
 {
   "files": {
-    "main.css": "/2024-hackathon/static/css/main.3ab43bbc.css",
-    "main.js": "/2024-hackathon/static/js/main.eef3c498.js",
+    "main.css": "/2024-hackathon/static/css/main.9d71e511.css",
+    "main.js": "/2024-hackathon/static/js/main.09e4355b.js",
     "static/js/453.086ebf5e.chunk.js": "/2024-hackathon/static/js/453.086ebf5e.chunk.js",
     "static/media/theme_background.png": "/2024-hackathon/static/media/theme_background.4eb31e24da696d3e161e.png",
-    "static/media/poster2.svg": "/2024-hackathon/static/media/poster2.530ee5d17ddf42e3005e72897e5ed08a.svg",
-    "static/media/poster1.svg": "/2024-hackathon/static/media/poster1.3919b9ce6a2c54e3257a48ff1cc04a28.svg",
+    "static/media/poster2.svg": "/2024-hackathon/static/media/poster2.211e73dc2f63f71381ac6c31ec89e855.svg",
+    "static/media/poster1.svg": "/2024-hackathon/static/media/poster1.024d6f42b3ab74503fe7928feeafb068.svg",
     "static/media/solux_img.png": "/2024-hackathon/static/media/solux_img.ae62ea11462710127c50.png",
     "static/media/dacos_img.png": "/2024-hackathon/static/media/dacos_img.49624e6017f3953d0e9c.png",
     "static/media/process_background.png": "/2024-hackathon/static/media/process_background.064773ec66c35570efae.png",
-    "static/media/round_background.png": "/2024-hackathon/static/media/round_background.a3eb3f1b144def62cc37.png",
+    "static/media/round_background.png": "/2024-hackathon/static/media/round_background.3ccbeba6248772832a3d.png",
     "static/media/software.svg": "/2024-hackathon/static/media/software.e9f53d65938b64388c041abba33aa2d7.svg",
+    "static/media/about_logo.svg": "/2024-hackathon/static/media/about_logo.8f6cc55b57d4e7f9c41f2032ccbe7a3c.svg",
     "static/media/dacos.svg": "/2024-hackathon/static/media/dacos.33539b3fbe5ce243cf4d18326d359073.svg",
     "static/media/solux.png": "/2024-hackathon/static/media/solux.9f3156dbe5cea9f1c1e2.png",
-    "static/media/logo.svg": "/2024-hackathon/static/media/logo.a7143efbd17fd142f4f7788ff47b2465.svg",
+    "static/media/logo.svg": "/2024-hackathon/static/media/logo.7bdbb9ab18aa5f28eae31ad3156dbf84.svg",
     "index.html": "/2024-hackathon/index.html",
     "static/media/instagram_icon.svg": "/2024-hackathon/static/media/instagram_icon.2851bc5ebd0bf4cd7f0e279febf4dd99.svg",
     "static/media/mail_icon.svg": "/2024-hackathon/static/media/mail_icon.93d395ab05cb8dca4b37f97a8f4e1b0c.svg",
+    "static/media/left_arrow.svg": "/2024-hackathon/static/media/left_arrow.64090821e85b64096fc1.svg",
+    "static/media/right_arrow.svg": "/2024-hackathon/static/media/right_arrow.c59a226e78cdf8254290.svg",
     "static/media/bottom_arrow_icon.svg": "/2024-hackathon/static/media/bottom_arrow_icon.4c25b885d2233d53184ea508eb345071.svg",
-    "main.3ab43bbc.css.map": "/2024-hackathon/static/css/main.3ab43bbc.css.map",
-    "main.eef3c498.js.map": "/2024-hackathon/static/js/main.eef3c498.js.map",
+    "main.9d71e511.css.map": "/2024-hackathon/static/css/main.9d71e511.css.map",
+    "main.09e4355b.js.map": "/2024-hackathon/static/js/main.09e4355b.js.map",
     "453.086ebf5e.chunk.js.map": "/2024-hackathon/static/js/453.086ebf5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ab43bbc.css",
-    "static/js/main.eef3c498.js"
+    "static/css/main.9d71e511.css",
+    "static/js/main.09e4355b.js"
   ]
 }

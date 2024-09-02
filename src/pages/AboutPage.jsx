@@ -73,16 +73,16 @@ const InfoTextContainer = styled.div`
     margin-top: 60px;
 `
 
+const GroupTextContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+`
+
 const InfoBoldText = styled.div`
     font-weight: 600;
     font-size: clamp(1.3rem, 1.5vw, 1.7rem);
-`
-
-const InfoLightText = styled.div`
-    width: 55%;
-    font-weight: 200;
-    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
-    line-height: 160%;
 `
 
 const DSTitle = styled.div`
@@ -99,22 +99,13 @@ const DSSubtitle = styled.div`
 
 const DSContent = styled.div`
     font-weight: 200;
-    width: 100%;
+    width: 80%;
     text-align : center;
     word-break: keep-all;
     font-size: clamp(0.7rem, 100vw, 0.8rem);
     line-height: 160%;
     margin-top: 20px;
-    text-align: start;
-`
-
-const DacosInfoContainer = styled.div`
-    height: auto;
-    margin: 200px 0px;
-`
-
-const SoluxInfoContainer = styled.div`
-    margin-bottom: 40px;
+    text-align: center;
 `
 
 const PosterContainer = styled.div`
@@ -135,7 +126,7 @@ const PosterImage = styled.img`
     width: 100%;
     height: auto;
     display: block;
-    object-fit: contain;
+    object-fit: fill;
 `
 
 const MobilePosterContainer = styled.div`
@@ -143,7 +134,7 @@ const MobilePosterContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 11;
+    z-index: 1;
     width: 100%;
     height: auto;
 `;
@@ -171,10 +162,17 @@ const MobileImageContainer = styled.div`
     height: auto;
 `;
 
+const DacosInfoContainer = styled.div`
+    margin: 200px 0px;
+`
+
+const SoluxInfoContainer = styled.div`
+    margin-bottom: 150px;
+`
 
 const DacosImage = styled.div`
-    width: 80%;
-    aspect-ratio: 1;
+    width: 70%;
+    aspect-ratio: 2;
     background-image: url(${dacos});
     background-size: contain;
     background-repeat: no-repeat;
@@ -183,7 +181,7 @@ const DacosImage = styled.div`
 
 const SoluxImage = styled.div`
     width: 80%;
-    aspect-ratio: 1;
+    aspect-ratio: 2;
     background-image: url(${solux});
     background-size: contain;
     background-repeat: no-repeat;
@@ -221,9 +219,9 @@ const AboutPage = () => {
                 </MainConatiner>
                 <RoundBackground/> 
             </LogoContainer>
-
+            
+            { isMobile && <>
             <About>
-                { isMobile && <>
                 <MobilePosterContainer>
                     <MobileImageContainer>
                         <Slider {...settings}>
@@ -233,14 +231,31 @@ const AboutPage = () => {
                     </MobileImageContainer>
                     <InfoTextContainer>
                         <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
-                        <DSContent>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</DSContent>
+                        <DSContent style={{ width: "100%" }}>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</DSContent>
                     </InfoTextContainer>
                 </MobilePosterContainer>
-                    
-                </>
-                }
-                
+                <DacosInfoContainer>
+                    <GroupTextContainer>
+                        <DacosImage style={{ width: "90%"}} />
+                        <DSTitle>DACOS</DSTitle>
+                        <DSSubtitle>소프트웨어학부 데이터분석 학회</DSSubtitle>
+                        <DSContent style={{ width: "90%"}}>DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.</DSContent>
+                    </GroupTextContainer>
+                </DacosInfoContainer>
+
+                <SoluxInfoContainer style={{ marginBottom: "100px"}}>
+                    <GroupTextContainer>
+                        <SoluxImage style={{ width: "90%"}} />
+                        <DSTitle>SOLUX</DSTitle>
+                        <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
+                        <DSContent style={{ width: "90%"}}>리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
+                    </GroupTextContainer>
+                </SoluxInfoContainer>
+            </About>        
+            </>
+            } 
                 { !isMobile && <>
+                <About>
                     <InfoContainer>
                         <PosterContainer>
                             <PosterWrapper>
@@ -252,28 +267,30 @@ const AboutPage = () => {
                         </PosterContainer>
                         <InfoTextContainer>
                             <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
-                            <InfoLightText>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</InfoLightText>
+                            <DSContent>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</DSContent>
                         </InfoTextContainer>
                     </InfoContainer>
-                </>}
-                <DacosInfoContainer>
-                    <InfoTextContainer>
-                        <DacosImage />
-                        <DSTitle>DACOS</DSTitle>
-                        <DSSubtitle>소프트웨어학부 데이터분석 학회</DSSubtitle>
-                        <DSContent style={{ width: !isMobile? "65%" : "100%"}}>DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.</DSContent>
-                    </InfoTextContainer>
-                </DacosInfoContainer>
 
-                <SoluxInfoContainer>
-                    <InfoTextContainer>
-                        <SoluxImage />
-                        <DSTitle>SOLUX</DSTitle>
-                        <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
-                        <DSContent style={{ width: !isMobile? "65%" : "100%"}}>리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
-                    </InfoTextContainer>
-                </SoluxInfoContainer>
-            </About>
+                    <DacosInfoContainer>
+                        <GroupTextContainer>
+                            <DacosImage />
+                            <DSTitle>DACOS</DSTitle>
+                            <DSSubtitle>소프트웨어학부 데이터분석 학회</DSSubtitle>
+                            <DSContent style={{ width: "70%"}}>DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.</DSContent>
+                        </GroupTextContainer>
+                    </DacosInfoContainer>
+
+                    <SoluxInfoContainer>
+                        <GroupTextContainer>
+                            <SoluxImage />
+                            <DSTitle>SOLUX</DSTitle>
+                            <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
+                            <DSContent style={{ width: "70%"}}>리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.</DSContent>
+                        </GroupTextContainer>
+                    </SoluxInfoContainer>
+                </About>
+                </>}
+                
         </AboutContainer>
         
     );

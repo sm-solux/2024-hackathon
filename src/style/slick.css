@@ -97,8 +97,8 @@
 
 .slick-prev,
 .slick-next {
-    width: 50px; 
-    height: 50px;
+    width: 40px; 
+    height: 40px;
     z-index: 1;
     outline: none;
     background-size: 40px 40px; 

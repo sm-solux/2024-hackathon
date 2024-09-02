@@ -8,7 +8,6 @@ import poster1 from "../images/about/poster1.svg";
 import poster2 from "../images/about/poster2.svg";
 import { useMediaQuery } from 'react-responsive';
 import Slider from "react-slick";
-import "../style/slick-theme.css";
 import "../style/slick.css";
 
 const AboutContainer = styled.div`
@@ -71,12 +70,12 @@ const InfoTextContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 60px;
 `
 
 const InfoBoldText = styled.div`
     font-weight: 600;
     font-size: clamp(1.3rem, 1.5vw, 1.7rem);
-    margin-top: 20px;
 `
 
 const InfoLightText = styled.div`
@@ -223,14 +222,14 @@ const AboutPage = () => {
                 
                 { !isMobile && <>
                     <InfoContainer>
-                    <PosterContainer>
-                        <PosterWrapper>
-                            <PosterImage src={poster1} alt="Poster 1" />
-                        </PosterWrapper>
-                        <PosterWrapper>
-                            <PosterImage src={poster2} alt="Poster 2" />
-                        </PosterWrapper>
-                    </PosterContainer>
+                        <PosterContainer>
+                            <PosterWrapper>
+                                <PosterImage src={poster1} alt="Poster 1" />
+                            </PosterWrapper>
+                            <PosterWrapper>
+                                <PosterImage src={poster2} alt="Poster 2" />
+                            </PosterWrapper>
+                        </PosterContainer>
                         <InfoTextContainer>
                             <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
                             <InfoLightText>DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.</InfoLightText>

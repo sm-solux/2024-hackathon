@@ -105,6 +105,7 @@ const DSContent = styled.div`
     font-size: clamp(0.7rem, 100vw, 0.8rem);
     line-height: 160%;
     margin-top: 20px;
+    text-align: start;
 `
 
 const DacosInfoContainer = styled.div`
@@ -125,6 +126,7 @@ const PosterContainer = styled.div`
 
 const PosterWrapper = styled.div`
     width: 48%;
+    border: 1px solid #FFFFFF;
     border-radius: 3%;
     overflow: hidden;
 `
@@ -137,54 +139,72 @@ const PosterImage = styled.img`
 `
 
 const MobilePosterContainer = styled.div`
-    margin-top: 20vh;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
     z-index: 11;
-`
-
-const MobilePoster1 = styled.div`
-    width: 80%;
-    height: 100vw;
-    background-image: url(${poster1});
-    background-size: cover;
-    background-repeat: no-repeat;
-`
-
-const MobilePoster2 = styled.div`
-    width: 80%;
-    height: 100vw;
-    background-image: url(${poster2});
-    background-size: contain;
-    background-repeat: no-repeat;
-`
-
-const DacosImage = styled.div`
-    width: 80%;
-    height: clamp(15vw, 100vw, 25vw);
-    background-image: url(${dacos});
-    background-size: contain;
-    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
 `;
 
-const SoluxImage = styled.div`
-    width: 80%;
-    height: clamp(15vw, 100vw, 25vw);
-    background-image: url(${solux});
-    background-size: contain;
-    background-repeat: no-repeat;
+const MobilePoster = styled.div`
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #FFFFFF;
+    border-radius: 3%;
+    background: none;
+`;
+
+const MobilePosterImage = styled.img`
+    width: 100%;
+    height: auto;
+    display: block;
 `;
 
 const MobileImageContainer = styled.div`
     display: flex;
-    width: 70vw;
-    height: 100%;
-`
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    height: auto;
+`;
+
+
+const DacosImage = styled.div`
+    width: 80%;
+    aspect-ratio: 1;
+    background-image: url(${dacos});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+`;
+
+const SoluxImage = styled.div`
+    width: 80%;
+    aspect-ratio: 1;
+    background-image: url(${solux});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+`;
 
 const AboutPage = () => {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
+    const MobilePoster1 = (props) => (
+        <MobilePoster>
+            <MobilePosterImage src={poster1} alt="Poster 1" />
+        </MobilePoster>
+    );
+    
+    const MobilePoster2 = (props) => (
+        <MobilePoster>
+            <MobilePosterImage src={poster2} alt="Poster 2" />
+        </MobilePoster>
+    );
+
     var settings = {
         dots: false,
         infinite: true,

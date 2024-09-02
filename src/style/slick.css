@@ -118,14 +118,15 @@
 
 .slick-prev {
     background-image: url('/src/images/about/left_arrow.svg');
-    right: 75px; 
-    bottom: -40px;
+    right: 50px; 
+    bottom: -50px;
+    margin-top: 30px;
 }
 
 .slick-next {
     background-image: url('/src/images/about/right_arrow.svg'); 
-    right: 15px;
-    bottom: -40px;
+    right: 0px;
+    bottom: -50px;
 }
 
 [dir='rtl'] .slick-prev {

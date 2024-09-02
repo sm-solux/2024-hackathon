@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
-import logo from "../images/logo/logo.svg"
+import logo from "../images/logo/about_logo.svg"
 import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png";
 import poster1 from "../images/about/poster1.svg";
@@ -18,6 +18,7 @@ const AboutContainer = styled.div`
 
 const LogoContainer = styled.div`
     height: 97vh;
+    width: 100%;
 `
 
 const About = styled.div`
@@ -31,18 +32,18 @@ const MainConatiner = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 30px;
+    padding-top: 120px;
+    padding-bottom: 100px;
 `
 
 const RoundBackground = styled.div`
     background-image: url(${background});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
     position: relative;
     width: 100%;
-    height: clamp(80%, 1.5vw, 150%);
+    height: 130%;
     border: none;
 `
 
@@ -51,26 +52,17 @@ const DXSLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: clamp(330px, 50vw, 370px);
-    height: clamp(80px, 50vw, 120px);
-`
-
-const MainBoldText = styled.div`
-    font-weight: 800;
-    font-size: clamp(2.5rem, 60vw, 2.7rem);
-`
-
-const MainLightText = styled.div`
-    font-weight: 100;
-    font-size: 0.65rem;
+    width: clamp(70vw, 100vw, 90vw);
+    height: clamp(200px, 100vw, 220px);
 `
 
 const InfoContainer = styled.div`
-    margin-top: 250px;
+    margin-top: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    z-index: 11;
 `
 
 const InfoTextContainer = styled.div`
@@ -148,11 +140,12 @@ const PosterImage = styled.img`
 `
 
 const MobilePosterContainer = styled.div`
-    margin-top: 50vh;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
+    z-index: 11;
 `
 
 const MobilePoster1 = styled.div`
@@ -208,10 +201,7 @@ const AboutPage = () => {
             <LogoContainer>
                 <MainConatiner>
                     <DXSLogo />
-                    <MainBoldText>연합해커톤</MainBoldText>
-                    <MainLightText>SOOKMYUNG WOMEN'S UNIVERSITY</MainLightText>
                 </MainConatiner>
-
                 <RoundBackground/> 
             </LogoContainer>
 

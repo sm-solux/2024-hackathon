@@ -206,7 +206,7 @@ const Part = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center:
+    justify-content: center;
     text-align: center;
     margin: 0 auto;
 `
@@ -266,21 +266,27 @@ const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center; 
     text-align: left;
-    gap: 0.5vw;
+    gap: 0.8vw;
     margin-top: 1vw;
     margin-bottom: 2.5vw;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: 100%;
 `;
 
 const Button = styled.button`
-    padding: 0.6vw 1.5vw;
-    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    padding: clamp(0.4rem, 0.6vw, 0.6rem) clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.7rem, 1vw, 0.8rem);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#0057FF' : 'black')};
     color: ${({ isActive }) => (isActive ? 'white' : 'grey')};
+    white-space: nowrap;
+
+    &:hover{
+        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
+    }
 `;
 
 

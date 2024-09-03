@@ -15,6 +15,19 @@ function Topbar() {
   const [activeLink, setActiveLink] = useState('/');
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
+  const mobileMenuText = () => {
+    switch (location.pathname) {
+      case '/timeline':
+        return 'TIMELINE';
+      case '/hackathon':
+        return 'HACKATHON';
+      case '/faq':
+        return 'FAQ';
+      default:
+        return '';
+    }
+  };
+
   useEffect(() => {
     setActiveLink(location.pathname);
     setIsNavbarOpen(false);
@@ -32,6 +45,9 @@ function Topbar() {
             alt="dacos x solux Hackathon Logo"
           />
         </Navbar.Brand>
+        <div className={`mobile-menu-text`}>
+          {mobileMenuText()}
+        </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav"
         onClick={() => setIsNavbarOpen(!isNavbarOpen)} />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end' in={isNavbarOpen}>

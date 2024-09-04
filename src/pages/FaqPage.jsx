@@ -97,7 +97,6 @@ const etcData = [
 ];
 
 const Container = styled.div`
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,6 +153,7 @@ const FAQAnswer = styled.div`
 `;
 
 const QuestionText = styled.div`
+    width: 95%;
     font-size: clamp(0.9rem, 1.5vw, 1.05rem);
     background-color: transparent;
 `
@@ -200,8 +200,8 @@ const FaqQuestion = styled.div`
 
 const InquriryContainer = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
-    padding-top: 30px;
     height: 30vh;
 `
 
@@ -222,7 +222,6 @@ const BlueText = styled.div`
 `
 
 const WhiteText = styled.div`
-    width: 3rem;
     font-size: clamp(0.5rem, 1.5vw, 0.8rem);
     font-weight: 400;
     background-color: transparent;
@@ -232,7 +231,6 @@ const InquiryInfoConatiner = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(35vw, 1.5vw, 30vw);
     text-align: center;
     margin: 0 auto;
 `
@@ -242,8 +240,8 @@ const MailIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(18px, 1.5vw, 22px);
-    height: clamp(18px, 1.5vw, 22px);
+    width: clamp(13px, 2vw, 18px);
+    height: clamp(13px, 2vw, 18px);
 `
 
 const InstagramIcon = styled.div`
@@ -251,8 +249,8 @@ const InstagramIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(18px, 1.5vw, 22px);
-    height: clamp(18px, 1.5vw, 22px);
+    width: clamp(13px, 2vw, 18px);
+    height: clamp(13px, 2vw, 18px);
 `
 
 const ArrowIcon = styled.div`

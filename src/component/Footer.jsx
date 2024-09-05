@@ -49,7 +49,7 @@ const InfoContainer = styled.div`
 
 const FooterInfoText = styled.p`
   color: #6B6B6B;
-  font-size: clamp(5px, 15vw, 8px);
+  font-size: clamp(8px, 2vw, 12px);
   margin: 0px 5px 0px 0px;
 `
 

@@ -162,7 +162,7 @@ const SoluxInfoContainer = styled.div`
 `;
 
 const DacosImage = styled.div`
-    width: 90%;
+    width: 80%;
     aspect-ratio: 2;
     background-image: url(${dacos});
     background-size: contain;
@@ -171,7 +171,7 @@ const DacosImage = styled.div`
 `;
 
 const SoluxImage = styled.div`
-    width: 90%;
+    width: 80%;
     aspect-ratio: 2;
     background-image: url(${solux});
     background-size: contain;
@@ -243,7 +243,7 @@ const AboutPage = () => {
                             <DacosBlueLogo />
                             <DSSubtitle>소프트웨어학부 데이터분석 학회</DSSubtitle>
                             <DSContent style={{ width: "90%" }}>
-                                DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.
+                            DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.
                             </DSContent>
                         </GroupTextContainer>
                     </DacosInfoContainer>
@@ -254,7 +254,7 @@ const AboutPage = () => {
                             <SoluxBlueLogo />
                             <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
                             <DSContent style={{ width: "90%" }}>
-                                리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다.
+                            리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.
                             </DSContent>
                         </GroupTextContainer>
                     </SoluxInfoContainer>
@@ -284,7 +284,7 @@ const AboutPage = () => {
                             <DacosBlueLogo />
                             <DSSubtitle>소프트웨어학부 데이터분석 학회</DSSubtitle>
                             <DSContent>
-                                DACOS는 숙명여대 소프트웨어학부의 데이터 분석 동아리로, 데이터 처리 및 분석, 머신러닝, 딥러닝 등의 분야에서 활동하고 있습니다.
+                            DACOS는 숙명여대 소프트웨어학부의 최초 데이터 분석 동아리로, "Data Analysis Club of Sookmyung" 의 약자입니다. DACOS는 데이터 처리, 머신러닝, 딥러닝 등의 기술을 함께 학습하며, 데이터 분석에 대한 깊이 있는 논의와 협업을 위한 공간을 제공합니다.
                             </DSContent>
                         </GroupTextContainer>
                     </DacosInfoContainer>
@@ -295,7 +295,7 @@ const AboutPage = () => {
                             <SoluxBlueLogo />
                             <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
                             <DSContent>
-                                SOLUX는 다양한 소프트웨어 개발 프로젝트를 진행하며, 개발 능력을 향상시키기 위한 다양한 활동을 하고 있습니다.
+                            리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.
                             </DSContent>
                         </GroupTextContainer>
                     </SoluxInfoContainer>

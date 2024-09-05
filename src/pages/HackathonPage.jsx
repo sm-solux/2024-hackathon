@@ -24,9 +24,10 @@ const ThemeContainer = styled.div`
     text-align: center;
 `
 const ThemeText = styled.div`
-    font-size: 2.5rem;
+    font-size: calc(0.26vw + 27.08px);;
     font-weight: 600;
     background-color: transparent;
+    margin-right: 5px;
 `
 const ThemeTitleContainer = styled.div`
     display: flex;
@@ -70,20 +71,20 @@ const TitleContainer = styled.div`
 `
 
 const TitleText = styled.div`
-    font-size: clamp(1.5rem, 1vw, 1.8rem);
+    font-size: calc(0.26vw + 27.08px);
     font-weight: 600;
     background-color: transparent;
 `
 
 const GrayTitleText = styled.div`
     font-weight: 600;
-    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-size: calc(0.26vw + 12.08px);
     color: #949494;
     background-color: transparent;
 `
 
 const SubtitleText = styled.div`
-    font-size: 1rem;
+    font-size: calc(0.26vw + 14.08px);;
     font-weight: 100;
     background-color: transparent;
     width: clamp(70vw, 1.5vw, 60vw);
@@ -111,13 +112,13 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: clamp(1rem, 1.9vw, 1.9rem);
+    font-size: calc(0.26vw + 14.08px);
     background-color: transparent;
 `;
 
 const PrizeMoney = styled.div`
     font-weight: 200;
-    font-size: clamp(0.7rem, 2.5vw, 1rem); 
+    font-size: calc(0.26vw + 14.08px); 
     margin-top: clamp(0.3rem, 0.5rem, 0.5rem);
     background-color: transparent;
 `;
@@ -127,16 +128,15 @@ const ButtonContainer = styled.div`
     align-items: center; /* 세로 중앙 정렬 */
     justify-content: center; 
     gap: 1vw;
-    margin-top: 1vw;
-    margin-bottom: 2vw;
+    margin: 2rem 0;
     width: 100%;
     overflow-x: auto;
     scrollbar-width: none;
 `;
 
 const Button = styled.button`
-    padding: clamp(0.4rem, 0.6vw, 0.6rem) clamp(1rem, 1.5vw, 1.5rem);
-    font-size: clamp(0.7rem, 1vw, 0.8rem);
+    padding: clamp(0.5rem, 0.7vw, 0.7rem) clamp(1.1rem, 1.6vw, 1.6rem);
+    font-size: calc(0.26vw + 14.08px);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
@@ -170,7 +170,7 @@ const HackathonPage = () => {
                     <ThemeText>주제</ThemeText>
                     <GrayTitleText>THEME</GrayTitleText>
                 </ThemeTitleContainer>
-                <SubtitleText>자율주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
+                <SubtitleText>자율 주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
             </ThemeContainer>
             
             <EvaluationContainer isMobile={isMobile}>
@@ -235,7 +235,7 @@ const HackathonPage = () => {
                             title='완성도'
                             point='(25점)'
                             contents={[
-                                '서비스가 원활하게 작동하는가 (서버연결)',
+                                '서비스가 원활하게 작동하는가 (서버 연결)',
                                 'UIUX가 사용자 친화적인가'
                             ]}
                         />

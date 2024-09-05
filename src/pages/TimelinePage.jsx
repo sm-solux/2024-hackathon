@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
 import timeline from "../images/timeline/timeline.svg";
-import { useMediaQuery } from 'react-responsive';
 
 const TimelineContainer = styled.div`
     background-color: transparent;

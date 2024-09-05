@@ -25,16 +25,17 @@ const ThemeContainer = styled.div`
 `
 
 const ThemeText = styled.div`
-    font-size: calc(0.26vw + 32.08px);;
+    font-size: calc(0.26vw + 32.08px);
     font-weight: 600;
     background-color: transparent;
     margin-right: 5px;
+    line-height: 1; 
 `
 
 const ThemeTitleContainer = styled.div`
     width: clamp(70vw, 1.5vw, 60vw);
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: flex-end;
     background-color: transparent;
     margin-bottom: 20px;
@@ -86,6 +87,7 @@ const GrayTitleText = styled.div`
     font-size: calc(0.26vw + 12.08px);
     color: #949494;
     background-color: transparent;
+    line-height: 1;
 `
 
 const SubtitleText = styled.div`

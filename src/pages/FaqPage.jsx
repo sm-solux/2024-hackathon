@@ -11,11 +11,11 @@ const applyData = [
       answer: '해당 경우, 원하는 분야로 지원해주시면 됩니다.'
     },
     {
-        question: '단체지원이 가능한가요? / 미리 팀을 만들어서 지원해도 되나요?',
+        question: '미리 팀을 만들어서 지원해도 되나요?',
         answer: '아니요, 팀 별 지원은 불가능합니다.'
     },
     {
-        question: '두 개의 팀에 복수로 참가 지원해도 되나요?',
+        question: '두 개의 팀에 복수 지원해도 되나요?',
         answer: '아니요, 데이터분석 또는 개발 중 하나만 선택하여 지원해야 합니다. 또한, 팀 단위가 아닌 개인으로 지원하여 하나의 팀에 배정받기 때문에 두 개의 팀에 복수 배정되지 않습니다.'
     },
     {
@@ -26,16 +26,16 @@ const applyData = [
 
 const planningData = [
     {
+        question: '모델과 백 연동을 할 줄 몰라도 괜찮나요?',
+        answer: '솔룩스 내에서 10월 세미나로 해당 내용을 다룰 예정이니 세미나 수강을 권장드립니다.'
+    },
+    {
         question: '사전 기획 기간에는 무엇을 해야 하나요?',
         answer: '주제 선정과 기획 및 디자인을 진행해 주시면 됩니다. 더불어, 모델링 혹은 연동 등 기능적 부분을 준비할 수 있는 기간입니다.'
     },
     {
         question: '사전 기획 기간에는 자율적으로 모여서 작업하는 건가요?',
         answer: '네. 또한, 주최 측에서 대면 회의가 가능한 강의실을 제공해 드릴 예정이며 추후 공지드릴 예정입니다.'
-    },
-    {
-      question: '모델과 백 연동을 할 줄 몰라도 괜찮나요?',
-      answer: '솔룩스 내에서 10월 세미나로 해당 내용을 다룰 예정이니 세미나 수강을 권장드립니다.'
     },
 ];
 
@@ -46,7 +46,7 @@ const preparationData = [
     },
     {
         question: '유료 API를 사용해도 되나요?',
-        answer: '모델 API는 사용이 불가능합니다.'
+        answer: '모델 API는 사용이 가능하지만, 유료 API는 사용이 불가능합니다.'
     },
     {
         question: '사용해야 하는 데이터나 모델이 정해져 있나요?',
@@ -60,12 +60,8 @@ const preparationData = [
 
 const progressData = [
     {
-        question: '대회 도중 외출이 가능한가요?',
-        answer: '네 외출은 자유롭게 가능합니다.'
-    },
-    {
         question: '개인 일정으로 늦은 참석, 또는 이른 퇴장이 가능한가요?',
-        answer: '아니요, 예정되어 있는 시간에는 모두 참여 가능해야합니다. 단, 학교 수업의 경우 지원 시에 작성한 일정에 따라 가능합니다.'
+        answer: '아니요, 예정되어 있는 시간에는 모두 참여 가능해야합니다. 단, 학교 수업의 경우 지원 시에 작성한 일정에 따라 가능합니다. 늦은 참석이라도 가급적 OT는 듣고 가는 것을 권장드리며, 듣지 못할 경우 최소한의 내용은 알려드리나 OT 불참에 대한 책임은 본인에게 있습니다. '
     },
     {
         question: '식사 제공되나요?',
@@ -73,11 +69,11 @@ const progressData = [
     },
     {
         question: '심사위원님들은 어떻게 구성되나요?',
-        answer: '교내 교수님으로 구성됩니다.'
+        answer: '교내 교수님으로 우선 구성되나, 상황에 따라 외부 심사위원이 포함될 수 있습니다.'
     },
     {
         question: '심사 결과는 언제 발표되나요?',
-        answer: '행사 당일 심사 결과 발표 후, 마지막에 시상이 진행될 예정입니다.'
+        answer: '행사 당일 심사 결과 발표 후 마지막에 시상이 진행될 예정입니다.'
     },
     {
         question: '상금은 시상식 당일에 지급되나요?',
@@ -91,8 +87,8 @@ const etcData = [
         answer: '지원 시 작성한 폼에 따라 실력을 최대한 비슷하게 맞추어 구성할 예정입니다.'
     },
     {
-        question: '선발일은 언제인가요? / 참가 합격자 공지는 언제 주나요?',
-        answer: '부원 자격으로 신청한 경우 9월 20일에 오픈채팅방 개설과 함께 참가자 명단이 공개됩니다. 팀 구성은 팀 공개일(24. 10. 31)에 공개됩니다.'
+        question: '참가자 선발일은 언제인가요? ',
+        answer: '부원 자격으로 신청한 경우 9월 20일에 오픈채팅방 개설과 함께 참가자 명단이 공개됩니다. 팀 구성은 팀 공개일(24. 10. 31)에 공개됩니다. '
     },
 ];
 
@@ -154,13 +150,13 @@ const FAQAnswer = styled.div`
 
 const QuestionText = styled.div`
     width: 95%;
-    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+    font-size: calc(0.26vw + 14.08px);
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 `
 
 const AnswerText = styled.div`
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: calc(0.26vw + 14.08px);
     background-color: transparent;
     text-indent: -1rem;
     margin-left: 1rem;
@@ -226,6 +222,7 @@ const Part = styled.div`
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+    gap: 0.5vw;
 `
 
 const BlueText = styled.div`
@@ -236,7 +233,7 @@ const BlueText = styled.div`
 `
 
 const WhiteText = styled.div`
-    font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+    font-size: calc(0.26vw + 14.08px);
     font-weight: 400;
     background-color: transparent;
 `
@@ -281,14 +278,14 @@ const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center; 
     text-align: left;
-    gap: 0.6rem;
+    gap: 1vw;
     margin-bottom: 0.6rem;
     width: 100%;
 `;
 
 const Button = styled.button`
     padding: clamp(0.5rem, 0.6vw, 0.6rem) clamp(1.4rem, 1.8vw, 1.8rem);
-    font-size: 0.8rem;
+    font-size: calc(0.26vw + 14.08px);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;

@@ -100,13 +100,13 @@ const Container = styled.div`
 `;
 
 const FaqContainer = styled.div`
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
     position: relative;
     display: flex; 
     flex-direction: column;
-    justify-content: center; /* Vertically centered */
-    align-items: center;  /* Center aligned horizontally */
+    justify-content: center;
+    align-items: center; 
     text-align: center;
     
 `;
@@ -118,25 +118,26 @@ const FAQ = styled.div`
 
 const TitleContainer = styled.div`
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
     background-color: transparent;
+    flex-direction: column;
     width: clamp(70vw, 1.5vw, 60vw);
 `;
 
 const TitleText = styled.div`
-    font-size: clamp(1.5rem, 1vw, 1.8rem);
+    font-size: calc(0.26vw + 27.08px);
     font-weight: 600;
     background-color: transparent;
 `;
 
 const GrayTitleText = styled.div`
     font-weight: 600;
-    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    font-size: calc(0.26vw + 12.08px);
     color: #949494;
     background-color: transparent;
     margin-left: 5px;
+    margin-bottom: 10px;
 `;
 
 const FAQAnswer = styled.div`
@@ -146,6 +147,7 @@ const FAQAnswer = styled.div`
     opacity: 0;
     padding-top: 0;
     padding-bottom: 0;
+    background-color: transparent;
 `;
 
 const QuestionText = styled.div`
@@ -159,7 +161,7 @@ const AnswerText = styled.div`
     font-size: calc(0.26vw + 14.08px);
     background-color: transparent;
     text-indent: -1rem;
-    margin-left: 1rem;
+    margin-left: 1.2rem;
 `
 
 // Unified container for both question and answer
@@ -251,8 +253,8 @@ const MailIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(13px, 2vw, 18px);
-    height: clamp(13px, 2vw, 18px);
+    width: clamp(15px, 2vw, 18px);
+    height: clamp(15px, 2vw, 18px);
 `
 
 const InstagramIcon = styled.div`
@@ -260,8 +262,8 @@ const InstagramIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(13px, 2vw, 18px);
-    height: clamp(13px, 2vw, 18px);
+    width: clamp(15px, 2vw, 18px);
+    height: clamp(15px, 2vw, 18px);
 `
 
 const ArrowIcon = styled.div`
@@ -285,7 +287,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
     padding: clamp(0.5rem, 0.6vw, 0.6rem) clamp(1.4rem, 1.8vw, 1.8rem);
-    font-size: calc(0.26vw + 14.08px);
+    font-size: calc(0.26vw + 12.08px);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
@@ -327,8 +329,6 @@ const FaqPage = () => {
             <FaqContainer>
                 <TitleContainer>
                     <TitleText>자주 묻는 질문</TitleText>
-                </TitleContainer>
-                <TitleContainer>
                     <GrayTitleText>FAQ</GrayTitleText>
                 </TitleContainer>
                 
@@ -507,10 +507,8 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer>
-                    <TitleText style={{ marginTop: "7vh"}}>문의사항</TitleText>
-                </TitleContainer>
-                <TitleContainer>
+                <TitleContainer style={{ marginTop: "100px", marginBottom: "50px", borderBottom: "1px solid #525252" }}>
+                    <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
                 <InquriryContainer>

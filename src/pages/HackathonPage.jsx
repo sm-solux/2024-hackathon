@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from '../images/hackathon/theme_background.png';
 import Box from '../component/Box';
 import { useMediaQuery } from 'react-responsive';
+import ScrollLink from "../component/ScrollLink";
 
 const HackathonContainer = styled.div`
 
@@ -11,7 +12,6 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    margin-top: 7vh;
     background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,17 +23,22 @@ const ThemeContainer = styled.div`
     align-items: center; /* 수평 방향 가운데 정렬 */
     text-align: center;
 `
+
 const ThemeText = styled.div`
-    font-size: calc(0.26vw + 27.08px);;
+    font-size: calc(0.26vw + 32.08px);;
     font-weight: 600;
     background-color: transparent;
     margin-right: 5px;
 `
+
 const ThemeTitleContainer = styled.div`
+    width: clamp(70vw, 1.5vw, 60vw);
     display: flex;
-    align-items: baseline; 
     justify-content: center; 
+    align-items: flex-end;
     background-color: transparent;
+    margin-bottom: 20px;
+    height: 100px;
 `
 
 const EvaluationContainer = styled.div`
@@ -87,7 +92,7 @@ const SubtitleText = styled.div`
     font-size: calc(0.26vw + 14.08px);;
     font-weight: 100;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: 90%;
 `
 
 const PrizeBoxContainer = styled.div`
@@ -136,7 +141,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
     padding: clamp(0.5rem, 0.7vw, 0.7rem) clamp(1.1rem, 1.6vw, 1.6rem);
-    font-size: calc(0.26vw + 14.08px);
+    font-size: calc(0.26vw + 12.08px);
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
@@ -170,10 +175,13 @@ const HackathonPage = () => {
                     <ThemeText>주제</ThemeText>
                     <GrayTitleText>THEME</GrayTitleText>
                 </ThemeTitleContainer>
-                <SubtitleText>자율 주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
+                    <SubtitleText>자율 주제로 진행됩니다.</SubtitleText>
+                    <SubtitleText>참신한 아이디어와 실용적인 기획을 펼쳐주세요. </SubtitleText>
             </ThemeContainer>
+
+            <ScrollLink />
             
-            <EvaluationContainer isMobile={isMobile}>
+            <EvaluationContainer isMobile={isMobile} style={{ marginTop: "120px"}}>
                 <TitleContainer>
                     <TitleText>심사 기준</TitleText>
                     <GrayTitleText>EVALUATION CRITERIA</GrayTitleText>              

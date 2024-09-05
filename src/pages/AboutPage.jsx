@@ -39,9 +39,9 @@ const MainContainer = styled.div`
 
 const RoundBackground = styled.div`
     background-image: url(${background});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     position: relative;
     width: 100%;
     height: 130%;
@@ -53,8 +53,8 @@ const DXSLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: clamp(80vw, 100vw, 90vw);
-    height: clamp(220px, 100vw, 240px);
+    width: clamp(83vw, 100vw, 93vw);
+    height: clamp(230px, 100vw, 250px);
 `;
 
 const InfoContainer = styled.div`
@@ -91,7 +91,7 @@ const InfoBoldText = styled.div`
 
 const DSSubtitle = styled.div`
     font-weight: 100;
-    font-size: calc(0.26vw + 10.08px);
+    font-size: calc(0.26vw + 12.08px);
     margin-bottom: 10px;
 `;
 
@@ -100,7 +100,7 @@ const DSContent = styled.div`
     width: 80%;
     text-align: center;
     word-break: keep-all;
-    font-size: calc(0.26vw + 11.08px);
+    font-size: calc(0.26vw + 14.08px);
     line-height: 160%;
     margin-top: 20px;
 `;
@@ -233,7 +233,7 @@ const AboutPage = () => {
                         <InfoTextContainer>
                             <InfoBoldText>DACOS X SOLUX 해커톤</InfoBoldText>
                             <DSContent style={{ width: "100%" }}>
-                                DACOS X SOLUX 해커톤은 다코스의 데이터 분석 능력과 솔룩스의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.
+                                DACOS X SOLUX 해커톤은 DACOS의 데이터 분석 능력과 SOLUX의 개발 능력을 결합하여 협력적 사고와 미래지향적 아이디어 창출을 목표로, 새로운 아이디어를 모색하고 실제 기획 및 구현까지의 진행을 도모합니다.
                             </DSContent>
                         </InfoTextContainer>
                     </MobilePosterContainer>

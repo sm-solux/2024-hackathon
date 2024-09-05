@@ -53,8 +53,8 @@ const DXSLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: clamp(80vw, 100vw, 90vw);
-    height: clamp(220px, 100vw, 240px);
+    width: clamp(83vw, 100vw, 93vw);
+    height: clamp(230px, 100vw, 250px);
 `;
 
 const InfoContainer = styled.div`

@@ -39,9 +39,9 @@ const MainContainer = styled.div`
 
 const RoundBackground = styled.div`
     background-image: url(${background});
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     position: relative;
     width: 100%;
     height: 130%;

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import theme from '../images/hackathon/theme_background.png';
 import Box from '../component/Box';
 import { useMediaQuery } from 'react-responsive';
+import ScrollLink from "../component/ScrollLink";
 
 const HackathonContainer = styled.div`
 
@@ -11,7 +12,6 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    margin-top: 7vh;
     background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
     background-size: cover;
     background-repeat: no-repeat;
@@ -23,6 +23,7 @@ const ThemeContainer = styled.div`
     align-items: center; /* 수평 방향 가운데 정렬 */
     text-align: center;
 `
+
 const ThemeText = styled.div`
     font-size: calc(0.26vw + 32.08px);;
     font-weight: 600;
@@ -91,7 +92,7 @@ const SubtitleText = styled.div`
     font-size: calc(0.26vw + 14.08px);;
     font-weight: 100;
     background-color: transparent;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: 90%;
 `
 
 const PrizeBoxContainer = styled.div`
@@ -177,6 +178,8 @@ const HackathonPage = () => {
                     <SubtitleText>자율 주제로 진행됩니다.</SubtitleText>
                     <SubtitleText>참신한 아이디어와 실용적인 기획을 펼쳐주세요. </SubtitleText>
             </ThemeContainer>
+
+            <ScrollLink />
             
             <EvaluationContainer isMobile={isMobile} style={{ marginTop: "120px"}}>
                 <TitleContainer>

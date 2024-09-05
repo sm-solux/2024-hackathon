@@ -156,6 +156,7 @@ const QuestionText = styled.div`
     width: 95%;
     font-size: clamp(0.9rem, 1.5vw, 1.05rem);
     background-color: transparent;
+    transition: all 0.3s ease-in-out;
 `
 
 const AnswerText = styled.div`
@@ -179,6 +180,11 @@ const FaqItem = styled.div`
     &.active {
         background: linear-gradient(135deg, #0057FF 0%, #003499 100%);
         color: white;
+
+        &:hover ${QuestionText}{
+            color: #FFFFFF;
+            transition: 0.001s;
+        }
     }
     
     &.active ${FAQAnswer} {
@@ -186,6 +192,14 @@ const FaqItem = styled.div`
         max-height: 500px;
         padding-top: 20px;
         opacity: 1;
+    }
+
+    &:hover{
+        background-color: #FFFFFF;
+    }
+
+    &:hover ${QuestionText}{
+        color: #000000;
     }
 `;
 

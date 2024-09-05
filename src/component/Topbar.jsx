@@ -10,7 +10,7 @@ import topbarlogo from "../images/logo/logo.svg";
 
 function Topbar() {
   const location = useLocation();
-  const isMobile = useMediaQuery({ query: "(max-width: 995px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 991px)" });
 
   const [activeLink, setActiveLink] = useState('/');
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
@@ -67,7 +67,7 @@ function Topbar() {
               FAQ
           </Nav.Link>
           <Button
-            style={{ width: isMobile? "90px" : "", marginRight: isMobile ? '0px' : '10px' }}
+            style={{ width: isMobile? "90px" : "", marginTop: isMobile ? '20px' : '0px', alignSelf: isMobile ? 'flex-end' : 'center' }}
             onClick={() => {
               window.open("https://linktr.ee/DxSHackathon");
             }}

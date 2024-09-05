@@ -11,6 +11,11 @@ const StyleButton = styled.button `
     background-color: #0057FF;
     padding: 5px 10px;
     margin: 5px 0px;
+
+    &:hover{
+        background: #FFFFFF;
+        color: #000000;
+    }
 `
 const hoverVariants = {
     grow: {

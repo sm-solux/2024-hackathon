@@ -1,18 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import dacoslogo from "../images/logo/dacos.svg";
+import dacoslogo from "../images/logo/dacos.png";
 import soluxlogo from "../images/logo/solux.png";
-import software from "../images/logo/software.svg";
+import software from "../images/logo/software.png";
 
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
 `
 
 const DacosLogo = styled.div`
   background-image: url(${dacoslogo});
-  width: 50px;
+  width: clamp(45px, 15vw, 55px);
   height: 30px;
   position: relative;
   background-size: contain;
@@ -30,11 +29,11 @@ const SoluxLogo = styled.div`
 
 const SoftwareLogo = styled.div`
   background-image: url(${software});
-  width: 200px;
-  height: 30px;
-  background-size: contain;
+  width: 180px;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0px 20px;
+  margin-bottom: 6px;
 `
 
 const EmailContainer = styled.p`

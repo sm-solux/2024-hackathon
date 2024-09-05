@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
 import timeline from "../images/timeline/timeline.svg";
+import { useMediaQuery } from 'react-responsive';
 
 const TimelineContainer = styled.div`
     background-color: transparent;
@@ -19,6 +20,7 @@ const InfoContainer = styled.div`
     background-position: bottom;
     position: relative;
     display: flex;
+    padding: 0vw 5vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -91,6 +93,7 @@ const WhiteText = styled.span`
     color: #FFFFFF;
     background-color: transparent;
     font-size: calc(0.26vw + 14.08px);
+    display: inline;
 `;
 
 const BlueText = styled.span`
@@ -98,7 +101,6 @@ const BlueText = styled.span`
     background-color: transparent;
     font-size: calc(0.26vw + 14.08px);
 `;
-
 
 const GraySmallSubtitleText = styled.span`
     font-size: calc(0.26vw + 9.08px);
@@ -125,6 +127,7 @@ const TimelineImage = styled.object`
 `;
 
 const TimelinePage = () => {
+
     return (
         <TimelineContainer>
             <InfoContainer>
@@ -205,7 +208,7 @@ const TimelinePage = () => {
                     <TimelineImage data={timeline} type="image/svg+xml" aria-label="Timeline" />
                 </TimetlineContainer>
 
-                <GraySubtitleText style={{ marginTop: "5px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다</GraySubtitleText>
+                <GraySubtitleText style={{ marginTop: "10px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다</GraySubtitleText>
             </InfoContainer>
         </TimelineContainer>
     );

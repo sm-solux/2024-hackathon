@@ -8,12 +8,11 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
 `
 
 const DacosLogo = styled.div`
   background-image: url(${dacoslogo});
-  width: clamp(30px, 15vw, 45px);
+  width: 50px;
   height: 30px;
   position: relative;
   background-size: contain;
@@ -32,7 +31,7 @@ const SoluxLogo = styled.div`
 const SoftwareLogo = styled.div`
   background-image: url(${software});
   width: 200px;
-  height: 100%;
+  height: 30px;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0px 20px;
@@ -50,7 +49,7 @@ const InfoContainer = styled.div`
 
 const FooterInfoText = styled.p`
   color: #6B6B6B;
-  font-size: clamp(5px, 15vw, 8px);
+  font-size: calc(0.26vw + 7.08px);
   margin: 0px 5px 0px 0px;
 `
 

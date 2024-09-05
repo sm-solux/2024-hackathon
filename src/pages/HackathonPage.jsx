@@ -39,6 +39,7 @@ const EvaluationContainer = styled.div`
     height: auto;
     width: 100%;
     margin-top: 10vh;
+    padding : ${({ isMobile }) => (isMobile ? '0vw 5vw' : '0vw 15vw')};
     position: relative;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@ const PrizeContainer = styled.div`
     width: 100%;
     margin-top: 10vh;
     position: relative;
+    padding: ${({ isMobile }) => (isMobile ? '0vw 5vw' : '0vw 15vw')};
     display: flex;
     flex-direction: column;
     justify-content: center; /* 세로 방향 가운데 정렬 */
@@ -63,8 +65,8 @@ const TitleContainer = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: transparent;
-    width: clamp(60vw, 1.5vw, 70vw);
-    margin-bottom: clamp(1vw, 2vw, 2vw);
+    width: 100%;
+    margin-bottom: 2vw;
 `
 
 const TitleText = styled.div`
@@ -78,7 +80,6 @@ const GrayTitleText = styled.div`
     font-size: clamp(0.6rem, 1vw, 0.8rem);
     color: #949494;
     background-color: transparent;
-    margin-left: 5px;
 `
 
 const SubtitleText = styled.div`
@@ -91,13 +92,13 @@ const SubtitleText = styled.div`
 const PrizeBoxContainer = styled.div`
     display: flex;
     margin-top: 1vw;
-    width: clamp(60vw, 1.5vw, 70vw);
+    width: 100%;
     justify-content: space-between;
 `;
 
 const PrizeBox = styled.div`
-    width: clamp(14vw, 18vw, 18vw);
-    height: 17vw;
+    width: 30%;
+    aspect-ratio: 1.1;
     border: 1px solid #0057FF;
     background-color: ${({ opacity }) => `rgba(0, 87, 255, ${opacity})`};
     display: flex;
@@ -110,7 +111,7 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: clamp(1rem, 2.5vw, 1.5rem); 
+    font-size: clamp(1rem, 1.9vw, 1.9rem);
     background-color: transparent;
 `;
 
@@ -124,12 +125,11 @@ const PrizeMoney = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     align-items: center; /* 세로 중앙 정렬 */
-    justify-content: ${({ isMobile }) => (isMobile ? 'flex-start' : 'center')}; /* 수평 왼쪽 정렬 */
+    justify-content: center; 
     gap: 1vw;
     margin-top: 1vw;
     margin-bottom: 2vw;
     width: 100%;
-    max-width: clamp(60vw, 1.5vw, 70vw);
     overflow-x: auto;
     scrollbar-width: none;
 `;
@@ -173,7 +173,7 @@ const HackathonPage = () => {
                 <SubtitleText>자율주제로 진행됩니다. 참신한 아이디어와 실용적인 기획을 펼쳐주세요.</SubtitleText>  
             </ThemeContainer>
             
-            <EvaluationContainer>
+            <EvaluationContainer isMobile={isMobile}>
                 <TitleContainer>
                     <TitleText>심사 기준</TitleText>
                     <GrayTitleText>EVALUATION CRITERIA</GrayTitleText>              
@@ -266,7 +266,7 @@ const HackathonPage = () => {
 
             </EvaluationContainer>
             
-            <PrizeContainer>
+            <PrizeContainer isMobile={isMobile}>
                 <TitleContainer>
                     <TitleText>상금</TitleText>
                     <GrayTitleText>PRIZE</GrayTitleText>

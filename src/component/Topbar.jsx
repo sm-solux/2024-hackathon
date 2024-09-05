@@ -10,10 +10,23 @@ import topbarlogo from "../images/logo/logo.svg";
 
 function Topbar() {
   const location = useLocation();
-  const isMargin = useMediaQuery({ query: "(min-width: 995px)" });
-  
+  const isMobile = useMediaQuery({ query: "(max-width: 991px)" });
+
   const [activeLink, setActiveLink] = useState('/');
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const mobileMenuText = () => {
+    switch (location.pathname) {
+      case '/timeline':
+        return 'TIMELINE';
+      case '/hackathon':
+        return 'HACKATHON';
+      case '/faq':
+        return 'FAQ';
+      default:
+        return '';
+    }
+  };
 
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -32,6 +45,11 @@ function Topbar() {
             alt="dacos x solux Hackathon Logo"
           />
         </Navbar.Brand>
+        {isMobile && (  
+          <div className={`mobile-menu-text`}>
+            {mobileMenuText()}
+          </div>
+        )}
         <Navbar.Toggle aria-controls="basic-navbar-nav"
         onClick={() => setIsNavbarOpen(!isNavbarOpen)} />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end' in={isNavbarOpen}>
@@ -49,7 +67,7 @@ function Topbar() {
               FAQ
           </Nav.Link>
           <Button
-            style={{ marginLeft: isMargin ? '20px' : '10px', width: isMargin? "90px" : "", marginRight: isMargin ? '20px' : '10px' }}
+            style={{ width: isMobile? "90px" : "", marginTop: isMobile ? '20px' : '0px', alignSelf: isMobile ? 'flex-end' : 'center' }}
             onClick={() => {
               window.open("https://linktr.ee/DxSHackathon");
             }}

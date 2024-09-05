@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import mailicon from "../images/faq/mail_icon.svg"
 import instagramicon from "../images/faq/instagram_icon.svg"
 import arrowicon from "../images/faq/bottom_arrow_icon.svg";
+import { useMediaQuery } from 'react-responsive';
 
 const applyData = [
     {
@@ -96,10 +97,10 @@ const etcData = [
 ];
 
 const Container = styled.div`
-    margin-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding : ${({ isMobile }) => (isMobile ? '0vw 5vw' : '0vw 15vw')};
 `;
 
 const FaqContainer = styled.div`
@@ -111,11 +112,12 @@ const FaqContainer = styled.div`
     justify-content: center; /* Vertically centered */
     align-items: center;  /* Center aligned horizontally */
     text-align: center;
+    
 `;
 
 const FAQ = styled.div`
-    width: clamp(70vw, 1.5vw, 60vw);
-    margin: 0 auto;
+    width: 100%;
+    margin: 3vw auto 0 auto;
 `;
 
 const TitleContainer = styled.div`
@@ -151,8 +153,10 @@ const FAQAnswer = styled.div`
 `;
 
 const QuestionText = styled.div`
+    width: 95%;
     font-size: clamp(0.9rem, 1.5vw, 1.05rem);
     background-color: transparent;
+    transition: all 0.3s ease-in-out;
 `
 
 const AnswerText = styled.div`
@@ -169,13 +173,18 @@ const FaqItem = styled.div`
     padding: 20px;
     cursor: pointer;
     border-radius: 15px;
-    margin-bottom: 10px;
+    margin-top: 10px;
     border: 1px solid #0057FF;
     transition: all 0.3s ease-in-out;
 
     &.active {
         background: linear-gradient(135deg, #0057FF 0%, #003499 100%);
         color: white;
+
+        &:hover ${QuestionText}{
+            color: #FFFFFF;
+            transition: 0.001s;
+        }
     }
     
     &.active ${FAQAnswer} {
@@ -183,6 +192,14 @@ const FaqItem = styled.div`
         max-height: 500px;
         padding-top: 20px;
         opacity: 1;
+    }
+
+    &:hover{
+        background-color: #FFFFFF;
+    }
+
+    &:hover ${QuestionText}{
+        color: #000000;
     }
 `;
 
@@ -197,8 +214,8 @@ const FaqQuestion = styled.div`
 
 const InquriryContainer = styled.div`
     display: flex;
+    width: 100%;
     align-items: center;
-    padding-top: 30px;
     height: 30vh;
 `
 
@@ -206,7 +223,7 @@ const Part = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center:
+    justify-content: center;
     text-align: center;
     margin: 0 auto;
 `
@@ -219,7 +236,6 @@ const BlueText = styled.div`
 `
 
 const WhiteText = styled.div`
-    width: 3rem;
     font-size: clamp(0.5rem, 1.5vw, 0.8rem);
     font-weight: 400;
     background-color: transparent;
@@ -229,7 +245,6 @@ const InquiryInfoConatiner = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(35vw, 1.5vw, 30vw);
     text-align: center;
     margin: 0 auto;
 `
@@ -239,8 +254,8 @@ const MailIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(18px, 1.5vw, 22px);
-    height: clamp(18px, 1.5vw, 22px);
+    width: clamp(13px, 2vw, 18px);
+    height: clamp(13px, 2vw, 18px);
 `
 
 const InstagramIcon = styled.div`
@@ -248,8 +263,8 @@ const InstagramIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(18px, 1.5vw, 22px);
-    height: clamp(18px, 1.5vw, 22px);
+    width: clamp(13px, 2vw, 18px);
+    height: clamp(13px, 2vw, 18px);
 `
 
 const ArrowIcon = styled.div`
@@ -266,25 +281,33 @@ const ButtonContainer = styled.div`
     justify-content: center;
     align-items: center; 
     text-align: left;
-    gap: 0.5vw;
-    margin-top: 1vw;
-    margin-bottom: 2.5vw;
-    width: clamp(70vw, 1.5vw, 60vw);
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    width: 100%;
 `;
 
 const Button = styled.button`
-    padding: 0.6vw 1.5vw;
-    font-size: clamp(0.6rem, 1vw, 0.8rem);
+    padding: clamp(0.5rem, 0.6vw, 0.6rem) clamp(1.4rem, 1.8vw, 1.8rem);
+    font-size: 0.8rem;
     font-weight: 500;
     border-color: #0057FF;
     border-radius: 30px;
     cursor: pointer;
     background-color: ${({ isActive }) => (isActive ? '#0057FF' : 'black')};
     color: ${({ isActive }) => (isActive ? 'white' : 'grey')};
+    white-space: nowrap;
+    
+
+    &:hover{
+        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
+    }
 `;
 
 
 const FaqPage = () => {
+
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
     const [activeIndex, setActiveIndex] = useState(null);
     const [selectPart, setSelectPart] = useState('Apply');
 
@@ -303,7 +326,7 @@ const FaqPage = () => {
     }
 
     return (
-        <Container>
+        <Container isMobile={isMobile}>
             <FaqContainer>
                 <TitleContainer>
                     <TitleText>자주 묻는 질문</TitleText>
@@ -315,22 +338,38 @@ const FaqPage = () => {
             </FaqContainer>
 
             <ButtonContainer>
-                <Button isActive={selectPart === 'Apply'}  onClick={() => changePart('Apply')}>
+                <Button isActive={selectPart === 'Apply'} onClick={() => changePart('Apply')}>
                     지원
                 </Button>
-                <Button isActive={selectPart === 'Planning'}  onClick={() => changePart('Planning')}>
+                <Button isActive={selectPart === 'Planning'} onClick={() => changePart('Planning')}>
                     사전기획
                 </Button>
-                <Button isActive={selectPart === 'Preparation'}  onClick={() => changePart('Preparation')}>
+                <Button isActive={selectPart === 'Preparation'} onClick={() => changePart('Preparation')}>
                     해커톤 준비
                 </Button>
-                <Button isActive={selectPart === 'Progress'}  onClick={() => changePart('Progress')}>
-                    해커톤 진행
-                </Button>
-                <Button isActive={selectPart === 'Etc'}  onClick={() => changePart('Etc')}>
-                    기타
-                </Button>   
+                
+                {!isMobile && (
+                    <>
+                        <Button isActive={selectPart === 'Progress'} onClick={() => changePart('Progress')}>
+                            해커톤 진행
+                        </Button>
+                        <Button isActive={selectPart === 'Etc'} onClick={() => changePart('Etc')}>
+                            기타
+                        </Button>
+                    </>
+                )}
             </ButtonContainer>
+
+            {isMobile && (
+                <ButtonContainer>
+                    <Button isActive={selectPart === 'Progress'} onClick={() => changePart('Progress')}>
+                        해커톤 진행
+                    </Button>
+                    <Button isActive={selectPart === 'Etc'} onClick={() => changePart('Etc')}>
+                        기타
+                    </Button>
+                </ButtonContainer>
+            )}
 
             {selectPart === 'Apply' && (
                 <>

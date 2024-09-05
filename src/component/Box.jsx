@@ -10,7 +10,6 @@ const StyledBox = styled.div`
     margin-top: 1vw;
     margin-bottom: 1rem;
     flex-grow: 1;
-    max-width: clamp(60vw, 1.5vw, 70vw);
     width: 100%;
 `
 const TitleContainer = styled.div`

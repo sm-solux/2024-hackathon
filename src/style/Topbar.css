@@ -25,12 +25,32 @@
   max-width: 100% !important; 
 }
 
-.navbar-brand, .navbar-toggler{
+.navbar-brand{
   margin-left: 10px;
+  border: 0px !important;
+}
+
+.navbar-toggler{
   margin-right: 10px;
+  margin-left: 52px;
   border: 0px !important;
 }
 
 .nav-link{
   margin-left: 10px;
+}
+
+.mobile-menu-text {
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-nav{
+  display: flex;
+  align-items: flex-end;
+  margin-right: 22px;
+}
+
+.nav-link{
+  align-self: self-end;
 }

@@ -99,7 +99,7 @@ const SubtitleText = styled.div`
 
 const PrizeBoxContainer = styled.div`
     display: flex;
-    margin-top: 1vw;
+    margin-top: 2rem;
     width: 100%;
     justify-content: space-between;
 `;
@@ -119,13 +119,13 @@ const PrizeBox = styled.div`
 
 const PrizeTitle = styled.div`
     font-weight: 500;
-    font-size: calc(0.26vw + 14.08px);
+    font-size: calc(0.7vw + 14.08px);
     background-color: transparent;
 `;
 
 const PrizeMoney = styled.div`
     font-weight: 200;
-    font-size: calc(0.26vw + 14.08px); 
+    font-size: calc(0.3vw + 14.08px); 
     margin-top: clamp(0.3rem, 0.5rem, 0.5rem);
     background-color: transparent;
 `;

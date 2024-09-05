@@ -145,13 +145,6 @@ const MobilePoster = styled.div`
     background: none;
 `;
 
-const MobilePosterImage = styled.object`
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-`;
-
 const MobileImageContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -230,10 +223,10 @@ const AboutPage = () => {
                         <MobileImageContainer>
                             <Slider {...settings}>
                                 <MobilePoster>
-                                    <MobilePosterImage data={poster1} type="image/svg+xml" aria-label="Poster 1" />
+                                    <PosterImage data={poster1} type="image/svg+xml" aria-label="Poster 1" />
                                 </MobilePoster>
                                 <MobilePoster>
-                                    <MobilePosterImage data={poster2} type="image/svg+xml" aria-label="Poster 2" />
+                                    <PosterImage data={poster2} type="image/svg+xml" aria-label="Poster 2" />
                                 </MobilePoster>
                             </Slider>
                         </MobileImageContainer>

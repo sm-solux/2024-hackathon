@@ -67,7 +67,7 @@ function Topbar() {
               FAQ
           </Nav.Link>
           <Button
-            style={{ marginLeft: isMobile ? '20px' : '10px', width: isMobile? "90px" : "", marginRight: isMobile ? '20px' : '10px' }}
+            style={{ width: isMobile? "90px" : "", marginRight: isMobile ? '0px' : '10px' }}
             onClick={() => {
               window.open("https://linktr.ee/DxSHackathon");
             }}

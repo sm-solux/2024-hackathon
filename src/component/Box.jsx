@@ -20,24 +20,24 @@ const TitleContainer = styled.div`
 
 const StyledTitle = styled.div`
     font-weight: 600;
-    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    font-size: calc(0.26vw + 14.08px);
     margin-bottom: 0.5rem;
 `
 
 const StyledPoint = styled.div`
-    font-size: clamp(0.7rem, 0.9vw, 1rem);
+    font-size: calc(0.26vw + 14.08px);
     margin-left: 0.3vw;
 `
 
 const List = styled.ul`
     list-style: disc; /* 기본 점 스타일 */
-    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-size: calc(0.26vw + 14.08px);
     padding-left: clamp(2rem, 2.3vw, 2.3rem); 
     margin: 0; /* 기본 여백 제거 */
 `;
 
 const ListItem = styled.li`
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    font-size: calc(0.26vw + 14.08px);
     margin-top: 0.7vw;
 `;
 

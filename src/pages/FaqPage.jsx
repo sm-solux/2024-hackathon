@@ -15,7 +15,7 @@ const applyData = [
         answer: '아니요, 팀 별 지원은 불가능합니다.'
     },
     {
-        question: '두 개의 팀에 복수 지원해도 되나요?',
+        question: '두 개의 분야에 복수 지원해도 되나요?',
         answer: '아니요, 데이터 분석 또는 개발 중 하나만 선택하여 지원해야 합니다.'
     },
     {
@@ -167,7 +167,7 @@ const AnswerText = styled.div`
 
 // Unified container for both question and answer
 const FaqItem = styled.div`
-    background-color: rgba(0, 87, 255, 0.1);
+    background-color: rgba(0, 87, 255, 0.2);
     color: #0057FF;
     padding: 20px;
     cursor: pointer;
@@ -194,11 +194,11 @@ const FaqItem = styled.div`
     }
 
     &:hover{
-        background-color: #FFFFFF;
+        background-color: #000C23;
     }
 
     &:hover ${QuestionText}{
-        color: #000000;
+        color: #FFFFFF;
     }
 `;
 
@@ -508,11 +508,11 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer style={{ marginTop: "200px", marginBottom: "50px", paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
+                <TitleContainer style={{ marginTop: "200px", marginBottom: "10px", paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
                     <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
-                <InquriryContainer>
+                <InquriryContainer style={{ marginBottom: "30px" }}>
                     <Part>
                         <BlueText>DACOS</BlueText>
                         <InquiryInfoConatiner>

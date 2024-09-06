@@ -35,7 +35,7 @@ const SoftwareLogo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 `
 
 const EmailContainer = styled.p`

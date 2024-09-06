@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
-import logo from "../images/logo/about_logo.svg";
+import logo from "../images/logo/about_logo.png";
 import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png";
 import soluxblue from "../images/logo/solux_blue.svg";
@@ -33,8 +33,8 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
 `;
 
 const RoundBackground = styled.div`

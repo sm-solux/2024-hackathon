@@ -12,8 +12,7 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    margin-top: 5vh;
-    background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
+    background-image: url(${theme});
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -154,7 +153,7 @@ const Button = styled.button`
     white-space: nowrap;
 
     &:hover{
-        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        /* background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ; */
         color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
     }
 `;
@@ -283,17 +282,17 @@ const HackathonPage = () => {
                     <GrayTitleText>PRIZE</GrayTitleText>
                 </TitleContainer>
                 <PrizeBoxContainer>
-                    <PrizeBox opacity={0.2}>
-                        <PrizeTitle>우수상</PrizeTitle>
-                        <PrizeMoney>20만원</PrizeMoney>
+                    <PrizeBox opacity={1}>
+                        <PrizeTitle>대상</PrizeTitle>
+                        <PrizeMoney>50만원</PrizeMoney>
                     </PrizeBox>
                     <PrizeBox opacity={0.5}>
                         <PrizeTitle>최우수상</PrizeTitle>
                         <PrizeMoney>30만원</PrizeMoney>
                     </PrizeBox>
-                    <PrizeBox opacity={1}>
-                        <PrizeTitle>대상</PrizeTitle>
-                        <PrizeMoney>50만원</PrizeMoney>
+                    <PrizeBox opacity={0.2}>
+                        <PrizeTitle>우수상</PrizeTitle>
+                        <PrizeMoney>20만원</PrizeMoney>
                     </PrizeBox>
                 </PrizeBoxContainer>
             </PrizeContainer>

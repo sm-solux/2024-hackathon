@@ -12,7 +12,6 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    margin-top: 5vh;
     background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
     background-size: cover;
     background-repeat: no-repeat;
@@ -154,7 +153,7 @@ const Button = styled.button`
     white-space: nowrap;
 
     &:hover{
-        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        /* background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ; */
         color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
     }
 `;

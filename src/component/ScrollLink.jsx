@@ -34,7 +34,7 @@ const ScrollIcon = styled.span`
 `;
 
 const ScrollLink = () => (
-  <ScrollIndicator href="#scroll-here">
+  <ScrollIndicator>
     <ScrollIcon />
   </ScrollIndicator>
 );

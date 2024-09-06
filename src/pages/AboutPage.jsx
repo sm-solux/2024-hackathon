@@ -34,7 +34,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 25vh;
-    padding-bottom: 15vh;
+    padding-bottom: ${props => props.isMobile ? '10vh' : '15vh'};
 `;
 
 const RoundBackground = styled.div`
@@ -53,8 +53,8 @@ const DXSLogo = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: clamp(83vw, 100vw, 93vw);
-    height: clamp(240px, 100vw, 250px);
+    width: clamp(80vw, 100vw, 90vw);
+    height: clamp(220px, 100vw, 240px);
 `;
 
 const InfoContainer = styled.div`
@@ -208,7 +208,7 @@ const AboutPage = () => {
         
         <AboutContainer>
             <LogoContainer>
-                <MainContainer>
+                <MainContainer isMobile={isMobile}>
                     <DXSLogo />
                 </MainContainer>
                 <RoundBackground /> 
@@ -249,7 +249,7 @@ const AboutPage = () => {
                         <GroupTextContainer>
                             <SoluxImage />
                             <SoluxBlueLogo />
-                            <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
+                            <DSSubtitle>중앙 프로그래밍 동아리</DSSubtitle>
                             <DSContent style={{ width: "90%" }}>
                             리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.
                             </DSContent>
@@ -290,7 +290,7 @@ const AboutPage = () => {
                         <GroupTextContainer>
                             <SoluxImage />
                             <SoluxBlueLogo />
-                            <DSSubtitle>소프트웨어학부 개발 동아리</DSSubtitle>
+                            <DSSubtitle>중앙 프로그래밍 동아리</DSSubtitle>
                             <DSContent>
                             리눅스 학회에서 출발한 Sookmyung Linux, SOLUX는 더 다양한 분야에 도전합니다. SOLUX는 교내 유일 프로그래밍 중앙동아리로, 다양한 전공의 학우들이 모여 여러 분야와 IT를 융합하고 새로운 IT 기술을 향해 나아갑니다.
                             </DSContent>

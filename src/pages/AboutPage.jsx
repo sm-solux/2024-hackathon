@@ -34,7 +34,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 25vh;
-    padding-bottom: ${({ isMobile }) => (isMobile ? '10vh' : '15vh')};
+    padding-bottom: ${props => props.isMobile ? '10vh' : '15vh'};
 `;
 
 const RoundBackground = styled.div`
@@ -208,7 +208,7 @@ const AboutPage = () => {
         
         <AboutContainer>
             <LogoContainer>
-                <MainContainer>
+                <MainContainer isMobile={isMobile}>
                     <DXSLogo />
                 </MainContainer>
                 <RoundBackground /> 

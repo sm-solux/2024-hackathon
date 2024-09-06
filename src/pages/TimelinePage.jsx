@@ -98,6 +98,7 @@ const WhiteText = styled.span`
 const BlueText = styled.span`
     color: #0057FF;
     background-color: transparent;
+    font-weight: 600;
     font-size: calc(0.26vw + 14.08px);
 `;
 
@@ -140,7 +141,7 @@ const TimelinePage = () => {
                         </Part>
                         <Part style={{ marginTop: "10px"}}>
                             <BlueText>개발</BlueText>
-                            <WhiteText>SOLUX 29기 부원 및 OB 부원 중 웹앱 개발 가능자</WhiteText>
+                            <WhiteText>SOLUX 29기 부원 및 OB 부원 중 웹/앱 개발 가능자</WhiteText>
                         </Part>
                     </PartContainer>
                     <GraySubtitleText style={{ marginBottom: "50px"}}>
@@ -174,7 +175,7 @@ const TimelinePage = () => {
                 <ContentText>
                     <WhiteText style={{ marginRight: "5px"}}>• 구글폼에 기재해주신 연락처를 통해</WhiteText> <BlueText>오픈채팅방 개설 예정</BlueText> <WhiteText>입니다.</WhiteText>
                 </ContentText>
-                <GraySmallSubtitleText style={{ marginTop: "10px"}}>*팀은 임의로 변경 불가능합니다</GraySmallSubtitleText>
+                <GraySmallSubtitleText style={{ marginTop: "10px"}}>*팀은 임의로 변경 불가능합니다.</GraySmallSubtitleText>
             </InfoContainer>
 
             <InfoContainer>
@@ -184,7 +185,7 @@ const TimelinePage = () => {
                 <SubtitleText>2024. 11. 01 (FRI) - 24. 11. 07 (THU)</SubtitleText>
                 
                 <ContentText style={{ marginTop: "60px"}}>
-                    <WhiteText style={{ marginRight: "5px"}}>• 일주일간 사전 준비 기간을 거쳐 주제 선정을 비롯한 </WhiteText> <BlueText>기획 및 데이터 준비가 필요</BlueText> <WhiteText>합니다.</WhiteText>
+                    <WhiteText style={{ marginRight: "5px"}}>• 일주일간 사전 준비 기간을 거쳐 </WhiteText> <BlueText>주제 선정</BlueText> <WhiteText style={{ marginRight: "5px"}}>을 비롯한 </WhiteText> <BlueText>기획 및 데이터 준비가 필요</BlueText> <WhiteText>합니다.</WhiteText>
                 </ContentText>
                 <ContentText>
                     <WhiteText style={{ marginRight: "5px"}}>• </WhiteText><BlueText>백-모델링 연결</BlueText> <WhiteText style={{ marginRight: "5px"}}>을 위한 사전 준비 또한 필요합니다.</WhiteText> <GraySmallSubtitleText>(관련 가이드 제공)</GraySmallSubtitleText>
@@ -207,7 +208,8 @@ const TimelinePage = () => {
                     <TimelineImage data={timeline} type="image/svg+xml" aria-label="Timeline" />
                 </TimetlineContainer>
 
-                <GraySubtitleText style={{ marginTop: "10px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다</GraySubtitleText>
+                <GraySubtitleText style={{ marginTop: "10px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다.</GraySubtitleText>
+                <ContentText style={{ marginTop: "25px", marginBottom: "50px", fontWeight: "600"}}>장소 : 순헌관 621호</ContentText>
             </InfoContainer>
         </TimelineContainer>
     );

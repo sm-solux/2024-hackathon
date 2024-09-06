@@ -7,8 +7,8 @@ import { useMediaQuery } from 'react-responsive';
 
 const applyData = [
     {
-      question: '솔룩스 부원이기도 하고, 다코스 부원이기도 한데 어느 분야로 지원할 수 있나요?',
-      answer: '해당 경우, 원하는 분야로 지원해주시면 됩니다.'
+      question: '솔룩스 부원이기도 하고 다코스 부원이기도 하면 어느 분야에 지원해야 하나요?',
+      answer: '데이터 분석 또는 개발 중 원하는 분야로 지원해 주시면 됩니다.'
     },
     {
         question: '미리 팀을 만들어서 지원해도 되나요?',
@@ -16,7 +16,7 @@ const applyData = [
     },
     {
         question: '두 개의 팀에 복수 지원해도 되나요?',
-        answer: '아니요, 데이터분석 또는 개발 중 하나만 선택하여 지원해야 합니다. 또한, 팀 단위가 아닌 개인으로 지원하여 하나의 팀에 배정받기 때문에 두 개의 팀에 복수 배정되지 않습니다.'
+        answer: '아니요, 데이터 분석 또는 개발 중 하나만 선택하여 지원해야 합니다.'
     },
     {
         question: '외부 인원이 지원해도 괜찮나요?',
@@ -35,7 +35,7 @@ const planningData = [
     },
     {
         question: '사전 기획 기간에는 자율적으로 모여서 작업하는 건가요?',
-        answer: '네. 또한, 주최 측에서 대면 회의가 가능한 강의실을 제공해 드릴 예정이며 추후 공지드릴 예정입니다.'
+        answer: '네. 주최 측에서 대면 회의가 가능한 강의실을 제공해 드릴 예정이며, 참가자 명단 공개 후 공지되는 내용을 참고해 주세요.'
     },
 ];
 
@@ -61,11 +61,11 @@ const preparationData = [
 const progressData = [
     {
         question: '개인 일정으로 늦은 참석, 또는 이른 퇴장이 가능한가요?',
-        answer: '아니요, 예정되어 있는 시간에는 모두 참여 가능해야합니다. 단, 학교 수업의 경우 지원 시에 작성한 일정에 따라 가능합니다. 늦은 참석이라도 가급적 OT는 듣고 가는 것을 권장드리며, 듣지 못할 경우 최소한의 내용은 알려드리나 OT 불참에 대한 책임은 본인에게 있습니다. '
+        answer: '아니요, 예정되어 있는 시간에는 모두 참여 가능해야합니다. 단, 학교 수업이 있다면 미리 지원서에 작성한 경우에 한해 가능합니다. 늦은 참석이라도 가급적 OT는 듣고 가는 것을 권장드리며, 듣지 못할 경우 최소한의 내용은 알려드리나 OT 불참에 대한 책임은 본인에게 있습니다.'
     },
     {
         question: '식사 제공되나요?',
-        answer: '네, 점심과 저녁과 다음날 아침 및 소정의 간식이 제공됩니다.'
+        answer: '네. 점심, 저녁과 다음날 아침 및 소정의 간식이 제공됩니다.'
     },
     {
         question: '심사위원님들은 어떻게 구성되나요?',
@@ -73,18 +73,18 @@ const progressData = [
     },
     {
         question: '심사 결과는 언제 발표되나요?',
-        answer: '행사 당일 심사 결과 발표 후 마지막에 시상이 진행될 예정입니다.'
+        answer: '발표와 심사가 진행된 후 시상식에서 결과 발표 됩니다. 자세한 일정은 타임테이블을 참고해 주세요.'
     },
     {
         question: '상금은 시상식 당일에 지급되나요?',
-        answer: '상금은 행사 종료 후 한 달 내로 지급될 예정이며, 구체적인 시기는 변동될 수 있습니다. '
+        answer: '상금은 행사 종료 후 한 달 내로 지급될 예정이며, 구체적인 시기는 변동될 수 있습니다.'
     },
 ];
 
 const etcData = [
     {
         question: '팀빌딩 기준이 어떻게 되나요?',
-        answer: '지원 시 작성한 폼에 따라 실력을 최대한 비슷하게 맞추어 구성할 예정입니다.'
+        answer: '지원 시 작성한 폼에 따라 실력을 비슷하게 맞춰 구성할 예정입니다.'
     },
     {
         question: '참가자 선발일은 언제인가요? ',
@@ -94,6 +94,7 @@ const etcData = [
 
 const Container = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     padding : ${({ isMobile }) => (isMobile ? '0vw 5vw' : '0vw 15vw')};
@@ -108,7 +109,7 @@ const FaqContainer = styled.div`
     justify-content: center;
     align-items: center; 
     text-align: center;
-    
+    width: 100%;
 `;
 
 const FAQ = styled.div`
@@ -122,7 +123,7 @@ const TitleContainer = styled.div`
     align-items: center;
     background-color: transparent;
     flex-direction: column;
-    width: clamp(70vw, 1.5vw, 60vw);
+    width: 100%;
 `;
 
 const TitleText = styled.div`
@@ -229,8 +230,8 @@ const Part = styled.div`
 
 const BlueText = styled.div`
     color: #0057FF;
-    font-size: clamp(0.8rem, 1.5vw, 1rem);
-    font-weight: 400;
+    font-size: calc(0.26vw + 18.08px);
+    font-weight: 700;
     margin-bottom: 5px;
 `
 
@@ -253,8 +254,8 @@ const MailIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(15px, 2vw, 18px);
-    height: clamp(15px, 2vw, 18px);
+    width: calc(0.26vw + 14.08px);
+    height: calc(0.26vw + 14.08px);
 `
 
 const InstagramIcon = styled.div`
@@ -262,8 +263,8 @@ const InstagramIcon = styled.div`
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 3px;
-    width: clamp(15px, 2vw, 18px);
-    height: clamp(15px, 2vw, 18px);
+    width: calc(0.26vw + 14.08px);
+    height: calc(0.26vw + 14.08px);
 `
 
 const ArrowIcon = styled.div`
@@ -507,7 +508,7 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer style={{ marginTop: "100px", marginBottom: "50px", borderBottom: "1px solid #525252" }}>
+                <TitleContainer style={{ marginTop: "200px", marginBottom: "50px", paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
                     <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>

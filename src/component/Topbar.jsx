@@ -28,6 +28,10 @@ function Topbar() {
     }
   };
 
+  const MoveToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     setActiveLink(location.pathname);
     setIsNavbarOpen(false);
@@ -37,15 +41,26 @@ function Topbar() {
     <Navbar expand="lg" sticky="top" className="navbar-custom" data-bs-theme="dark">
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img
+          { location.pathname === "/" ?
+            <img
             src={topbarlogo}
             width="100px"
             height="40px"
             className="d-inline-block"
             alt="dacos x solux Hackathon Logo"
-          />
+            onClick={ MoveToTop }
+            />
+            : 
+            <img
+            src={topbarlogo}
+            width="100px"
+            height="40px"
+            className="d-inline-block"
+            alt="dacos x solux Hackathon Logo"
+            />
+          }
         </Navbar.Brand>
-        {isMobile && (  
+        {isMobile && !isNavbarOpen && (  
           <div className={`mobile-menu-text`}>
             {mobileMenuText()}
           </div>

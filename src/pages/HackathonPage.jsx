@@ -12,7 +12,7 @@ const HackathonContainer = styled.div`
 const ThemeContainer = styled.div`
     height: 75vh;
     width: 100%;
-    background-image: ${({ isMobile }) => (isMobile ? 'none' : `url(${theme})`)};
+    background-image: url(${theme});
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;

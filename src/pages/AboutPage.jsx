@@ -114,7 +114,7 @@ const PosterContainer = styled.div`
 
 const PosterWrapper = styled.div`
     width: 38%;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #0057FF;
     border-radius: 3%;
     overflow: hidden;
 `;
@@ -140,7 +140,7 @@ const MobilePoster = styled.div`
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #FFFFFF;
+    border: 1px solid #0057FF;
     border-radius: 3%;
     background: none;
 `;

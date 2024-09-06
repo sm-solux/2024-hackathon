@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/2024-hackathon/static/css/main.0435d5dd.css",
-    "main.js": "/2024-hackathon/static/js/main.59a6cf5c.js",
+    "main.css": "/2024-hackathon/static/css/main.ff78e4b9.css",
+    "main.js": "/2024-hackathon/static/js/main.d03d1b45.js",
     "static/js/453.086ebf5e.chunk.js": "/2024-hackathon/static/js/453.086ebf5e.chunk.js",
     "static/media/theme_background.png": "/2024-hackathon/static/media/theme_background.4eb31e24da696d3e161e.png",
     "static/media/poster2.svg": "/2024-hackathon/static/media/poster2.0bc58347977a7e9d45f8fa6b1566c902.svg",
@@ -23,12 +23,12 @@
     "static/media/left_arrow.svg": "/2024-hackathon/static/media/left_arrow.60c8fd91b2176be3a182.svg",
     "static/media/right_arrow.svg": "/2024-hackathon/static/media/right_arrow.2c9efcde031e8f76e1a0.svg",
     "static/media/bottom_arrow_icon.svg": "/2024-hackathon/static/media/bottom_arrow_icon.6a411729083fa4811b2d754544476a9e.svg",
-    "main.0435d5dd.css.map": "/2024-hackathon/static/css/main.0435d5dd.css.map",
-    "main.59a6cf5c.js.map": "/2024-hackathon/static/js/main.59a6cf5c.js.map",
+    "main.ff78e4b9.css.map": "/2024-hackathon/static/css/main.ff78e4b9.css.map",
+    "main.d03d1b45.js.map": "/2024-hackathon/static/js/main.d03d1b45.js.map",
     "453.086ebf5e.chunk.js.map": "/2024-hackathon/static/js/453.086ebf5e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0435d5dd.css",
-    "static/js/main.59a6cf5c.js"
+    "static/css/main.ff78e4b9.css",
+    "static/js/main.d03d1b45.js"
   ]
 }

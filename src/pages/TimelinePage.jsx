@@ -133,11 +133,11 @@ const TimelinePage = () => {
             <InfoContainer>
                 <TitleText>지원하기</TitleText>
                 <GrayTitleText>APPLY</GrayTitleText>
-                <SubtitleText>24. 09. 08 (SUN) 10:00 - 24. 09. 14 (SAT) 23:59</SubtitleText>
+                <SubtitleText>2024. 09. 08 (SUN) 10:00 - 09. 14 (SAT) 23:59</SubtitleText>
                     <PartContainer>
                         <Part style={{ marginTop: "10px"}}>
                             <BlueText>데이터 분석</BlueText>   
-                            <WhiteText>DACOS 2기 부원 및 OB부원</WhiteText>
+                            <WhiteText>DACOS 2기 부원 및 OB 부원</WhiteText>
                         </Part>
                         <Part style={{ marginTop: "10px"}}>
                             <BlueText>개발</BlueText>
@@ -182,7 +182,7 @@ const TimelinePage = () => {
                 <TitleText>사전기획</TitleText>
                 <GrayTitleText>PRE - PREPARATION</GrayTitleText>
                 
-                <SubtitleText>2024. 11. 01 (FRI) - 24. 11. 07 (THU)</SubtitleText>
+                <SubtitleText>2024. 11. 01 (FRI) - 11. 07 (THU)</SubtitleText>
                 
                 <ContentText style={{ marginTop: "60px"}}>
                     <WhiteText style={{ marginRight: "5px"}}>• 일주일간 사전 준비 기간을 거쳐 </WhiteText> <BlueText>주제 선정</BlueText> <WhiteText style={{ marginRight: "5px"}}>을 비롯한 </WhiteText> <BlueText>기획 및 데이터 준비가 필요</BlueText> <WhiteText>합니다.</WhiteText>
@@ -200,7 +200,7 @@ const TimelinePage = () => {
                 <TitleText style={{ marginTop: "80px"}}>연합 해커톤 진행</TitleText>
                 <GrayTitleText>HACKATHON</GrayTitleText>
                 
-                <div style={{ display: "flex", alignItems: "center"}}><SubtitleText style={{ marginRight: "5px"}}>2024. 11. 08 (FRI) 10:00 - 24. 11. 09 (SAT) 14:00</SubtitleText>
+                <div style={{ display: "flex", alignItems: "center"}}><SubtitleText style={{ marginRight: "5px"}}>2024. 11. 08 (FRI) 10:00 - 11. 09 (SAT) 14:00</SubtitleText>
                 <GraySmallSubtitleText>*무박 2일 진행</GraySmallSubtitleText></div>
                 
                 <ContentText style={{ padding: "0px", marginTop: "30px"}}>Time table</ContentText>

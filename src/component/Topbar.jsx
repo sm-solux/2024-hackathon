@@ -60,7 +60,7 @@ function Topbar() {
             />
           }
         </Navbar.Brand>
-        {isMobile && (  
+        {isMobile && !isNavbarOpen && (  
           <div className={`mobile-menu-text`}>
             {mobileMenuText()}
           </div>

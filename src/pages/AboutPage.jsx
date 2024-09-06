@@ -209,6 +209,7 @@ const AboutPage = () => {
     };
 
     return (
+        
         <AboutContainer>
             <LogoContainer>
                 <MainContainer>

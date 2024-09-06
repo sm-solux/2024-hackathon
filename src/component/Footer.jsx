@@ -33,7 +33,6 @@ const SoftwareLogo = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0px 20px;
-  margin-bottom: 6px;
 `
 
 const EmailContainer = styled.p`

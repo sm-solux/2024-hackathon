@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import background from "../images/about/round_background.png";
-import logo from "../images/logo/about_logo.svg";
+import logo from "../images/logo/about_logo.png";
 import solux from "../images/about/solux_img.png";
 import dacos from "../images/about/dacos_img.png";
 import soluxblue from "../images/logo/solux_blue.svg";
@@ -33,8 +33,8 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 25vh;
+    padding-bottom: 15vh;
 `;
 
 const RoundBackground = styled.div`
@@ -72,7 +72,7 @@ const InfoTextContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 55px;
 `;
 
 const GroupTextContainer = styled.div`
@@ -113,9 +113,7 @@ const PosterContainer = styled.div`
 `;
 
 const PosterWrapper = styled.div`
-    width: 38%;
-    border: 2px solid #FFFFFF;
-    border-radius: 3%;
+    width: 44%;
     overflow: hidden;
 `;
 
@@ -140,8 +138,6 @@ const MobilePoster = styled.div`
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #FFFFFF;
-    border-radius: 3%;
     background: none;
 `;
 

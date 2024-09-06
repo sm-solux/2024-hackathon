@@ -34,7 +34,7 @@ const MainContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding-top: 120px;
-    padding-bottom: 100px;
+    padding-bottom: 120px;
 `;
 
 const RoundBackground = styled.div`
@@ -54,7 +54,7 @@ const DXSLogo = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: clamp(83vw, 100vw, 93vw);
-    height: clamp(230px, 100vw, 250px);
+    height: clamp(240px, 100vw, 250px);
 `;
 
 const InfoContainer = styled.div`

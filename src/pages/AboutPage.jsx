@@ -72,7 +72,7 @@ const InfoTextContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 60px;
+    margin-top: 55px;
 `;
 
 const GroupTextContainer = styled.div`
@@ -113,9 +113,7 @@ const PosterContainer = styled.div`
 `;
 
 const PosterWrapper = styled.div`
-    width: 38%;
-    border: 1px solid #0057FF;
-    border-radius: 3%;
+    width: 44%;
     overflow: hidden;
 `;
 
@@ -140,8 +138,6 @@ const MobilePoster = styled.div`
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #0057FF;
-    border-radius: 3%;
     background: none;
 `;
 

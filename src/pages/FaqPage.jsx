@@ -156,6 +156,7 @@ const QuestionText = styled.div`
     font-size: calc(0.26vw + 14.08px);
     background-color: transparent;
     transition: all 0.3s ease-in-out;
+    color: #9D9D9D;
 `
 
 const AnswerText = styled.div`
@@ -180,8 +181,11 @@ const FaqItem = styled.div`
         background: linear-gradient(135deg, #0057FF 0%, #003499 100%);
         color: white;
 
+        ${QuestionText} {
+            color: white;
+        }
+
         &:hover ${QuestionText}{
-            color: #FFFFFF;
             transition: 0.001s;
         }
     }
@@ -299,7 +303,7 @@ const Button = styled.button`
     
 
     &:hover{
-        background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ;
+        /* background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')} ; */
         color:${({ isActive }) => (isActive ? 'black' : 'white')} ;
     }
 `;

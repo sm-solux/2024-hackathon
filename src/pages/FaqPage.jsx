@@ -108,8 +108,9 @@ const FaqContainer = styled.div`
     align-items: center; 
     text-align: center;
     width: 100%;
-    height: 70vh;
+    height: 75vh;
     margin-top: 100px;
+    margin-bottom: 25px;
 `;
 
 const FAQ = styled.div`
@@ -221,7 +222,6 @@ const FaqQuestion = styled.div`
 const InquriryContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 50%;
     align-items: center;
 `
 
@@ -233,13 +233,14 @@ const Part = styled.div`
     text-align: center;
     margin: 0 auto;
     gap: 0.5vw;
+    margin-top: 15px;
 `
 
 const BlueText = styled.div`
     color: #0057FF;
     font-size: calc(0.26vw + 18.08px);
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-top: 25px;
 `
 
 const WhiteText = styled.div`
@@ -512,7 +513,7 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer style={{ paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
+                <TitleContainer style={{ paddingBottom: "25px", borderBottom: "1px solid #525252" }}>
                     <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
@@ -528,7 +529,7 @@ const FaqPage = () => {
                             <WhiteText>@smdacos_oficial</WhiteText>
                         </InquiryInfoConatiner>
                     </Part>
-                    <Part>
+                    <Part style={{ marginBottom: isMobile? "40px" : ""}}>
                         <BlueText>SOLUX</BlueText>
                         <InquiryInfoConatiner>
                             <MailIcon />

@@ -233,7 +233,7 @@ const Part = styled.div`
     text-align: center;
     margin: 0 auto;
     gap: 0.5vw;
-    margin-top: 25px;
+    margin-top: 15px;
 `
 
 const BlueText = styled.div`
@@ -513,7 +513,7 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer style={{ paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
+                <TitleContainer style={{ paddingBottom: "25px", borderBottom: "1px solid #525252" }}>
                     <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
@@ -529,7 +529,7 @@ const FaqPage = () => {
                             <WhiteText>@smdacos_oficial</WhiteText>
                         </InquiryInfoConatiner>
                     </Part>
-                    <Part style={{ marginBottom: isMobile? "50px" : ""}}>
+                    <Part style={{ marginBottom: isMobile? "40px" : ""}}>
                         <BlueText>SOLUX</BlueText>
                         <InquiryInfoConatiner>
                             <MailIcon />

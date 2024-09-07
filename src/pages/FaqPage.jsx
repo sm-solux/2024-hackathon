@@ -101,8 +101,6 @@ const Container = styled.div`
 `;
 
 const FaqContainer = styled.div`
-    margin-top: 40px;
-    margin-bottom: 50px;
     position: relative;
     display: flex; 
     flex-direction: column;
@@ -110,6 +108,8 @@ const FaqContainer = styled.div`
     align-items: center; 
     text-align: center;
     width: 100%;
+    height: 70vh;
+    margin-top: 100px;
 `;
 
 const FAQ = styled.div`
@@ -123,7 +123,9 @@ const TitleContainer = styled.div`
     align-items: center;
     background-color: transparent;
     flex-direction: column;
-    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10vh;
+    width: 90%;
 `;
 
 const TitleText = styled.div`
@@ -149,6 +151,7 @@ const FAQAnswer = styled.div`
     padding-top: 0;
     padding-bottom: 0;
     background-color: transparent;
+    will-change: height, opacity;
 `;
 
 const QuestionText = styled.div`
@@ -218,8 +221,8 @@ const FaqQuestion = styled.div`
 const InquriryContainer = styled.div`
     display: flex;
     width: 100%;
+    height: 50%;
     align-items: center;
-    height: 30vh;
 `
 
 const Part = styled.div`
@@ -331,13 +334,10 @@ const FaqPage = () => {
 
     return (
         <Container isMobile={isMobile}>
-            <FaqContainer>
-                <TitleContainer>
-                    <TitleText>자주 묻는 질문</TitleText>
-                    <GrayTitleText>FAQ</GrayTitleText>
-                </TitleContainer>
-                
-            </FaqContainer>
+            <TitleContainer>
+                <TitleText>자주 묻는 질문</TitleText>
+                <GrayTitleText>FAQ</GrayTitleText>
+            </TitleContainer>
 
             <ButtonContainer>
                 <Button isActive={selectPart === 'Apply'} onClick={() => changePart('Apply')}>
@@ -512,11 +512,11 @@ const FaqPage = () => {
             
             
             <FaqContainer>
-                <TitleContainer style={{ marginTop: "200px", marginBottom: "10px", paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
+                <TitleContainer style={{ paddingBottom: "50px", borderBottom: "1px solid #525252" }}>
                     <TitleText>문의사항</TitleText>
                     <GrayTitleText>INQUIRY</GrayTitleText>
                 </TitleContainer>
-                <InquriryContainer style={{ marginBottom: "30px" }}>
+                <InquriryContainer style={{ flexDirection: isMobile? "column" : "", justifyContent: isMobile? "space-evenly" : "" }}>
                     <Part>
                         <BlueText>DACOS</BlueText>
                         <InquiryInfoConatiner>

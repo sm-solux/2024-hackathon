@@ -154,7 +154,6 @@ const TimelinePage = () => {
                         </Part>
                     </PartContainer>
                     <GraySubtitleText style={{ marginBottom: "50px"}}>
-                        * 5,000원의 참가비가 발생하니 지원 시 참고해주시기 바랍니다.<br />
                         * 교차 지원 불가능하며, 외부 인원 지원에 대해선 추후 공지 예정입니다.<br />
                         * 개발 분야와 데이터 분야 지원 링크가 다르니 유의해서 지원 부탁드립니다.
                     </GraySubtitleText>

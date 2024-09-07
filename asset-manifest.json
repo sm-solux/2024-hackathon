@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2024-hackathon/static/css/main.1449538f.css",
-    "main.js": "/2024-hackathon/static/js/main.94036dd5.js",
+    "main.js": "/2024-hackathon/static/js/main.dc16e741.js",
     "static/js/453.086ebf5e.chunk.js": "/2024-hackathon/static/js/453.086ebf5e.chunk.js",
     "static/media/theme_background.png": "/2024-hackathon/static/media/theme_background.4eb31e24da696d3e161e.png",
     "static/media/poster2.svg": "/2024-hackathon/static/media/poster2.b8416549b4947b02f29ecd031e06c9a4.svg",
@@ -10,8 +10,8 @@
     "static/media/dacos_img.png": "/2024-hackathon/static/media/dacos_img.49624e6017f3953d0e9c.png",
     "static/media/process_background.png": "/2024-hackathon/static/media/process_background.064773ec66c35570efae.png",
     "static/media/round_background.png": "/2024-hackathon/static/media/round_background.3ccbeba6248772832a3d.png",
-    "static/media/timeline.svg": "/2024-hackathon/static/media/timeline.f4cde6979f01e201e11a0f343cbd95fd.svg",
-    "static/media/about_logo.png": "/2024-hackathon/static/media/about_logo.d0ae3fedfb1e9bae67ba.png",
+    "static/media/timeline.svg": "/2024-hackathon/static/media/timeline.7f7c8b2aa2a04193a0780e73b41c3869.svg",
+    "static/media/about_logo.png": "/2024-hackathon/static/media/about_logo.a303f53ea343ada6c21b.png",
     "static/media/software.png": "/2024-hackathon/static/media/software.d2362bae37df9ed4fef8.png",
     "static/media/solux.png": "/2024-hackathon/static/media/solux.9f3156dbe5cea9f1c1e2.png",
     "static/media/logo.svg": "/2024-hackathon/static/media/logo.30355f17d12db584e1c146c1ba4249c0.svg",
@@ -24,11 +24,11 @@
     "static/media/right_arrow.svg": "/2024-hackathon/static/media/right_arrow.2c9efcde031e8f76e1a0.svg",
     "static/media/bottom_arrow_icon.svg": "/2024-hackathon/static/media/bottom_arrow_icon.6a411729083fa4811b2d754544476a9e.svg",
     "main.1449538f.css.map": "/2024-hackathon/static/css/main.1449538f.css.map",
-    "main.94036dd5.js.map": "/2024-hackathon/static/js/main.94036dd5.js.map",
+    "main.dc16e741.js.map": "/2024-hackathon/static/js/main.dc16e741.js.map",
     "453.086ebf5e.chunk.js.map": "/2024-hackathon/static/js/453.086ebf5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1449538f.css",
-    "static/js/main.94036dd5.js"
+    "static/js/main.dc16e741.js"
   ]
 }

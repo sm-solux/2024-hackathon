@@ -22,6 +22,7 @@ const ThemeContainer = styled.div`
     justify-content: center; /* 세로 방향 가운데 정렬 */
     align-items: center; /* 수평 방향 가운데 정렬 */
     text-align: center;
+    margin-top: 5vh;
 `
 
 const ThemeText = styled.div`

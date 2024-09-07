@@ -202,14 +202,13 @@ const TimelinePage = () => {
                 
                 <div style={{ display: "flex", alignItems: "center"}}><SubtitleText style={{ marginRight: "5px"}}>2024. 11. 08 (FRI) 10:00 - 11. 09 (SAT) 14:00</SubtitleText>
                 <GraySmallSubtitleText>*무박 2일 진행</GraySmallSubtitleText></div>
+
+                <ContentText style={{ marginTop: "30px", marginBottom: "30px", fontWeight: "500"}}>장소 : 순헌관 621호</ContentText>
                 
-                <ContentText style={{ padding: "0px", marginTop: "30px"}}>Time table</ContentText>
-                <TimetlineContainer>
+                <ContentText style={{ padding: "0px" }}>Time table</ContentText>
+                <TimetlineContainer style={{ marginBottom: "45px" }}>
                     <TimelineImage data={timeline} type="image/svg+xml" aria-label="Timeline" />
                 </TimetlineContainer>
-
-                <GraySubtitleText style={{ marginTop: "10px"}}>*점심, 저녁, 다음날 아침 및 간단한 간식이 제공됩니다.</GraySubtitleText>
-                <ContentText style={{ marginTop: "25px", marginBottom: "50px", fontWeight: "600"}}>장소 : 순헌관 621호</ContentText>
             </InfoContainer>
         </TimelineContainer>
     );

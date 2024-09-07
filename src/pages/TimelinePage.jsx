@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import background from "../images/timeline/process_background.png";
 import Button from "../component/Button";
 import timeline from "../images/timeline/timeline.svg";
+import { useMediaQuery } from 'react-responsive';
 
 const TimelineContainer = styled.div`
     background-color: transparent;
@@ -109,6 +110,13 @@ const GraySmallSubtitleText = styled.span`
     background-color: transparent;
 `
 
+const GraySmallSmallSubtitleText = styled.span`
+    font-size: calc(0.26vw + 7.08px);
+    font-weight: 200;
+    color: #B2B2B2;
+    background-color: transparent;
+`
+
 const TimetlineContainer = styled.div`
     width: 90%;
     background-color: transparent;
@@ -127,6 +135,7 @@ const TimelineImage = styled.object`
 `;
 
 const TimelinePage = () => {
+    const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     return (
         <TimelineContainer>
@@ -196,17 +205,17 @@ const TimelinePage = () => {
 
             </InfoContainer>
 
-            <InfoContainer style={{ marginBottom: "40px", height: "130vh"}}>
+            <InfoContainer style={{ marginBottom: "40px", height: "140vh"}}>
                 <TitleText style={{ marginTop: "80px"}}>연합 해커톤 진행</TitleText>
                 <GrayTitleText>HACKATHON</GrayTitleText>
                 
                 <div style={{ display: "flex", alignItems: "center"}}><SubtitleText style={{ marginRight: "5px"}}>2024. 11. 08 (FRI) 10:00 - 11. 09 (SAT) 14:00</SubtitleText>
-                <GraySmallSubtitleText>*무박 2일 진행</GraySmallSubtitleText></div>
+                <GraySmallSmallSubtitleText>*무박 2일 진행</GraySmallSmallSubtitleText></div>
 
                 <ContentText style={{ marginTop: "30px", marginBottom: "30px", fontWeight: "500"}}>장소 : 순헌관 621호</ContentText>
                 
                 <ContentText style={{ padding: "0px" }}>Time table</ContentText>
-                <TimetlineContainer style={{ marginBottom: "45px" }}>
+                <TimetlineContainer style={{ marginBottom: !isMobile? "45px" : "0px" }}>
                     <TimelineImage data={timeline} type="image/svg+xml" aria-label="Timeline" />
                 </TimetlineContainer>
             </InfoContainer>

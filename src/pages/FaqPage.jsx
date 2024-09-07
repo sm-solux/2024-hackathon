@@ -221,7 +221,7 @@ const FaqQuestion = styled.div`
 const InquriryContainer = styled.div`
     display: flex;
     width: 100%;
-    height: 50%;
+    height: 35%;
     align-items: center;
 `
 

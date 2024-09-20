@@ -184,6 +184,7 @@ const TimelinePage = () => {
                     <WhiteText style={{ marginRight: "5px"}}>• 구글폼에 기재해주신 연락처를 통해</WhiteText> <BlueText>오픈채팅방 개설 예정</BlueText> <WhiteText>입니다.</WhiteText>
                 </ContentText>
                 <GraySmallSubtitleText style={{ marginTop: "10px"}}>*팀은 임의로 변경 불가능합니다.</GraySmallSubtitleText>
+                <GraySmallSubtitleText style={{ marginTop: "5px"}}>*외부 인원에 대한 참여자 명단 및 오픈채팅방 공개는 추가 모집 이후 진행됩니다.</GraySmallSubtitleText>
             </InfoContainer>
 
             <InfoContainer>

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dxs-hackathon/static/css/main.f35b7ff2.css",
-    "main.js": "/dxs-hackathon/static/js/main.03e9ba89.js",
+    "main.js": "/dxs-hackathon/static/js/main.4242be47.js",
     "static/js/453.086ebf5e.chunk.js": "/dxs-hackathon/static/js/453.086ebf5e.chunk.js",
     "static/media/theme_background.png": "/dxs-hackathon/static/media/theme_background.4eb31e24da696d3e161e.png",
     "static/media/poster2.svg": "/dxs-hackathon/static/media/poster2.b8416549b4947b02f29ecd031e06c9a4.svg",
@@ -24,11 +24,11 @@
     "static/media/right_arrow.svg": "/dxs-hackathon/static/media/right_arrow.2c9efcde031e8f76e1a0.svg",
     "static/media/bottom_arrow_icon.svg": "/dxs-hackathon/static/media/bottom_arrow_icon.6a411729083fa4811b2d754544476a9e.svg",
     "main.f35b7ff2.css.map": "/dxs-hackathon/static/css/main.f35b7ff2.css.map",
-    "main.03e9ba89.js.map": "/dxs-hackathon/static/js/main.03e9ba89.js.map",
+    "main.4242be47.js.map": "/dxs-hackathon/static/js/main.4242be47.js.map",
     "453.086ebf5e.chunk.js.map": "/dxs-hackathon/static/js/453.086ebf5e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f35b7ff2.css",
-    "static/js/main.03e9ba89.js"
+    "static/js/main.4242be47.js"
   ]
 }
